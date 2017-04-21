@@ -75,6 +75,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dll\Newtonsoft.Json.dll" />
+    <Content Include="dll\URLRewriter.dll" />
     <Content Include="view\static\css\main.css" />
     <Content Include="view\static\css\style.css" />
     <Content Include="view\static\css\toggles.css" />
@@ -145,6 +147,21 @@
     </Compile>
     <Compile Include="control\doctorUpdate.ashx.cs">
       <DependentUpon>doctorUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\orderAdd.ashx.cs">
+      <DependentUpon>orderAdd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\orderDelete.ashx.cs">
+      <DependentUpon>orderDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\orderList.ashx.cs">
+      <DependentUpon>orderList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\orderSendUpdate.ashx.cs">
+      <DependentUpon>orderSendUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\orderUpdate.ashx.cs">
+      <DependentUpon>orderUpdate.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\showLog.ashx.cs">
       <DependentUpon>showLog.ashx</DependentUpon>
@@ -260,6 +277,11 @@
     <Content Include="control\showLog.ashx" />
     <Content Include="control\test\ucpaasTest.ashx" />
     <Content Include="control\test\ucpassListTest.ashx" />
+    <Content Include="control\orderAdd.ashx" />
+    <Content Include="control\orderDelete.ashx" />
+    <Content Include="control\orderList.ashx" />
+    <Content Include="control\orderSendUpdate.ashx" />
+    <Content Include="control\orderUpdate.ashx" />
     <None Include="view\static\css\style.css.bak" />
     <None Include="view\static\fontello-5d544c46\config.json" />
     <None Include="view\static\fontello-5d544c46\config.json.bak" />

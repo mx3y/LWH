@@ -9,7 +9,9 @@ using System.Text;
 namespace LW_AskOnline.Web.control
 {
     /// <summary>
-    /// doctorUpdate 的摘要说明
+    /// CREATE 2017-04-21
+    /// AUTHOR:SU
+    /// UDATE:2017-4-21 15:37 PM AUTHOR：MENG
     /// </summary>
     public class doctorUpdate : IHttpHandler
     {
