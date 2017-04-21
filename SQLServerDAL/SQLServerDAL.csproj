@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB835BA2-FFD6-49CD-87B0-E216255BB32E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LW_AskOnline.SQLServerDAL</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LW_AskOnline.SQLServerDAL</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0988C62E-247F-471F-A183-DB509C7A3839}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{B0706FA2-977C-4523-B093-F57804756498}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Name>Model</Name>
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PubConstant.cs" />
+    <Compile Include="SysManage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SysManage1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ask_city.cs" />
+    <Compile Include="ask_doctor_list.cs" />
+    <Compile Include="ask_hospital.cs" />
+    <Compile Include="ask_msg_check.cs" />
+    <Compile Include="ask_order.cs" />
+    <Compile Include="ask_order_pay.cs" />
+    <Compile Include="ask_test_bill.cs" />
+    <Compile Include="ask_ucpaas.cs" />
+    <Compile Include="ask_user.cs" />
+    <Compile Include="jichang.cs" />
+    <Compile Include="jichang_org.cs" />
+    <Compile Include="log_dispatch.cs" />
+    <Compile Include="log_exception.cs" />
+    <Compile Include="log_login.cs" />
+    <Compile Include="log_use.cs" />
+    <Compile Include="norecord.cs" />
+    <Compile Include="sj_fuchas.cs" />
+    <Compile Include="sj_fuchas_main.cs" />
+    <Compile Include="sj_tjdj.cs" />
+    <Compile Include="sj_tjhz.cs" />
+    <Compile Include="sj_tjjg.cs" />
+    <Compile Include="sj_tjjg1.cs" />
+    <Compile Include="sj_zhibiaos.cs" />
+    <Compile Include="sms_record.cs" />
+    <Compile Include="sys_dict.cs" />
+    <Compile Include="sys_dict_type.cs" />
+    <Compile Include="sys_func.cs" />
+    <Compile Include="sys_param.cs" />
+    <Compile Include="sys_platform.cs" />
+    <Compile Include="sys_role.cs" />
+    <Compile Include="sys_role_func.cs" />
+    <Compile Include="sys_seq.cs" />
+    <Compile Include="sys_user.cs" />
+    <Compile Include="sys_user_role.cs" />
+    <Compile Include="t_base_item_info.cs" />
+    <Compile Include="t_base_item_relation.cs" />
+    <Compile Include="t_base_item_type_info.cs" />
+    <Compile Include="t_base_jxb_info.cs" />
+    <Compile Include="t_case_annex.cs" />
+    <Compile Include="t_case_info.cs" />
+    <Compile Include="t_check_ordered.cs" />
+    <Compile Include="t_check_package.cs" />
+    <Compile Include="t_check_package_item.cs" />
+    <Compile Include="t_check_people_record.cs" />
+    <Compile Include="t_check_project_item.cs" />
+    <Compile Include="t_company.cs" />
+    <Compile Include="t_contract_info.cs" />
+    <Compile Include="t_delivery_info.cs" />
+    <Compile Include="t_environment.cs" />
+    <Compile Include="t_evaluation_info.cs" />
+    <Compile Include="t_evaluation_schedule.cs" />
+    <Compile Include="t_expert_doctor.cs" />
+    <Compile Include="t_medical_addres.cs" />
+    <Compile Include="t_medical_examination.cs" />
+    <Compile Include="t_medical_items.cs" />
+    <Compile Include="t_medical_org.cs" />
+    <Compile Include="t_medical_report.cs" />
+    <Compile Include="t_member.cs" />
+    <Compile Include="t_member_account.cs" />
+    <Compile Include="t_member_base_info.cs" />
+    <Compile Include="t_member_card.cs" />
+    <Compile Include="t_member_copy.cs" />
+    <Compile Include="t_member_info.cs" />
+    <Compile Include="t_member_level.cs" />
+    <Compile Include="t_member_package_rel.cs" />
+    <Compile Include="t_member_status.cs" />
+    <Compile Include="t_message.cs" />
+    <Compile Include="t_message_record.cs" />
+    <Compile Include="t_message_template.cs" />
+    <Compile Include="t_news.cs" />
+    <Compile Include="t_news_column.cs" />
+    <Compile Include="t_notice.cs" />
+    <Compile Include="t_office_status_record.cs" />
+    <Compile Include="t_order_detail.cs" />
+    <Compile Include="t_order_record.cs" />
+    <Compile Include="t_ordered_datechange.cs" />
+    <Compile Include="t_org_base_packages.cs" />
+    <Compile Include="t_org_contract_rel.cs" />
+    <Compile Include="t_pay_transaction_record.cs" />
+    <Compile Include="t_product_info.cs" />
+    <Compile Include="t_product_schedule.cs" />
+    <Compile Include="t_repair_picture.cs" />
+    <Compile Include="t_repair_record.cs" />
+    <Compile Include="t_reservation_office.cs" />
+    <Compile Include="t_reservation_record.cs" />
+    <Compile Include="t_shopping_cart.cs" />
+    <Compile Include="t_suggestion_record.cs" />
+    <Compile Include="t_system_message.cs" />
+    <Compile Include="t_temp_post_user.cs" />
+    <Compile Include="t_trading_account_record.cs" />
+    <Compile Include="t_webchat_message.cs" />
+    <Compile Include="t_wechat_menu.cs" />
+    <Compile Include="user_refund_record.cs" />
+    <Compile Include="view_member.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

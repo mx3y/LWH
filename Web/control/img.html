@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <script src="js/jquery-1.8.0.js" type="text/javascript"></script>
+    <script src="js/jquery.form.js" type="text/javascript"></script>
+	<!--<script src="js/ajaxfileupload.js" type="text/javascript"></script>-->
+	
+    <script type="text/javascript">
+         $(function () {
+            $("#btn").click(function () {
+				
+                $("#fm1").ajaxSubmit({
+                    url: "http://localhost:3448/api/imgTest",
+                    type: "post",
+                    success: function (data) {
+						data=data.split(">");
+						data=data[1].split("<");
+						$("#divimg").html("<img src='../upload/"+data[0]+"'>");
+                    },
+					error: function(){
+						console.log("333");
+					}
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="fm1" method="post" enctype="multipart/form-data">
+    <input type="file" id="btnfile" name="btnfile" value="提交" />
+	<input type="button" id="btn" value="上传" />
+    </form>
+    <div id="divimg">
+        
+    </div>
+</body>
+
+</html>

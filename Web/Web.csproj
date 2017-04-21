@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B535162-10C2-4238-BC56-193B968E1834}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LW_AskOnline.Web</RootNamespace>
+    <AssemblyName>LW_AskOnline.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LTP.Accounts, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LTP.Accounts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.UI.WebControls">
+      <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LtpPageControl">
+      <HintPath>..\Lib\LtpPageControl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="URLRewriter, Version=1.0.1495.18710, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\URLRewriter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="view\static\css\main.css" />
+    <Content Include="view\static\css\style.css" />
+    <Content Include="view\static\css\toggles.css" />
+    <Content Include="view\static\fontello-5d544c46\css\animation.css" />
+    <Content Include="view\static\fontello-5d544c46\css\fontello-codes.css" />
+    <Content Include="view\static\fontello-5d544c46\css\fontello-embedded.css" />
+    <Content Include="view\static\fontello-5d544c46\css\fontello-ie7-codes.css" />
+    <Content Include="view\static\fontello-5d544c46\css\fontello-ie7.css" />
+    <Content Include="view\static\fontello-5d544c46\css\fontello.css" />
+    <Content Include="view\static\fontello-5d544c46\demo.html" />
+    <Content Include="view\static\fontello-5d544c46\README.txt" />
+    <Content Include="view\static\fontello-75e38b70\css\animation.css" />
+    <Content Include="view\static\fontello-75e38b70\css\fontello-codes.css" />
+    <Content Include="view\static\fontello-75e38b70\css\fontello-embedded.css" />
+    <Content Include="view\static\fontello-75e38b70\css\fontello-ie7-codes.css" />
+    <Content Include="view\static\fontello-75e38b70\css\fontello-ie7.css" />
+    <Content Include="view\static\fontello-75e38b70\css\fontello.css" />
+    <Content Include="view\static\fontello-75e38b70\demo.html" />
+    <Content Include="view\static\fontello-75e38b70\LICENSE.txt" />
+    <Content Include="view\static\fontello-75e38b70\README.txt" />
+    <Content Include="view\static\images\btn_child.png" />
+    <Content Include="view\static\images\btn_man.png" />
+    <Content Include="view\static\images\btn_woman.png" />
+    <Content Include="view\static\images\child.png" />
+    <Content Include="view\static\images\Disclosure Indicator Copy%402x.png" />
+    <Content Include="view\static\images\Disclosure Indicator Copy%403x.png" />
+    <Content Include="view\static\images\Disclosure Indicator%402x.png" />
+    <Content Include="view\static\images\Disclosure Indicator%403x.png" />
+    <Content Include="view\static\images\indexBg.png" />
+    <Content Include="view\static\images\intelligence_body_child_back.jpg" />
+    <Content Include="view\static\images\intelligence_body_child_front.jpg" />
+    <Content Include="view\static\images\intelligence_body_female_back.jpg" />
+    <Content Include="view\static\images\intelligence_body_female_front.jpg" />
+    <Content Include="view\static\images\intelligence_body_male_back.jpg" />
+    <Content Include="view\static\images\intelligence_body_male_front.jpg" />
+    <Content Include="view\static\images\man.png" />
+    <Content Include="view\static\images\other.jpg" />
+    <Content Include="view\static\images\other1.jpg" />
+    <Content Include="view\static\images\pic_01.jpg" />
+    <Content Include="view\static\images\pic_02.jpg" />
+    <Content Include="view\static\images\pic_03.jpg" />
+    <Content Include="view\static\images\pic_04.jpg" />
+    <Content Include="view\static\images\pic_05.jpg" />
+    <Content Include="view\static\images\pic_06.jpg" />
+    <Content Include="view\static\images\pic_07.jpg" />
+    <Content Include="view\static\images\woman.png" />
+    <Content Include="view\static\js\common.js" />
+    <Content Include="view\static\js\imageMapResizer.min.js" />
+    <Content Include="view\static\js\jquery-1.7.2.min.js" />
+    <Content Include="view\static\js\jquery.imagemapster.min.js" />
+    <Content Include="view\static\js\jquery.min.js" />
+    <Content Include="view\static\js\rem.js" />
+    <Content Include="view\static\js\toggles.min.js" />
+    <Content Include="view\syms.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="control\doctorAdd.ashx.cs">
+      <DependentUpon>doctorAdd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\doctorDelete.ashx.cs">
+      <DependentUpon>doctorDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\doctorSendUpdate.ashx.cs">
+      <DependentUpon>doctorSendUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\doctorUpdate.ashx.cs">
+      <DependentUpon>doctorUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\showLog.ashx.cs">
+      <DependentUpon>showLog.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\test\addTest.ashx.cs">
+      <DependentUpon>addTest.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\doctor_add.ashx.cs">
+      <DependentUpon>doctor_add.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\doctorList.ashx.cs">
+      <DependentUpon>doctorList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\test\deleteTest.ashx.cs">
+      <DependentUpon>deleteTest.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\test\imgTest.ashx.cs">
+      <DependentUpon>imgTest.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\test\queryTest.ashx.cs">
+      <DependentUpon>queryTest.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\test.ashx.cs">
+      <DependentUpon>test.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\test\sendUpdateTest.ashx.cs">
+      <DependentUpon>sendUpdateTest.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\test\ucpaasTest.ashx.cs">
+      <DependentUpon>ucpaasTest.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\test\ucpassListTest.ashx.cs">
+      <DependentUpon>ucpassListTest.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\test\updateTest.ashx.cs">
+      <DependentUpon>updateTest.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\userAdd.ashx.cs">
+      <DependentUpon>userAdd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\userDelete.ashx.cs">
+      <DependentUpon>userDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\userList.ashx.cs">
+      <DependentUpon>userList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\userSendUpdate.ashx.cs">
+      <DependentUpon>userSendUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\userUpdate.ashx.cs">
+      <DependentUpon>userUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OracleDAL\OracleDAL.csproj">
+      <Project>{9FE00521-3A8B-42B1-814E-585E99407B2E}</Project>
+      <Name>OracleDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLServerDAL\SQLServerDAL.csproj">
+      <Project>{AB835BA2-FFD6-49CD-87B0-E216255BB32E}</Project>
+      <Name>SQLServerDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="control\test.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="control\test\upedFile\" />
+    <Folder Include="control\upedFile\" />
+    <Folder Include="upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="control\doctor_add.ashx" />
+    <Content Include="control\doctorList.ashx" />
+    <Content Include="control\userAdd.ashx" />
+    <Content Include="control\test\queryTest.ashx" />
+    <Content Include="control\test\addTest.ashx" />
+    <Content Include="control\test\sendUpdateTest.ashx" />
+    <Content Include="control\test\deleteTest.ashx" />
+    <Content Include="control\test\updateTest.ashx" />
+    <Content Include="control\test\imgTest.ashx" />
+    <Content Include="control\doctorAdd.ashx" />
+    <Content Include="control\doctorUpdate.ashx" />
+    <Content Include="control\userList.ashx" />
+    <Content Include="control\userSendUpdate.ashx" />
+    <Content Include="control\userUpdate.ashx" />
+    <Content Include="control\userDelete.ashx" />
+    <Content Include="control\doctorDelete.ashx" />
+    <Content Include="control\doctorSendUpdate.ashx" />
+    <Content Include="control\showLog.ashx" />
+    <Content Include="control\test\ucpaasTest.ashx" />
+    <Content Include="control\test\ucpassListTest.ashx" />
+    <None Include="view\static\css\style.css.bak" />
+    <None Include="view\static\fontello-5d544c46\config.json" />
+    <None Include="view\static\fontello-5d544c46\config.json.bak" />
+    <None Include="view\static\fontello-5d544c46\css\animation.css.bak" />
+    <None Include="view\static\fontello-5d544c46\css\fontello-ie7-codes.css.bak" />
+    <None Include="view\static\fontello-5d544c46\css\fontello-ie7.css.bak" />
+    <None Include="view\static\fontello-5d544c46\font\fontello.eot" />
+    <None Include="view\static\fontello-5d544c46\font\fontello.svg" />
+    <None Include="view\static\fontello-5d544c46\font\fontello.svg.bak" />
+    <None Include="view\static\fontello-5d544c46\font\fontello.ttf" />
+    <None Include="view\static\fontello-5d544c46\font\fontello.woff" />
+    <None Include="view\static\fontello-75e38b70\config.json" />
+    <None Include="view\static\fontello-75e38b70\font\fontello.eot" />
+    <None Include="view\static\fontello-75e38b70\font\fontello.svg" />
+    <None Include="view\static\fontello-75e38b70\font\fontello.ttf" />
+    <None Include="view\static\fontello-75e38b70\font\fontello.woff" />
+    <None Include="view\static\font\fontello.eot" />
+    <None Include="view\static\font\fontello.svg" />
+    <None Include="view\static\font\fontello.ttf" />
+    <None Include="view\static\font\fontello.woff" />
+    <None Include="view\static\images\Thumbs.db" />
+    <None Include="view\static\svg\icon01.svg" />
+    <None Include="view\static\svg\icon02.svg" />
+    <None Include="view\static\svg\icon03.svg" />
+    <None Include="view\static\svg\icon04.svg" />
+    <None Include="view\static\svg\icon05.svg" />
+    <None Include="view\static\svg\icon06.svg" />
+    <None Include="view\static\svg\icon07.svg" />
+    <None Include="view\static\svg\icon08.svg" />
+    <None Include="view\static\svg\icon09.svg" />
+    <None Include="view\static\svg\icon10.svg" />
+    <None Include="view\static\svg\icon11.svg" />
+    <None Include="view\static\svg\icon12.svg" />
+    <None Include="view\static\svg\icon13.svg" />
+    <None Include="view\static\svg\icon14.svg" />
+    <None Include="view\static\svg\icon15.svg" />
+    <None Include="view\static\svg\icon16.svg" />
+    <None Include="view\static\svg\icon17.svg" />
+    <None Include="view\static\svg\icon18.svg" />
+    <None Include="view\static\svg\icon19.svg" />
+    <None Include="view\static\svg\icon20.svg" />
+    <None Include="view\static\svg\icon21.svg" />
+    <None Include="view\static\svg\icon22.svg" />
+    <None Include="view\static\svg\icon23.svg" />
+    <None Include="view\static\svg\icon24.svg" />
+    <None Include="view\static\svg\icon25.svg" />
+    <None Include="view\static\svg\icon26.svg" />
+    <None Include="view\static\svg\icon27.svg" />
+    <None Include="view\static\svg\icon28.svg" />
+    <None Include="view\static\svg\icon29.svg" />
+    <None Include="view\static\svg\icon30.svg" />
+    <None Include="view\static\svg\icon31.svg" />
+    <None Include="view\static\svg\icon32.svg" />
+    <None Include="view\static\svg\icon33.svg" />
+    <None Include="view\static\svg\icon34.svg" />
+    <None Include="view\static\svg\icon35.svg" />
+    <None Include="view\static\svg\icon36.svg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3448</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
