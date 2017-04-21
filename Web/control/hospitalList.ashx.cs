@@ -8,9 +8,10 @@ using System.Data;
 namespace LW_AskOnline.Web.control
 {
     /// <summary>
-    /// orderList 的摘要说明
+    /// CREATE 2017-4-21
+    /// AUTHOR:SU
     /// </summary>
-    public class orderList : IHttpHandler
+    public class hospitalList : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
@@ -18,15 +19,15 @@ namespace LW_AskOnline.Web.control
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
             string callback = context.Request.QueryString["callback"].ToString();
-            BLL.ask_order adlBLL = new BLL.ask_order();
-            Model.ask_order adlModel = new Model.ask_order();
+            BLL.ask_hospital adlBLL = new BLL.ask_hospital();
+            Model.ask_hospital adlModel = new Model.ask_hospital();
             DataSet set = adlBLL.GetList("");
             DataSet sendSet = set.Copy();
             sendSet.Clear();
             //dstate为1的加入sendSet
             for (int i = 0; i < set.Tables[0].Rows.Count; i++)
             {
-                if (set.Tables[0].Rows[i][""].ToString().Equals("1"))
+                if (set.Tables[0].Rows[i]["hstatus"].ToString().Equals("1"))
                 {
                     sendSet.Tables[0].Rows.Add(set.Tables[0].Rows[i].ItemArray);
                 }

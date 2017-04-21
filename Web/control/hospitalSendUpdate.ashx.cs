@@ -7,34 +7,24 @@ using System.Text;
 namespace LW_AskOnline.Web.control
 {
     /// <summary>
-    /// deleteOrder 的摘要说明
+    /// CREATE 2017-4-21
+    /// AUTHOR:SU
     /// </summary>
-    public class deleteOrder : IHttpHandler
+    public class hospitalSendUpdate : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
-            Common.Log log = new Common.Log();
             string callback = context.Request.QueryString["callback"].ToString();
             string parameter = context.Request.QueryString["id"].ToString();
             int id = Convert.ToInt32(parameter);
-            BLL.ask_order adlBll = new BLL.ask_order();
-            Model.ask_order adlModel = new Model.ask_order();
+            BLL.ask_hospital adlBll = new BLL.ask_hospital();
+            Model.ask_hospital adlModel = new Model.ask_hospital();
             adlModel = adlBll.GetModel(id);
-            ---
-            bool check = adlBll.Update(adlModel);
-            //写入日志
-            if (check)
-            {
-                string handle = "DELETE";
-                string ip = log.GetIP();
-                string user = "ORDER";
-                DateTime time = log.GetTime();
-                log.WriteLogFile(handle, ip, user, time);
-            }
-            context.Response.Write(callback + "()");
+            string json = Newtonsoft.Json.JsonConvert.SerializeObject(adlModel, Newtonsoft.Json.Formatting.Indented);
+            context.Response.Write(callback + "(" + json + ")");
         }
 
         public bool IsReusable

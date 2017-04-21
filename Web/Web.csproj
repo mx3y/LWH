@@ -75,6 +75,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\COM.Excel.dll" />
+    <Content Include="bin\LTP.Accounts.dll" />
+    <Content Include="bin\LtpPageControl.dll" />
+    <Content Include="bin\LW_AskOnline.BLL.dll" />
+    <Content Include="bin\LW_AskOnline.BLL.pdb" />
+    <Content Include="bin\LW_AskOnline.Common.dll" />
+    <Content Include="bin\LW_AskOnline.Common.pdb" />
+    <Content Include="bin\LW_AskOnline.DALFactory.dll" />
+    <Content Include="bin\LW_AskOnline.DALFactory.pdb" />
+    <Content Include="bin\LW_AskOnline.DBUtility.dll" />
+    <Content Include="bin\LW_AskOnline.DBUtility.pdb" />
+    <Content Include="bin\LW_AskOnline.IDAL.dll" />
+    <Content Include="bin\LW_AskOnline.IDAL.pdb" />
+    <Content Include="bin\LW_AskOnline.Model.dll" />
+    <Content Include="bin\LW_AskOnline.Model.pdb" />
+    <Content Include="bin\LW_AskOnline.OracleDAL.dll" />
+    <Content Include="bin\LW_AskOnline.OracleDAL.pdb" />
+    <Content Include="bin\LW_AskOnline.SQLServerDAL.dll" />
+    <Content Include="bin\LW_AskOnline.SQLServerDAL.pdb" />
+    <Content Include="bin\LW_AskOnline.Web.dll" />
+    <Content Include="bin\LW_AskOnline.Web.pdb" />
+    <Content Include="bin\Microsoft.Web.UI.WebControls.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\OpenSmtp.dll" />
+    <Content Include="bin\OWC10Chart.dll" />
+    <Content Include="bin\System.Data.SQLite.dll" />
+    <Content Include="bin\URLRewriter.dll" />
+    <Content Include="control\img.html" />
     <Content Include="dll\Newtonsoft.Json.dll" />
     <Content Include="dll\URLRewriter.dll" />
     <Content Include="view\static\css\main.css" />
@@ -136,6 +165,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\orderDelete.ashx.cs">
+      <DependentUpon>orderDelete.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\doctorAdd.ashx.cs">
       <DependentUpon>doctorAdd.ashx</DependentUpon>
     </Compile>
@@ -150,9 +182,6 @@
     </Compile>
     <Compile Include="control\orderAdd.ashx.cs">
       <DependentUpon>orderAdd.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="control\orderDelete.ashx.cs">
-      <DependentUpon>orderDelete.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\orderList.ashx.cs">
       <DependentUpon>orderList.ashx</DependentUpon>
@@ -277,9 +306,9 @@
     <Content Include="control\showLog.ashx" />
     <Content Include="control\test\ucpaasTest.ashx" />
     <Content Include="control\test\ucpassListTest.ashx" />
+    <Content Include="control\orderList.ashx" />
     <Content Include="control\orderAdd.ashx" />
     <Content Include="control\orderDelete.ashx" />
-    <Content Include="control\orderList.ashx" />
     <Content Include="control\orderSendUpdate.ashx" />
     <Content Include="control\orderUpdate.ashx" />
     <None Include="view\static\css\style.css.bak" />
