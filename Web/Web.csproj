@@ -165,6 +165,21 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\hospitalAdd.ashx.cs">
+      <DependentUpon>hospitalAdd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\hospitalDelete.ashx.cs">
+      <DependentUpon>hospitalDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\hospitalList.ashx.cs">
+      <DependentUpon>hospitalList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\hospitalSendUpdate.ashx.cs">
+      <DependentUpon>hospitalSendUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\hospitalUpdate.ashx.cs">
+      <DependentUpon>hospitalUpdate.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\orderDelete.ashx.cs">
       <DependentUpon>orderDelete.ashx</DependentUpon>
     </Compile>
@@ -185,6 +200,9 @@
     </Compile>
     <Compile Include="control\orderList.ashx.cs">
       <DependentUpon>orderList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\orderPayList.ashx.cs">
+      <DependentUpon>orderPayList.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\orderSendUpdate.ashx.cs">
       <DependentUpon>orderSendUpdate.ashx</DependentUpon>
@@ -227,6 +245,12 @@
     </Compile>
     <Compile Include="control\test\updateTest.ashx.cs">
       <DependentUpon>updateTest.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\ucpaasDetial.ashx.cs">
+      <DependentUpon>ucpaasDetial.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\ucpaasList.ashx.cs">
+      <DependentUpon>ucpaasList.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\userAdd.ashx.cs">
       <DependentUpon>userAdd.ashx</DependentUpon>
@@ -311,6 +335,14 @@
     <Content Include="control\orderDelete.ashx" />
     <Content Include="control\orderSendUpdate.ashx" />
     <Content Include="control\orderUpdate.ashx" />
+    <Content Include="control\hospitalAdd.ashx" />
+    <Content Include="control\hospitalDelete.ashx" />
+    <Content Include="control\hospitalList.ashx" />
+    <Content Include="control\hospitalSendUpdate.ashx" />
+    <Content Include="control\hospitalUpdate.ashx" />
+    <Content Include="control\orderPayList.ashx" />
+    <Content Include="control\ucpaasDetial.ashx" />
+    <Content Include="control\ucpaasList.ashx" />
     <None Include="view\static\css\style.css.bak" />
     <None Include="view\static\fontello-5d544c46\config.json" />
     <None Include="view\static\fontello-5d544c46\config.json.bak" />
