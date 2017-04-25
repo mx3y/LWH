@@ -134,6 +134,7 @@
                 "dname": $("#dname").val(),
                 "dtype": $("#dtype").val(),
                 "ddept": $("#ddept").val(),
+				"dprofessor": $("#dprofessor").val(),
                 "ddeptid": $("#ddeptid").val(),
                 "dcity": $("#dcity_2").val(),
                 "dcityid": $("#dcityid").val(),

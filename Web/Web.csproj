@@ -106,6 +106,63 @@
     <Content Include="control\img.html" />
     <Content Include="dll\Newtonsoft.Json.dll" />
     <Content Include="dll\URLRewriter.dll" />
+    <Content Include="lwh\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="lwh\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="lwh\bootstrap\css\bootstrap.css" />
+    <Content Include="lwh\bootstrap\css\bootstrap.min.css" />
+    <Content Include="lwh\bootstrap\js\bootstrap.js" />
+    <Content Include="lwh\bootstrap\js\bootstrap.min.js" />
+    <Content Include="lwh\bootstrap\js\jquery-3.2.0.min.js" />
+    <Content Include="lwh\bootstrap\js\npm.js" />
+    <Content Include="lwh\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="lwh\css\doctor_add.css" />
+    <Content Include="lwh\css\doctor_edit.css" />
+    <Content Include="lwh\css\doctor_list.css" />
+    <Content Include="lwh\css\index.css" />
+    <Content Include="lwh\css\login.css" />
+    <Content Include="lwh\css\log_query.css" />
+    <Content Include="lwh\css\order_list.css" />
+    <Content Include="lwh\css\order_pay.css" />
+    <Content Include="lwh\css\user_add.css" />
+    <Content Include="lwh\css\user_edit.css" />
+    <Content Include="lwh\css\user_list.css" />
+    <Content Include="lwh\doctor_add.html" />
+    <Content Include="lwh\doctor_edit.html" />
+    <Content Include="lwh\doctor_list.html" />
+    <Content Include="lwh\images\bg-2.jpg" />
+    <Content Include="lwh\images\bg.jpg" />
+    <Content Include="lwh\images\test.jpg" />
+    <Content Include="lwh\img.html" />
+    <Content Include="lwh\index.html" />
+    <Content Include="lwh\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="lwh\js\dataTables\dataTables.bootstrap.css" />
+    <Content Include="lwh\js\dataTables\dataTables.bootstrap.js" />
+    <Content Include="lwh\js\dataTables\jquery.dataTables.js" />
+    <Content Include="lwh\js\doctor_add.js" />
+    <Content Include="lwh\js\doctor_edit.js" />
+    <Content Include="lwh\js\doctor_list.js" />
+    <Content Include="lwh\js\images\sort_asc.png" />
+    <Content Include="lwh\js\images\sort_asc_disabled.png" />
+    <Content Include="lwh\js\images\sort_both.png" />
+    <Content Include="lwh\js\images\sort_desc.png" />
+    <Content Include="lwh\js\images\sort_desc_disabled.png" />
+    <Content Include="lwh\js\index.js" />
+    <Content Include="lwh\js\jquery.form.js" />
+    <Content Include="lwh\js\log_query.js" />
+    <Content Include="lwh\js\order_list.js" />
+    <Content Include="lwh\js\order_pay.js" />
+    <Content Include="lwh\js\user_add.js" />
+    <Content Include="lwh\js\user_edit.js" />
+    <Content Include="lwh\js\user_list.js" />
+    <Content Include="lwh\list.html" />
+    <Content Include="lwh\login.html" />
+    <Content Include="lwh\log_query.html" />
+    <Content Include="lwh\order_list.html" />
+    <Content Include="lwh\order_pay.html" />
+    <Content Include="lwh\test.html" />
+    <Content Include="lwh\user_add.html" />
+    <Content Include="lwh\user_edit.html" />
+    <Content Include="lwh\user_list.html" />
     <Content Include="view\static\css\main.css" />
     <Content Include="view\static\css\style.css" />
     <Content Include="view\static\css\toggles.css" />
@@ -180,9 +237,6 @@
     <Compile Include="control\hospitalUpdate.ashx.cs">
       <DependentUpon>hospitalUpdate.ashx</DependentUpon>
     </Compile>
-    <Compile Include="control\orderDelete.ashx.cs">
-      <DependentUpon>orderDelete.ashx</DependentUpon>
-    </Compile>
     <Compile Include="control\doctorAdd.ashx.cs">
       <DependentUpon>doctorAdd.ashx</DependentUpon>
     </Compile>
@@ -195,20 +249,17 @@
     <Compile Include="control\doctorUpdate.ashx.cs">
       <DependentUpon>doctorUpdate.ashx</DependentUpon>
     </Compile>
-    <Compile Include="control\orderAdd.ashx.cs">
-      <DependentUpon>orderAdd.ashx</DependentUpon>
-    </Compile>
     <Compile Include="control\orderList.ashx.cs">
       <DependentUpon>orderList.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\orderPayList.ashx.cs">
       <DependentUpon>orderPayList.ashx</DependentUpon>
     </Compile>
-    <Compile Include="control\orderSendUpdate.ashx.cs">
-      <DependentUpon>orderSendUpdate.ashx</DependentUpon>
-    </Compile>
     <Compile Include="control\orderUpdate.ashx.cs">
       <DependentUpon>orderUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\selectCity.ashx.cs">
+      <DependentUpon>selectCity.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\showLog.ashx.cs">
       <DependentUpon>showLog.ashx</DependentUpon>
@@ -331,9 +382,6 @@
     <Content Include="control\test\ucpaasTest.ashx" />
     <Content Include="control\test\ucpassListTest.ashx" />
     <Content Include="control\orderList.ashx" />
-    <Content Include="control\orderAdd.ashx" />
-    <Content Include="control\orderDelete.ashx" />
-    <Content Include="control\orderSendUpdate.ashx" />
     <Content Include="control\orderUpdate.ashx" />
     <Content Include="control\hospitalAdd.ashx" />
     <Content Include="control\hospitalDelete.ashx" />
@@ -343,6 +391,16 @@
     <Content Include="control\orderPayList.ashx" />
     <Content Include="control\ucpaasDetial.ashx" />
     <Content Include="control\ucpaasList.ashx" />
+    <Content Include="control\selectCity.ashx" />
+    <None Include="lwh\bootstrap\css\bootstrap-theme.css.map" />
+    <None Include="lwh\bootstrap\css\bootstrap-theme.min.css.map" />
+    <None Include="lwh\bootstrap\css\bootstrap.css.map" />
+    <None Include="lwh\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="lwh\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="lwh\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="lwh\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="lwh\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="lwh\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="view\static\css\style.css.bak" />
     <None Include="view\static\fontello-5d544c46\config.json" />
     <None Include="view\static\fontello-5d544c46\config.json.bak" />
