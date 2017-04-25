@@ -26,7 +26,7 @@ namespace LW_AskOnline.Web.control
             JObject o = (JObject)ja;
             BLL.ask_order adlBll = new BLL.ask_order();
             //将数据放到model
-            Model.ask_order adlModel = new Model.ask_order();
+            Model.ask_order adlModel = adlBll.GetModel(int.Parse(o["oid"].ToString()));
             adlModel.ocommittime = DateTime.Parse(o["ocommittime"].ToString());
             bool check = adlBll.Update(adlModel);
             //写入日志
@@ -40,7 +40,6 @@ namespace LW_AskOnline.Web.control
             }
             context.Response.Write(callback + "(" + o + ")");
         }
-
         public bool IsReusable
         {
             get

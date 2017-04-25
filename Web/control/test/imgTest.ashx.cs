@@ -11,12 +11,12 @@ namespace LW_AskOnline.Web.control.test
     /// </summary>
     public class imgTest : IHttpHandler
     {
-        public class Account
+       /* public class Account
         {
             public string error { get; set; }
             public string msg { get; set; }
             public string url { get; set; }
-        }
+        }*/
 
         public void ProcessRequest(HttpContext context)
         {
@@ -38,16 +38,18 @@ namespace LW_AskOnline.Web.control.test
           
                 context.Response.ContentType = "text/plain";
                 context.Response.ContentEncoding = Encoding.UTF8;
-               // string temp= context.Request.Form["file"];
-                HttpPostedFile img = context.Request.Files["file"];
-                string filename = context.Request.Form["filename"];
+                HttpPostedFile file = context.Request.Files[0];
+                String fileName = System.IO.Path.GetFileName(file.FileName);
+                file.SaveAs(context.Server.MapPath("~/") + fileName);
+                //HttpPostedFile img = context.Request.Files["file"];
+               // string filename = context.Request.Form["filename"];
                // string callback = context.Request.QueryString["callback"].ToString();
-                string s = img.FileName;
+               /* string s = img.FileName;
                 string path = "~/upload/" + s.Substring(s.LastIndexOf("//") + 1);
                 img.SaveAs(context.Server.MapPath(path));
-                string data = HttpRuntime.AppDomainAppVirtualPath + path.Substring(1);
+                string data = HttpRuntime.AppDomainAppVirtualPath + path.Substring(1);*/
                 //string json = Newtonsoft.Json.JsonConvert.SerializeObject(formData, Newtonsoft.Json.Formatting.Indented);
-                context.Response.Write(s);
+                context.Response.Write("OK");
            
         }
         

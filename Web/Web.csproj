@@ -104,6 +104,7 @@
     <Content Include="bin\System.Data.SQLite.dll" />
     <Content Include="bin\URLRewriter.dll" />
     <Content Include="control\img.html" />
+    <Content Include="control\upedFile\logfile.txt" />
     <Content Include="dll\Newtonsoft.Json.dll" />
     <Content Include="dll\URLRewriter.dll" />
     <Content Include="lwh\bootstrap\css\bootstrap-theme.css" />
@@ -357,7 +358,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="control\test\upedFile\" />
-    <Folder Include="control\upedFile\" />
     <Folder Include="upload\" />
   </ItemGroup>
   <ItemGroup>

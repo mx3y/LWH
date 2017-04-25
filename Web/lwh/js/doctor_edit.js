@@ -138,7 +138,6 @@
                 "ddeptid": $("#ddeptid").val(),
                 "dcity": $("#dcity_2").val(),
                 "dcityid": $("#dcityid").val(),
-                "dcity": $("#dcity_2").val(),
                 "dhospital": $("#dhospital").val(),
                 "dhospitalid": $("#dhospitalid").val(),
                 "dcontent": $("#dcontent").val(),
