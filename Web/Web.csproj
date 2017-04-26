@@ -250,6 +250,15 @@
     <Compile Include="control\doctorUpdate.ashx.cs">
       <DependentUpon>doctorUpdate.ashx</DependentUpon>
     </Compile>
+    <Compile Include="control\login.ashx.cs">
+      <DependentUpon>login.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\masterEdit.ashx.cs">
+      <DependentUpon>masterEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\masterSendEdit.ashx.cs">
+      <DependentUpon>masterSendEdit.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\orderList.ashx.cs">
       <DependentUpon>orderList.ashx</DependentUpon>
     </Compile>
@@ -273,6 +282,9 @@
     </Compile>
     <Compile Include="control\doctorList.ashx.cs">
       <DependentUpon>doctorList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\test\cookieTest.ashx.cs">
+      <DependentUpon>cookieTest.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\test\deleteTest.ashx.cs">
       <DependentUpon>deleteTest.ashx</DependentUpon>
@@ -392,6 +404,10 @@
     <Content Include="control\ucpaasDetial.ashx" />
     <Content Include="control\ucpaasList.ashx" />
     <Content Include="control\selectCity.ashx" />
+    <Content Include="control\test\cookieTest.ashx" />
+    <Content Include="control\login.ashx" />
+    <Content Include="control\masterSendEdit.ashx" />
+    <Content Include="control\masterEdit.ashx" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.min.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap.css.map" />

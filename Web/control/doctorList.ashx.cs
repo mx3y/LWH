@@ -20,7 +20,7 @@ namespace LW_AskOnline.Web.control
             string callback = context.Request.QueryString["callback"].ToString();
             BLL.ask_doctor_list adlBLL = new BLL.ask_doctor_list();
             Model.ask_doctor_list adlModel = new Model.ask_doctor_list();
-            DataSet set = adlBLL.GetList("");
+            DataSet set = adlBLL.GetAllList();
             DataSet sendSet = set.Copy();
             sendSet.Clear();
             //dstate为1的加入sendSet
