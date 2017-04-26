@@ -23,7 +23,7 @@ namespace LW_AskOnline.Web.control
             BLL.ask_order adlBll = new BLL.ask_order();
             Model.ask_order adlModel = new Model.ask_order();
             adlModel = adlBll.GetModel(id);
-            ---
+    
             bool check = adlBll.Update(adlModel);
             //写入日志
             if (check)
