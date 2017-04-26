@@ -31,13 +31,13 @@ namespace LW_AskOnline.Web.control
             //读json
             Object ja = JsonConvert.DeserializeObject(addParameter);
             JObject o = (JObject)ja;
-            Common.Log log = new Common.Log();
-            BLL.ask_city adlBll = new BLL.ask_city();
+            //Common.Log log = new Common.Log();
+           // BLL.ask_city adlBll = new BLL.ask_city();
             /*int cparent_id = Convert.ToInt32(o["cparent_id"].ToString());
             int cregion_grade = Convert.ToInt32(o["cregion_grade"].ToString());
             int cstatus = Convert.ToInt32(o["cstatus"].ToString());*/
             //将数据放到model
-            Model.ask_city adlModel = new Model.ask_city()
+           /* Model.ask_city adlModel = new Model.ask_city()
             {
                 cparent_id = 1,
                 cregion_name = o["name"].ToString(),
@@ -51,7 +51,7 @@ namespace LW_AskOnline.Web.control
             string ip = log.GetIP();
             string user = "USER";
             DateTime time = log.GetTime();
-            log.WriteLogFile(handle, ip, user, time);  
+            log.WriteLogFile(handle, ip, user, time);  */
             //读取日志
            /* Common.Log log1 = new Common.Log();
             string[] lines = log1.ReadLogFile();
@@ -62,15 +62,22 @@ namespace LW_AskOnline.Web.control
             }
             json1 = json1.Substring(0, json1.Length - 1);
             json1 = string.Format("[{0}]", json1);*/
-            string [] lines = log.ReadLogFile();
+           /* string [] lines = log.ReadLogFile();
             List<string[]> list = new List<string[]>();
             for (int i = 0; i < lines.Length; i++)
             {
                 string[] line = Regex.Split(lines[i], " ", RegexOptions.IgnoreCase);
                 list.Add(line);
             }
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(list, Newtonsoft.Json.Formatting.Indented);
-                context.Response.Write(callback + "(" + json + ")");
+            string json = Newtonsoft.Json.JsonConvert.SerializeObject(list, Newtonsoft.Json.Formatting.Indented);*/
+            /*HttpCookie cookie = new HttpCookie();
+            cookie.Value = "Tom";
+            cookie.Expires = DateTime.Now.AddDays(1);
+            context.Response.Cookies.Add(cookie);*/
+            HttpCookie co = new HttpCookie();
+            context.Response.Cookies["name"].Value = "aa";
+            context.Response.Cookies["name"].Expires = DateTime.Now.AddHours(1);
+                context.Response.Write(context.Request.Cookies["name"]);
         }
 
         public bool IsReusable
