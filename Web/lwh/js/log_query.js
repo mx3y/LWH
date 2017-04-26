@@ -16,7 +16,7 @@ $(document).ready(function(){
     });
     $.ajax({ 
         type:"post", 
-        url:"http://192.168.1.168/api/showLog",
+        url:"http://192.168.1.172/api/showLog",
         dataType:"jsonp",
         jsonp:"callback", 
         success:function(data){

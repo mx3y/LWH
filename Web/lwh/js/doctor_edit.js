@@ -22,7 +22,7 @@
         if(getUrlParam("id")){
             $.ajax({ 
                 type:"post", 
-                url:"http://192.168.1.168/api/doctorSendUpdate",
+                url:"http://192.168.1.172/api/doctorSendUpdate",
                 data:{id:getUrlParam("id")}, 
                 dataType:"jsonp",
                 jsonp:"callback", 
@@ -31,8 +31,9 @@
                     $("#dtype").val(data["dtype"]);
                     $("#ddept").val(data["ddept"]);
                     $("#ddeptid").val(data["ddeptid"]);
-                    $("#dcity").val(data["dcity"]);
                     $("#dcityid").val(data["dcityid"]);
+                    $("#dhospital").val(data["dhospital"]);
+                    $("#dhospitalid").val(data["dhospitalid"]);
                     $("#dprofessor").val(data["dprofessor"]);
                     $("#dcontent").val(data["dcontent"]);
                     $("#dmonery").val(data["dmonery"]);
@@ -50,12 +51,59 @@
                     $("#dqq").val(data["dqq"]);
                     $("#daccount").val(data["daccount"]);
                     $("#dpassword").val(data["dpassword"]);
+                    $("#dsort").val(data["dsort"]);
+                    $("#dishot").val(data["dishot"]);
+                    $("#dstate").val(data["dstate"]);
                 },
                 error:function(){
                     alert('get-url-fail');
                 }
             });
         }
+        var city = null;
+        $.ajax({ 
+            type:"post", 
+            url:"http://192.168.1.172/api/selectCity",
+            data:{
+                cid: null
+            },
+            dataType:"jsonp",
+            jsonp:"callback", 
+            success:function(data){
+                city = data.ds;
+                $.each(data.ds,function(i,n){
+                    $("#dcity_1").append("<option>"+n.cregion_name+"</option>");
+                });
+            },
+            error:function(){
+                console.log("city_1 error.");
+            }
+        });
+        $("#dcity_1").change(function(){
+            var city_id = null;
+            $.each(city,function(i,n){
+                 if(n.cregion_name == $("#dcity_1").val())
+                    city_id = n.cid;
+            });
+            $("#dcity_2").html("<option>请选择</option>");
+            $.ajax({ 
+                type:"post", 
+                url:"http://192.168.1.172/api/selectCity",
+                data:{
+                    cid: city_id
+                },
+                dataType:"jsonp",
+                jsonp:"callback", 
+                success:function(data){
+                    $.each(data.data,function(i,n){
+                        $("#dcity_2").append("<option>"+n.cregion_name+"</option>");
+                    });  
+                },
+                error:function(){
+                    console.log("city_2 error.");
+                }
+            });
+        });
         $(".panel .cancal").click(function(){
             window.location.href = "doctor_list.html";
         });
@@ -86,10 +134,12 @@
                 "dname": $("#dname").val(),
                 "dtype": $("#dtype").val(),
                 "ddept": $("#ddept").val(),
+				"dprofessor": $("#dprofessor").val(),
                 "ddeptid": $("#ddeptid").val(),
-                "dcity": $("#dcity").val(),
+                "dcity": $("#dcity_2").val(),
                 "dcityid": $("#dcityid").val(),
-                "dprofessor": $("#dprofessor").val(),
+                "dhospital": $("#dhospital").val(),
+                "dhospitalid": $("#dhospitalid").val(),
                 "dcontent": $("#dcontent").val(),
                 "dmonery": $("#dmonery").val(),
                 "ddiscount": $("#ddiscount").val(),
@@ -106,6 +156,9 @@
                 "dqq": $("#dqq").val(),
                 "daccount": $("#daccount").val(),
                 "dpassword": $("#dpassword").val(),
+                "dsort": $("#dsort").val(),
+                "dishot": $("#dishot").val(),
+                "dstate": $("#dstate").val(),
             }
             doctor = JSON.stringify(doctor);
             var ddoctor={
@@ -114,7 +167,7 @@
             console.log(ddoctor);
             $.ajax({ 
                 type:"post", 
-                url:"http://192.168.1.168/api/doctorUpdate",
+                url:"http://192.168.1.172/api/doctorUpdate",
                 data:ddoctor, 
                 dataType:"jsonp",
                 jsonp:"callback", 

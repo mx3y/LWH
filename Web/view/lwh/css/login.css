@@ -1,0 +1,182 @@
+body{
+	margin: 0;
+	padding: 0;
+	background:url("../images/bg.jpg") no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-blend-mode: soft-light;
+	z-index: -1;
+}
+.bg-color{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #303640;
+	opacity: 0.8;
+}
+.head{
+	position: relative;
+	text-align: center;
+	margin-top: 30px;
+	padding-top: 40px;
+	padding-bottom: 50px;
+	font-size: 28px;
+	font-weight: normal;
+	color: #fff;
+}
+.head span{
+	display: inline-block;
+	height: 65px;
+	line-height: 65px;
+}
+.left{
+	position: relative;
+	background: rgba(60,173,163,0.8);
+	height: 450px;
+	padding-left: 0;
+	border-radius: 5px 0 0 5px;
+	border: none;
+}
+.left .bg-pic{
+	position: absolute;
+	bottom: 0;
+	width:	100%;
+	height: 100%;
+	z-index: -1;
+}
+.left .img{
+	text-align: center;
+	padding: 90px 0 40px 0;
+}
+.left .name{
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+}
+.left-pic{
+	width: 100px;
+	height: 100px;
+}
+.right{
+	position: relative;
+	background: #fff;
+	height: 450px;
+	padding-top: 90px;
+	padding-left: 40px;
+	border-radius: 0 5px 5px 0;
+	border: none;
+}
+.right h4{
+	font-size: 20px;
+}
+.right h4 small{
+	display: inline-block;
+	padding-left: 10px;
+	font-size: 15px;
+}
+.right .login-account{
+	width: 90%;
+	margin-top: 30px;
+	height: 30px;
+	line-height: 30px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+}
+.right .login-account:focus{
+	outline: none;
+	border-bottom: 1px solid #aaa;
+}
+.right .login-pwd{
+	width: 90%;
+	margin-top: 20px;
+	height: 30px;
+	line-height: 30px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+}
+.right .login-pwd:focus{
+	outline: none;
+	border-bottom: 1px solid #aaa;
+}
+.right .login-rmb{
+	margin-top: 20px;
+	margin-right: 10px;
+}
+.right .login-sub{
+	margin-top: 20px;
+	width: 130px;
+	height: 40px;
+	line-height: 30px;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	border: 2px solid #41b2a6;
+	border-radius: 20px;
+	color: #41b2a6;
+	background: #fff;
+}
+.right .login-sub:focus{
+	outline: none;
+}
+.right .login-sub:hover{
+	background: #41b2a6;
+	color: #fff;
+}
+.right .message{
+	position: absolute;
+	right: 15%;
+	bottom: 10%;
+	color: #aaa;
+	font-size: 12px;
+}
+.right .glyphicon-user{
+	position: relative;
+	left: -25px;
+	color: #ddd;
+}
+.right .glyphicon-lock{
+	position: relative;
+	left: -25px;
+	color: #ddd;
+}
+.right .glyphicon-earphone{
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 10px;
+}
+.right .error{
+	display: none;
+	position: absolute;
+	left: -20%;
+	top: 50%;
+	background: rgba(226,117,114,0.8);
+	width: 300px;
+	height: 75px;
+	padding-top: 20px;
+	padding-left: 30px;
+}
+.right .glyphicon-remove-sign{
+	margin-right: 20px;
+	color: #fff;
+	font-size: 30px;
+	vertical-align: top;
+}
+.right .error-message{
+	color: #fff;
+	vertical-align: top;
+	font-size: 20px;
+}
+.footer{
+	width: 100%;
+	position: absolute;
+	height: 5%;
+	bottom: 0;
+	background: #353a42;
+	opacity: 0.9;
+}
+.footer .copy{
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding-top: 10px;
+}

@@ -32,10 +32,10 @@ namespace LW_AskOnline.Web.control
                 ddept = o["ddept"].ToString(),
                 ddeptid = o["ddeptid"].ToString(),
                 dtype = o["dtype"].ToString(),
-                dhospital = "isnull",
+                dhospital = o["dhospital"].ToString(),
                 dcityid = o["dcityid"].ToString(),
                 dcity = o["dcity"].ToString(),
-                dhospitalid = 0,
+                dhospitalid = int.Parse(o["dhospitalid"].ToString()),
                 dprofessor = o["dprofessor"].ToString(),
                 dcontent = o["dcontent"].ToString(),
                 dmonery = int.Parse(o["dmonery"].ToString()),
@@ -55,9 +55,9 @@ namespace LW_AskOnline.Web.control
                 dpassword = o["dpassword"].ToString(),
                 dcreadate = DateTime.Parse("1988-8-8"),
                 dlastlogin = DateTime.Parse("2018-1-8"),
-                dsort = 0,
-                dishot = 0,
-                dstate = 1
+                dsort = int.Parse(o["dsort"].ToString()),
+                dishot = int.Parse(o["dishot"].ToString()),
+                dstate = int.Parse(o["dstate"].ToString())
             };
             BLL.ask_doctor_list adlBll = new BLL.ask_doctor_list();
             int check = adlBll.Add(adlModel);

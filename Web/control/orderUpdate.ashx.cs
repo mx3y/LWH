@@ -26,24 +26,8 @@ namespace LW_AskOnline.Web.control
             JObject o = (JObject)ja;
             BLL.ask_order adlBll = new BLL.ask_order();
             //将数据放到model
-            Model.ask_order adlModel = new Model.ask_order()
-            {
-                oid = int.Parse(o["oid"].ToString()),
-                ouid = int.Parse(o["ouid"].ToString()),
-                odid = int.Parse(o["odid"].ToString()),
-                otype = int.Parse(o["otype"].ToString()),
-                oresult = int.Parse(o["oresult"].ToString()),
-                ostate = int.Parse(o["ostate"].ToString()),
-                ocreatetime = DateTime.Parse(o["ocreatetime"].ToString()),
-                ocommittime = DateTime.Parse(o["ocommittime"].ToString()),
-                opublicmonery = int.Parse(o["opublicmonery"].ToString()),
-                oprivatemonery = int.Parse(o["oprivatemonery"].ToString()),
-                ototalmonery = int.Parse(o["ototalmonery"].ToString()),
-                otransid = int.Parse(o["otransid"].ToString()),
-                ocallresult = o["ocallresult"].ToString(),
-                ocallid = o["ocallid"].ToString(),
-                ocalldate = o["ocalldate"].ToString()
-            };
+            Model.ask_order adlModel = adlBll.GetModel(int.Parse(o["oid"].ToString()));
+            adlModel.ocommittime = DateTime.Parse(o["ocommittime"].ToString());
             bool check = adlBll.Update(adlModel);
             //写入日志
             if (check)
@@ -56,7 +40,6 @@ namespace LW_AskOnline.Web.control
             }
             context.Response.Write(callback + "(" + o + ")");
         }
-
         public bool IsReusable
         {
             get
