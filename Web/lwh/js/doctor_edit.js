@@ -4,6 +4,7 @@
             var r = window.location.search.substr(1).match(reg);  //匹配目标参数
             if (r != null) return unescape(r[2]); return null; //返回参数值
         }
+        $("#master_name").text($.cookie("mname"));
         $(".nav-open").bind("click",function(){
             $(".nav-left").css("left","0px");
             $(".main").css("left","12%");
@@ -134,10 +135,10 @@
                 "dname": $("#dname").val(),
                 "dtype": $("#dtype").val(),
                 "ddept": $("#ddept").val(),
-				"dprofessor": $("#dprofessor").val(),
                 "ddeptid": $("#ddeptid").val(),
                 "dcity": $("#dcity_2").val(),
                 "dcityid": $("#dcityid").val(),
+                "dcity": $("#dcity_2").val(),
                 "dhospital": $("#dhospital").val(),
                 "dhospitalid": $("#dhospitalid").val(),
                 "dcontent": $("#dcontent").val(),

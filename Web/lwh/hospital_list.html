@@ -5,15 +5,13 @@
     <title>六维健康管理后台</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" type="text/css" href="js/dataTables/dataTables.bootstrap.css">
     <script type="text/javascript" src="bootstrap/js/jquery-3.2.0.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript" src="js/dataTables/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="js/jquery.cookie.js"></script>
     <script type="text/javascript" src="js/dataTables/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" src="js/order_pay.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/hospital_list.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default" role="navigation">
@@ -56,7 +54,7 @@
                     <span>用户管理</span>
                 </a>
             </li>
-            <li>
+            <li class="li-active">
                 <a href="hospital_list.html">
                     <span class="glyphicon glyphicon-user">
                     <span>医院管理</span>
@@ -74,7 +72,7 @@
                     <span>订单查询</span>
                 </a>
             </li>
-            <li class="li-active">
+            <li>
                 <a href="order_pay.html">
                     <span class="glyphicon glyphicon-user">
                     <span>订单支付</span>
@@ -94,22 +92,19 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">全部订单</h3>
+                            <h3 class="panel-title">医院列表</h3>
                         </div>
                         <div class="panel-body">
+                            <a class="btn btn-primary" href="hospital_add.html"><span class=" glyphicon glyphicon-plus" style="padding-right: 10px"></span>新增医院</a>
                             <div class="table">
-                                <table class="table table-bordered table-hover" id="order-list">
+                                <table class="table table-bordered table-hover" id="hospital-list">
                                     <thead>
                                         <tr>
-                                            <th>订单编号</th>
-                                            <th>用户编号</th>
-                                            <th>商户单号</th>
-                                            <th>微信单号</th>
-                                            <th>交易金额</th>
-                                            <th>创建支付订单日期</th>
-                                            <th>完成支付订单日期</th>
-                                            <th>支付微信帐号</th>
-                                            <th>支付完成状态</th>
+                                            <th>医院名称</th>
+                                            <th>所属城市</th>
+                                            <th>医院级别</th>
+                                            <th>医院地址</th>
+                                            <th>操作</th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -118,29 +113,6 @@
                     </div><!-- panel -->
                 </div>
            </div><!-- row -->
-        </div>
-        <!-- 模态框（Modal） -->
-        <div class="modal fade" id="change-date" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">修改订单执行日期</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div style="margin: 30px 100px;">
-                            <input style="width: 80px;margin:0 10px;" placeholder="年" id="year">-
-                            <input style="width: 70px;margin:0 10px;" placeholder="月" id="month">-
-                            <input style="width: 70px;margin:0 10px;" placeholder="日" id="day">
-                        </div>
-                        <span style="display: none;"></span>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                        <button type="button" class="btn btn-primary" id="change-sbt">提交更改</button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal -->
         </div>
         <div class="success">
             <span class="glyphicon glyphicon-ok"></span><span class="success-message">删除成功</span>

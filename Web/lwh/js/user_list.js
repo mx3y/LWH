@@ -16,6 +16,7 @@ function del(cid){
     });
 }
 $(document).ready(function(){
+    $("#master_name").text($.cookie("mname"));
     $(".nav-open").bind("click",function(){
         $(".nav-left").css("left","0px");
         $(".main").css("left","12%");
@@ -102,9 +103,8 @@ $(document).ready(function(){
             {
                 "targets": [7],
                 "render": function(data, type, row, full) {
-                    return "<a class='btn btn-sm btn-primary' style='margin-right:10px' href='user_edit.html?id="+data.uuid+"''>修改</a>"
-                    +"<button class='btn btn-sm btn-danger' onclick='del("+data.uuid+")'>删除</button>";
-
+                    return "<a class='btn btn-sm btn-link' href='user_edit.html?id="+data.uuid+"''><span class='glyphicon glyphicon-wrench' style='margin-right:5px;'></span>修改</a>"
+                    +"<button class='btn btn-sm btn-link' onclick='del("+data.uuid+")'><span class='glyphicon glyphicon-trash' style='margin-right:5px;'></span>删除</button>";
                 }
             }
         ]
