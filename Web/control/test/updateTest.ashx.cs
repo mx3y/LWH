@@ -25,11 +25,11 @@ namespace LW_AskOnline.Web.control.test
             BLL.ask_city adlBll = new BLL.ask_city();
             Model.ask_city adlModel = new Model.ask_city();
             adlModel.carea_code = "ss";
-            adlModel.cparent_id = 11;
-            adlModel.cregion_grade = 11;
+            adlModel.cparent_id = "11";
+            adlModel.cregion_grade = "11";
             adlModel.cdistrict_code = "ss";
             adlModel.cstatus = 1;
-            adlModel.cid = 3;
+            adlModel.cid = "3";
             adlModel.cregion_name = o["name"].ToString();
             adlBll.Update(adlModel);
             context.Response.Write(callback+"("+o+")");

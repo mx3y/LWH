@@ -74,7 +74,7 @@ namespace LW_AskOnline.Web.control
             cookie.Value = "Tom";
             cookie.Expires = DateTime.Now.AddDays(1);
             context.Response.Cookies.Add(cookie);*/
-            HttpCookie co = new HttpCookie();
+            //HttpCookie co = new HttpCookie();
             context.Response.Cookies["name"].Value = "aa";
             context.Response.Cookies["name"].Expires = DateTime.Now.AddHours(1);
                 context.Response.Write(context.Request.Cookies["name"]);

@@ -57,7 +57,17 @@ namespace LW_AskOnline.Web.control
                 dlastlogin = DateTime.Parse("2018-1-8"),
                 dsort = int.Parse(o["dsort"].ToString()),
                 dishot = int.Parse(o["dishot"].ToString()),
-                dstate = int.Parse(o["dstate"].ToString())
+                dstate = int.Parse(o["dstate"].ToString()),
+                d_onlinedate = o["d_onlinedate"].ToString(),
+                d_message = o["d_message"].ToString(),
+                d_count = int.Parse(o["d_count"].ToString()),
+                d_score = o["d_score"].ToString(),
+                d_professionscore = o["d_professionscore"].ToString(),
+                d_professioncount = o["d_professioncount"].ToString(),
+                d_servicesscore = o["d_servicesscore"].ToString(),
+                d_servicescount = o["d_servicescount"].ToString(),
+                d_replyscore = o["d_replyscore"].ToString(),
+                d_replycount = o["d_replycount"].ToString()
             };
             BLL.ask_doctor_list adlBll = new BLL.ask_doctor_list();
             int check = adlBll.Add(adlModel);
