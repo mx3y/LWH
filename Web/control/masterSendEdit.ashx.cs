@@ -20,9 +20,6 @@ namespace LW_AskOnline.Web.control
             string callback = context.Request.QueryString["callback"].ToString();
             Model.ask_master adlModel = new Model.ask_master();
             BLL.ask_master adlBll = new BLL.ask_master();
-            //Common.GetCookie cookie = new Common.GetCookie();
-            //string mid = cookie.getCookie("mid");
-            //string mid = context.Request.Cookies["mid"].Value;
             if (context.Request.Cookies["mid"] != null)
             {
                 string mid = context.Request.Cookies["mid"].Value;

@@ -43,7 +43,8 @@ namespace LW_AskOnline.Web.control
                 uregisterip = "isnull",
                 ulastdatetime = DateTime.Parse("2022-5-9"),
                 ulastip = "isnull",
-                ustate = int.Parse(o["ustate"].ToString())
+                ustate = int.Parse(o["ustate"].ToString()),
+                uname = o["uname"].ToString()
             };
             bool check = adlBll.Update(adlModel);
             //写入日志

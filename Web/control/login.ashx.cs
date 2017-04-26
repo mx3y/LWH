@@ -37,26 +37,35 @@ namespace LW_AskOnline.Web.control
             string ip = log.GetIP();
             Acount acount = new Acount();
             DataSet set = adlBll.GetAllList();
+            bool check = false;
+            int index = 0;
             for (int i = 0; i < set.Tables[0].Rows.Count; i++)
             { 
                 if(set.Tables[0].Rows[i]["mnumber"].ToString().Equals(mname)&&set.Tables[0].Rows[i]["mpassword"].ToString().Equals(pwd))
                 {
-                    int id = int.Parse(set.Tables[0].Rows[i]["mid"].ToString());
-                    Model.ask_master adlModel = adlBll.GetModel(id);
-                    adlModel.mlastlogintime = time;
-                    adlModel.mlastip = ip;
-                    adlModel.mstate = 1;
-                    adlModel.mlogincount =adlModel.mlogincount+1;
-                    adlBll.Update(adlModel);
-                    acount.status = "1";
-                    acount.mid = id.ToString();
-                    acount.mname = adlModel.mname;
-                }else
-                {
-                    acount.status="0";
-                    acount.mid = null;
-                    acount.mname = null;
+                    index = i;
+                    check = true;
+                    break;
                 }
+            }
+            if(check)
+            {
+                int id = int.Parse(set.Tables[0].Rows[index]["mid"].ToString());
+                Model.ask_master adlModel = adlBll.GetModel(id);
+                adlModel.mlastlogintime = time;
+                adlModel.mlastip = ip;
+                adlModel.mstate = 1;
+                adlModel.mlogincount =adlModel.mlogincount+1;
+                adlBll.Update(adlModel);
+                acount.status = "1";
+                acount.mid = id.ToString();
+                acount.mname = adlModel.mname;
+            }
+            else
+            {
+                acount.status = "0";
+                acount.mid = null;
+                acount.mname = null;
             }
             string json = Newtonsoft.Json.JsonConvert.SerializeObject(acount, Newtonsoft.Json.Formatting.Indented);
             context.Response.Write(callback+"("+json+")");
