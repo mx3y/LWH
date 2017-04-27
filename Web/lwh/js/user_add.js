@@ -1,4 +1,5 @@
  $(document).ready(function (){
+        $("#master_name").text($.cookie("mname"));
         $(".nav-open").bind("click",function(){
             $(".nav-left").css("left","0px");
             $(".main").css("left","12%");

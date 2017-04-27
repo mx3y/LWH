@@ -18,9 +18,9 @@ namespace LW_AskOnline.Web.control.test
             context.Response.ContentEncoding = Encoding.UTF8;
             string callback = context.Request.QueryString["callback"].ToString();
             string parameter = context.Request.QueryString["id"].ToString();
-            int id = Convert.ToInt32(parameter);
+            //int id = Convert.ToInt32(parameter);
             BLL.ask_city adlBll = new BLL.ask_city();
-            adlBll.Delete(id);
+            adlBll.Delete(parameter);
 
             context.Response.Write(callback+"()");
         }

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("#master_name").text($.cookie("mname"));
     $(".nav-open").bind("click",function(){
         $(".nav-left").css("left","0px");
         $(".main").css("left","12%");
@@ -16,7 +17,7 @@ $(document).ready(function(){
     });
     $.ajax({ 
         type:"post", 
-        url:"http://192.168.1.172/api/showLog",
+        url:"http://192.168.1.168/api/showLog",
         dataType:"jsonp",
         jsonp:"callback", 
         success:function(data){

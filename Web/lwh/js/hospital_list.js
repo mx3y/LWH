@@ -1,3 +1,20 @@
+function del(hid){
+    $.ajax({
+        type:"post", 
+        url:"http://192.168.1.172/api/hospitalDelete",
+        data:{id: hid}, 
+        dataType:"jsonp",
+        jsonp:"callback", 
+        success:function(data){ 
+            $(".success").fadeIn("slow").delay(1000).fadeOut("slow",function(){                   
+                window.location.href = "hospital_list.html";
+            });
+        },
+        error:function(){
+            alert('fail');
+        }
+    });
+}
 $(document).ready(function(){
     $("#master_name").text($.cookie("mname"));
     $(".nav-open").bind("click",function(){
@@ -15,7 +32,7 @@ $(document).ready(function(){
         $(".nav-close").hide();
         $(".nav-open").show();
     });
-    $("#order-list").DataTable({
+    $("#hospital-list").DataTable({
         "bFilter": false,
         "info":true,
         "bLengthChange" : false,  
@@ -39,45 +56,26 @@ $(document).ready(function(){
 
         },
         "ajax": {
-            "url": "http://192.168.1.172/api/orderPayList",
+            "url": "http://192.168.1.172/api/hospitalList",
             "dataType": "jsonp"
         },
         "columns" : [
-            {"data": "oid"},
-            {"data": "uuid"},
-            {"data": "porder"},
-            {"data": "pwxorder"},
-            {"data": "pmonery"},
-            {"data": null},
-            {"data": null},
-            {"data": "popenid"},
+            {"data": "hname"},
+            {"data": "hcity"},
+            {"data": "hlevel"},
+            {"data": "haddress"},
             {"data": null}
         ],
        "columnDefs": [
             {
-                "targets": [5],
+                "targets": [4],
                 "render": function(data, type, row, full) {
-                    var date = data.pcreatetime.split("T")[0];
-                    return date;
-                }
-            },
-            {
-                "targets": [6],
-                "render": function(data, type, row, full) {
-                    var date = data.povertime.split("T")[0];
-                    return date;
-                }
-            },
-            {
-                "targets": [8],
-                "render": function(data, type, row, full) {
-                    if(data.pstatus == 0)
-                        return "未完成";
-                    else if(data.pstatus == 1)
-                        return "已完成";
-
+                    return "<a class='btn btn-sm btn-link' href='hospital_edit.html?id="+data.hid+"'><span class='glyphicon glyphicon-wrench' style='margin-right:5px;'></span>修改</a>"
+                    +"<button class='btn btn-sm btn-link' onclick='del("+data.hid+")'><span class='glyphicon glyphicon-trash' style='margin-right:5px;'></span>删除</button>"
+                    +"<a class='btn btn-sm btn-link' href='dept_list.html?id="+data.hid+"'><span class='glyphicon glyphicon-search' style='margin-right:5px;'></span>查看科室</a>";
                 }
             }
         ]
     });
+
 });

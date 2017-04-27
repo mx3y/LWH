@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>六维健康管理后台</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/user_add.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
     <script type="text/javascript" src="bootstrap/js/jquery-3.2.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery.cookie.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
-    <script type="text/javascript" src="js/user_add.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/master_edit.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default" role="navigation">
@@ -47,16 +47,10 @@
                     <span>医生管理</span>
                 </a>
             </li>
-            <li class="li-active">
+            <li>
                 <a href="user_list.html">
                     <span class="glyphicon glyphicon-user">
                     <span>用户管理</span>
-                </a>
-            </li>
-            <li>
-                <a href="hospital_list.html">
-                    <span class="glyphicon glyphicon-user">
-                    <span>医院管理</span>
                 </a>
             </li>
             <li>
@@ -86,99 +80,64 @@
         <span class="glyphicon glyphicon-chevron-left"></span>
     </div>
     <div class="main" style="padding:0 30px;">
-        <a class="btn btn-primary pull-right" href="user_list.html" style="margin: 20px 15px"><span class="glyphicon glyphicon-chevron-left" style="padding-right: 10px"></span>返回</a>
+        <a class="btn btn-primary pull-right" href="doctor_list.html" style="margin: 20px 15px"><span class="glyphicon glyphicon-chevron-left" style="padding-right: 10px"></span>返回</a>
         <div class="container-fluid">
             <div class="row" >
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">新增用户</h3>
+                            <h3 class="panel-title">编辑信息</h3>
                         </div>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">用户类型</label>
-                                        <input type="text" class="form-control" id="utijtid">
-                                        <span class="help-block"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="name">公司额度</label>
-                                        <input type="text" class="form-control" id="ucompanymonery">
-                                        <span class="help-block"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="name">充值金额</label>
-                                        <input type="text" class="form-control" id="umonery">
-                                        <span class="help-block"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="name">用户帐号</label>
-                                        <input type="text" class="form-control" id="uaccount">
-                                        <span class="help-block"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="name">用户密码</label>
-                                        <input type="text" class="form-control" id="upassword">
-                                        <span class="help-block"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="name">身份证号</label>
-                                        <input type="text" class="form-control" id="ucardnumber">
-                                        <span class="help-block"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="name">用户邮箱</label>
-                                        <input type="text" class="form-control" id="umail">
-                                        <span class="help-block"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group input-append date form_datetime">
-                                        <label for="name">用户出生日期</label>
-                                        <input class="form-control" id="ubrithday">
+                                        <label for="name">姓名</label>
+                                        <input type="text" class="form-control" id="mname">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="name">性别</label>
-                                        <select class="form-control" id="usex">
+                                        <select class="form-control" id="msex">
                                             <option>男</option>
                                             <option>女</option>
                                         </select>
-                                        <span class="help-block"></span>                                        
+                                        <span class="help-block"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">用户公司编号</label>
-                                        <input type="text" class="form-control" id="ucompanyid">
+                                        <label for="name">邮箱</label>
+                                        <input type="text" class="form-control" id="memail">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">用户使用状态</label>
-                                        <input type="text" class="form-control" id="ustate">
+                                        <label for="name">手机号码</label>
+                                        <input type="text" class="form-control" id="mtell">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="name">所属门店</label>
+                                        <input type="text" class="form-control" id="maddress">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <label for="name">备注信息</label>
+                                        <textarea class="form-control" rows="3" id="mremark" style="resize: none;"></textarea>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
@@ -193,7 +152,7 @@
            </div><!-- row -->
         </div>
         <div class="success">
-            <span class="glyphicon glyphicon-ok"></span><span class="success-message">添加成功</span>
+            <span class="glyphicon glyphicon-ok"></span><span class="success-message">修改成功</span>
         </div>
     </div>
 </body>

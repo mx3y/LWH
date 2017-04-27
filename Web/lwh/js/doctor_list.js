@@ -16,6 +16,7 @@ function del(cid){
     });
 }
 $(document).ready(function(){
+    $("#master_name").text($.cookie("mname"));
     $(".nav-open").bind("click",function(){
         $(".nav-left").css("left","0px");
         $(".main").css("left","12%");
@@ -89,12 +90,11 @@ $(document).ready(function(){
             {
                 "targets": [6],
                 "render": function(data, type, row, full) {
-                    return "<a class='btn btn-sm btn-primary' style='margin-right:10px' href='doctor_edit.html?id="+data.did+"''>修改</a>"
-                    +"<button class='btn btn-sm btn-danger' onclick='del("+data.did+")'>删除</button>";
+                    return "<a class='btn btn-sm btn-link' href='doctor_edit.html?id="+data.did+"''><span class='glyphicon glyphicon-wrench' style='margin-right:5px;'></span>修改</a>"
+                    +"<button class='btn btn-sm btn-link' onclick='del("+data.did+")'><span class='glyphicon glyphicon-trash' style='margin-right:5px;'></span>删除</button>";
 
                 }
             }
         ]
     });
-
 });
