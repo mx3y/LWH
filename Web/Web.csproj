@@ -274,6 +274,9 @@
     <Compile Include="control\doctorList.ashx.cs">
       <DependentUpon>doctorList.ashx</DependentUpon>
     </Compile>
+    <Compile Include="control\test\cookieTest.ashx.cs">
+      <DependentUpon>cookieTest.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\test\deleteTest.ashx.cs">
       <DependentUpon>deleteTest.ashx</DependentUpon>
     </Compile>
@@ -392,6 +395,7 @@
     <Content Include="control\ucpaasDetial.ashx" />
     <Content Include="control\ucpaasList.ashx" />
     <Content Include="control\selectCity.ashx" />
+    <Content Include="control\test\cookieTest.ashx" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.min.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap.css.map" />
