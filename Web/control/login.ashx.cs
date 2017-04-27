@@ -55,6 +55,10 @@ namespace LW_AskOnline.Web.control
                 adlModel.mlastlogintime = time;
                 adlModel.mlastip = ip;
                 adlModel.mstate = 1;
+                if (adlModel.mlogincount == null)
+                {
+                    adlModel.mlogincount = 0;
+                }
                 adlModel.mlogincount =adlModel.mlogincount+1;
                 adlBll.Update(adlModel);
                 acount.status = "1";
