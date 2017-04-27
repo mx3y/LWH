@@ -229,6 +229,9 @@
     <Compile Include="control\hospitalDelete.ashx.cs">
       <DependentUpon>hospitalDelete.ashx</DependentUpon>
     </Compile>
+    <Compile Include="control\hospitalDetial.ashx.cs">
+      <DependentUpon>hospitalDetial.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\hospitalList.ashx.cs">
       <DependentUpon>hospitalList.ashx</DependentUpon>
     </Compile>
@@ -408,6 +411,7 @@
     <Content Include="control\login.ashx" />
     <Content Include="control\masterSendEdit.ashx" />
     <Content Include="control\masterEdit.ashx" />
+    <Content Include="control\hospitalDetial.ashx" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.min.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap.css.map" />
