@@ -43,10 +43,11 @@ namespace LW_AskOnline.Web.control
             //写入日志
             if (check)
             {
-                string handle = "UPDATE";
                 string ip = log.GetIP();
-                string user = "HOSPITAL";
                 DateTime time = log.GetTime();
+                string handle = "UPDATE";
+                string user = "HOSPITAL";
+                //string master = context.Request.Cookies["mname"].Value;
                 log.WriteLogFile(handle, ip, user, time);
             }
             context.Response.Write(callback + "(" + o + ")");

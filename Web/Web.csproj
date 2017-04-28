@@ -104,7 +104,6 @@
     <Content Include="bin\System.Data.SQLite.dll" />
     <Content Include="bin\URLRewriter.dll" />
     <Content Include="control\img.html" />
-    <Content Include="control\upedFile\logfile.txt" />
     <Content Include="dll\Newtonsoft.Json.dll" />
     <Content Include="dll\URLRewriter.dll" />
     <Content Include="lwh\bootstrap\css\bootstrap-theme.css" />
@@ -259,6 +258,9 @@
     <Compile Include="control\doctorUpdate.ashx.cs">
       <DependentUpon>doctorUpdate.ashx</DependentUpon>
     </Compile>
+    <Compile Include="control\illpersionList.ashx.cs">
+      <DependentUpon>illpersionList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\login.ashx.cs">
       <DependentUpon>login.ashx</DependentUpon>
     </Compile>
@@ -274,11 +276,17 @@
     <Compile Include="control\orderPayList.ashx.cs">
       <DependentUpon>orderPayList.ashx</DependentUpon>
     </Compile>
+    <Compile Include="control\orderReplyList.ashx.cs">
+      <DependentUpon>orderReplyList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\orderUpdate.ashx.cs">
       <DependentUpon>orderUpdate.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\selectCity.ashx.cs">
       <DependentUpon>selectCity.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\selectDept.ashx.cs">
+      <DependentUpon>selectDept.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\showLog.ashx.cs">
       <DependentUpon>showLog.ashx</DependentUpon>
@@ -324,6 +332,9 @@
     </Compile>
     <Compile Include="control\ucpaasList.ashx.cs">
       <DependentUpon>ucpaasList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\selectHospital.ashx.cs">
+      <DependentUpon>selectHospital.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\userAdd.ashx.cs">
       <DependentUpon>userAdd.ashx</DependentUpon>
@@ -379,6 +390,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="control\test\upedFile\" />
+    <Folder Include="control\upedFile\" />
     <Folder Include="upload\" />
   </ItemGroup>
   <ItemGroup>
@@ -419,6 +431,10 @@
     <Content Include="control\masterEdit.ashx" />
     <Content Include="control\hospitalDetial.ashx" />
     <Content Include="control\deptAdd.ashx" />
+    <Content Include="control\selectDept.ashx" />
+    <Content Include="control\selectHospital.ashx" />
+    <Content Include="control\illpersionList.ashx" />
+    <Content Include="control\orderReplyList.ashx" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.min.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap.css.map" />

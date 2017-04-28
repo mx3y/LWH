@@ -8,9 +8,9 @@ using System.Data;
 namespace LW_AskOnline.Web.control
 {
     /// <summary>
-    /// selectCity 的摘要说明
+    /// selectDept 的摘要说明
     /// </summary>
-    public class selectCity : IHttpHandler
+    public class selectDept : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
@@ -18,18 +18,19 @@ namespace LW_AskOnline.Web.control
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
             string callback = context.Request.QueryString["callback"].ToString();
-            string getCid;
-            BLL.ask_city adlBll = new BLL.ask_city();
-            if (context.Request.QueryString["cid"].ToString() != "")
+            string getHid;
+            BLL.ask_dept adlBll = new BLL.ask_dept();
+            if (context.Request.QueryString["hid"].ToString() != "")
             {
-                getCid = context.Request.QueryString["cid"].ToString();
-                List<Model.ask_city> list = adlBll.GetModelList("cparent_id = '" + getCid + "'");
+                getHid = context.Request.QueryString["hid"].ToString();
+                int getDhid = int.Parse(getHid);
+                List<Model.ask_dept> list = adlBll.GetModelList("dhid = " + getDhid + "");
                 string json = Newtonsoft.Json.JsonConvert.SerializeObject(list, Newtonsoft.Json.Formatting.Indented);
                 context.Response.Write(callback + "(" + json + ")");
             }
             else
             {
-                List<Model.ask_city> list = adlBll.GetModelList("cparent_id='0'");
+                List<Model.ask_dept> list = adlBll.GetModelList("dhid=0");
                 string json = Newtonsoft.Json.JsonConvert.SerializeObject(list, Newtonsoft.Json.Formatting.Indented);
                 context.Response.Write(callback + "(" + json + ")");
             }

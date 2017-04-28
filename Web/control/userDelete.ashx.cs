@@ -28,11 +28,12 @@ namespace LW_AskOnline.Web.control
             //写入日志
             if (check)
             {
-                string handle = "DELETE";
                 string ip = log.GetIP();
-                string user = "USER";
                 DateTime time = log.GetTime();
-                log.WriteLogFile(handle, ip, user, time);
+                string handle = "DELETE";
+                string user = "USER";
+                //string master = context.Request.Cookies["mname"].Value;
+                log.WriteLogFile(handle, ip, user, time); 
             }
             context.Response.Write(callback + "()");
         }

@@ -50,12 +50,13 @@ namespace LW_AskOnline.Web.control
             int check = adlBll.Add(adlModel);
             //写入日志
             if (check != 0)
-            { 
-                string handle = "ADD";
+            {
                 string ip = log.GetIP();
-                string user = "USER";
                 DateTime time = log.GetTime();
-                log.WriteLogFile(handle, ip, user, time);
+                string handle = "ADD";
+                string user = "USER";
+                //string master = context.Request.Cookies["mname"].Value;
+                log.WriteLogFile(handle, ip, user, time); 
             }
             
             context.Response.Write(callback + "(" + o + ")");

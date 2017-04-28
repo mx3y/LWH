@@ -26,11 +26,15 @@ namespace LW_AskOnline.Common
             {
                 //根据上面创建的文件流创建写数据流
                 System.IO.StreamWriter w = new System.IO.StreamWriter(fs);
+                /*Common.Log log = new Common.Log();
+                string ip = log.GetIP();
+                DateTime time = log.GetTime();*/
                 //设置写数据流的起始位置为文件流的末尾
                 w.BaseStream.Seek(0, System.IO.SeekOrigin.End);
                 w.Write(handle+" ");
                 w.Write(ip + " ");
                 w.Write(user + " ");
+                //w.Write(master + " ");
                 w.Write(time + " \r\n");
                 /*w.Write("{0} {1} \r\n", DateTime.Now.ToLongTimeString(),
                     DateTime.Now.ToLongDateString());*/

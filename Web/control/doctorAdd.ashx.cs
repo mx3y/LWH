@@ -22,8 +22,8 @@ namespace LW_AskOnline.Web.control
             string callback = context.Request.QueryString["callback"].ToString();
             string addParameter = context.Request.QueryString["json"].ToString();
             //读json
-            Object ja = JsonConvert.DeserializeObject(addParameter);
-            JObject o = (JObject)ja;
+            Object obj = JsonConvert.DeserializeObject(addParameter);
+            JObject o = (JObject)obj;
             //将数据放到model
             Model.ask_doctor_list adlModel = new Model.ask_doctor_list()
             {
@@ -74,10 +74,11 @@ namespace LW_AskOnline.Web.control
             //写入日志
             if (check != 0)
             {
-                string handle = "ADD";
                 string ip = log.GetIP();
-                string user = "DOCTOR";
                 DateTime time = log.GetTime();
+                string handle = "ADD";
+                string user = "DOCTOR";
+                //string master = context.Request.Cookies["mname"].Value;
                 log.WriteLogFile(handle, ip, user, time); 
             }
             context.Response.Write(callback + "(" + o + ")");
