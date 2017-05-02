@@ -19,25 +19,20 @@ namespace LW_AskOnline.Web.control
             context.Response.ContentEncoding = Encoding.UTF8;
             string callback = context.Request.QueryString["callback"].ToString();
             Common.Log log1 = new Common.Log();
+            
             string[] lines = log1.ReadLogFile();
+            string[] line = new string[5];
             string json1 = "";
-            /*foreach (string line in lines)
+            for (int i = 0; i < lines.Length-1; i++)
             {
-                json1 += string.Format("{{\"handle\": \"{0}\",\"ip\": \"{1},\"user\": \"{2}\",\"datetime\": \"{3}\"}},", lines[0], lines[1], lines[2], lines[3]);
+                line = Regex.Split(lines[i].Trim(), " ", RegexOptions.IgnoreCase);
+                json1 += string.Format("{{\"handle\": \"{0}\",\"ip\": \"{1}\",\"user\": \"{2}\",\"date\": \"{3}\",\"time\": \"{4}\"}},", line[0], line[1], line[2], line[3],line[4]);
             }
+            int count = lines.Length;
             json1 = json1.Substring(0, json1.Length - 1);
-            json1 = string.Format("[{0}]", json1);*/
-            List<Object> list = new List<Object>();
-            for (int i = 0; i < lines.Length; i++)
-            {
-                string[] line = Regex.Split(lines[i], " ", RegexOptions.IgnoreCase);
-                list.Add(line);
-            }
-            foreach (string line in list)
-            {
-                json1 += string.Format("{{\"handle\": \"{0}\",\"ip\": \"{1},\"user\": \"{2}\",\"datetime\": \"{3}\"}},", lines[0], lines[1], lines[2], lines[3]);
-            }
-            context.Response.Write(callback+"("+json1+")");
+            json1 = string.Format("[{0}]", json1);
+            string zz = string.Format("{{\"draw\": \"{0}\", \"recordsTotal\": \"{1}\",\"recordsFiltered\": \"{2}\",\"data\":{3}}}", 1, count, count, json1);
+            context.Response.Write(callback+"("+zz+")");
         }
 
         public bool IsReusable

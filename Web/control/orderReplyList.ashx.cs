@@ -19,8 +19,10 @@ namespace LW_AskOnline.Web.control
             string callback = context.Request.QueryString["callback"].ToString();
             BLL.ask_order_reply adlBll = new BLL.ask_order_reply();
             List<Model.ask_order_reply> list = adlBll.GetModelList("");
+            int count = list.Count();
             string json = Newtonsoft.Json.JsonConvert.SerializeObject(list, Newtonsoft.Json.Formatting.Indented);
-            context.Response.Write(callback+"("+json+")");
+            string zz = string.Format("{{\"draw\": \"{0}\", \"recordsTotal\": \"{1}\",\"recordsFiltered\": \"{2}\",\"data\":{3}}}", 1, count, count, json);
+            context.Response.Write(callback+"("+zz+")");
         }
 
         public bool IsReusable

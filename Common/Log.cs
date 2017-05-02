@@ -60,7 +60,7 @@ namespace LW_AskOnline.Common
                t = r.ReadToEnd();
            }
            //string t = System.IO.File.ReadAllText(text);
-           string[] lines = Regex.Split(t, "----------------------------------------------", RegexOptions.IgnoreCase);
+           string[] lines = Regex.Split(t, "----------------------------------------------\r\n", RegexOptions.IgnoreCase);
            return lines;
         }
        //获取IP

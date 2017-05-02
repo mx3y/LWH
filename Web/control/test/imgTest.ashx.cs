@@ -20,7 +20,7 @@ namespace LW_AskOnline.Web.control.test
 
         public void ProcessRequest(HttpContext context)
         {
-            HttpPostedFile _upfile = context.Request.Files["File1"];
+            HttpPostedFile _upfile = context.Request.Files["file"];
             if (_upfile == null)
             {
                 ResponseWriteEnd(context, "4");//请选择要上传的文件   
