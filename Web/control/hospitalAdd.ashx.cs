@@ -35,7 +35,7 @@ namespace LW_AskOnline.Web.control
                 hlevel = o["hlevel"].ToString(),
                 haddress = o["haddress"].ToString(),
                 hcontent = o["hcontent"].ToString(),
-                hstatus = int.Parse(o["hstatus"].ToString())
+                hstatus = 1
             };
             BLL.ask_hospital adlBll = new BLL.ask_hospital();
             int check = adlBll.Add(adlModel);

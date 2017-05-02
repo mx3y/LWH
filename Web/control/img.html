@@ -14,6 +14,7 @@
                     url: "http://localhost:3448/api/imgTest",
                     type: "post",
                     success: function (data) {
+						console.log(data);
 						data=data.split(">");
 						data=data[1].split("<");
 						$("#divimg").html("<img src='../upload/"+data[0]+"'>");

@@ -29,7 +29,7 @@ namespace LW_AskOnline.Web.control
             //将数据放到model
             Model.ask_hospital adlModel = new Model.ask_hospital()
             {
-                hid = int.Parse(o["id"].ToString()),
+                hid = int.Parse(o["hid"].ToString()),
                 hcityid = int.Parse(o["hcityid"].ToString()),
                 hcity = o["hcity"].ToString(),
                 hname = o["hname"].ToString(),
@@ -37,7 +37,6 @@ namespace LW_AskOnline.Web.control
                 hlevel = o["hlevel"].ToString(),
                 haddress = o["haddress"].ToString(),
                 hcontent = o["hcontent"].ToString(),
-                hstatus = int.Parse(o["hstatus"].ToString())
             };
             bool check = adlBll.Update(adlModel);
             //写入日志
