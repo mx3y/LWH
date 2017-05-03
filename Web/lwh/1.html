@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="bootstrap/js/jquery-3.2.0.min.js"></script>
+</head>
+<body>
+<form action="http://192.168.1.172/api/imgTest" method="POST" enctype="multipart/form-data" target="upload">
+        <input type="file" name="upload_file" id="file" onchange="imgPreview(this)"/>
+        <input type="text" name="script" value="js/img.js" style="display:none" />
+        <input type="submit" value="开始上传" />
+</form>
+<img src="" id="image" style="width: 100px;height: auto;">
+<iframe name="upload" id="upload" style="display: none;">
+</iframe> 
+<script type="text/javascript">
+    function imgPreview(fileDom){
+        var reader = new FileReader();
+        var file = fileDom.files[0];
+        console.log(fileDom.files);
+        var imageType = /^image\//;
+        if (!imageType.test(file.type)) {
+            alert("请选择图片！");
+            return;
+        }
+        reader.onload = function(e) {
+            var img = document.getElementById("image");
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+</script>
+</body>
+</html>

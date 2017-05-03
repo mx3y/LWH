@@ -79,14 +79,14 @@ $(document).ready(function(){
             {
                 "targets": [5],
                 "render": function(data, type, row, full) {
-                    var date = data.ocreatetime.split("T")[0];
+                    var date = data.ocreatetime.split("T");
                     return date;
                 }
             },
             {
                 "targets": [6],
                 "render": function(data, type, row, full) {
-                    var date = data.ocommittime.split("T")[0];
+                    var date = data.ocommittime.split("T");
                     return date+"<a style='margin-left:10px;' onclick='totuu("+data.oid+")'>修改</a>";
                 }
             }

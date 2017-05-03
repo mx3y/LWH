@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>登陆</title>
+    <link rel="stylesheet" href="http://www.liuweijiankang.com:80/liuwei/wx-static/css/bootstrap.css">
+    <link rel="stylesheet" href="http://www.liuweijiankang.com:80/liuwei/wx-static/css/style.css">
+    <script src="http://www.liuweijiankang.com:80/liuwei/wx-static/js/flexible.js"></script>
+    <style>
+        .banner{
+            width:100%;
+            margin:0 auto;
+        }
+        .banner img{
+            width:100%;
+        }
+        .hy{
+            min-height: 31em;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <i class="banner"><img src="http://www.liuweijiankang.com:80/liuwei/wx-static/images/img_wx_logo.png" /></i> 
+</header>
+<div class="container-fluid hy" id="login">
+<dl class="login-layout clearfix">
+    <dt>
+        <i class="icon-mz"></i><i class="line"></i><input type="text" name="username" id="account" placeholder="请输入姓名" />
+    </dt>
+    <dt>
+        <i class="icon-sfz"></i><i class="line"></i><input type="text" name="password" id="password" placeholder="请输入密码" />
+    </dt>
+</dl>
+    <dl class="login-layout clearfix"><a class="btn-login" href="#">登陆</a></dl>
+</div>
+<footer>
+       <center>
+            <a class="logo" href="#">
+                <span class="logotxt">六维健康</span>
+            </a>
+            <div  class="smalltxt">引领中国精准医疗</div>
+            <div class="phone">
+                <img src="http://www.liuweijiankang.com:80/liuwei/wx-static/images/phone-icon.png">
+                <span>400-808-8166</span>
+            </div>
+           <!--  <div class="">Copyright 2002-2015 viptijian.com  六维健康版权所有</div> -->
+        </center>
+</footer>
+
+<script src="http://www.liuweijiankang.com:80/liuwei/wx-static/js/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/jquery.cookie.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $("#account").val($.cookie("account"));
+        $("#password").val($.cookie("password"));
+        $(".btn-login").click(function () {
+            if($("#account").val()=="" || $("#password").val()==""){
+                $("#account").focus();
+                $("#account").val("");
+                $("#password").val("");
+                $("#account").attr("placeholder", "帐号密码不能为空");
+                flash('#login', 8, 10, 100);
+                return false;
+            }
+            else{
+                $.cookie("account",$("#account").val(),{path: "/",expires: 7});
+                $.cookie("password",$("#password").val(),{path: "/",expires: 7});
+            }
+            var user = {
+                account: $("#account").val(),
+                password: $("#password").val()
+            }
+            user = JSON.stringify(user);
+            $.ajax({
+                type:"post",
+                url: "http://192.168.1.172/api/doctorLogin",
+                data: {json: user},
+                dataType: "jsonp",
+                jsonp: "callback",
+                success: function (data) {
+                    if(data.status == 0){
+                        $("#account").focus();
+                        $("#account").val("");
+                        $("#password").val("");
+                        $("#account").attr("placeholder", "会员信息有误");
+                        flash('#login', 8, 10, 100);
+                    }
+                    if(data.status == 1){
+                        $.cookie("did",data.did,{path: "/",expires: 7});
+                        $.cookie("dname",data.dname,{path: "/",expires: 7});
+                        window.location.href = "order_list.html";
+                    }
+                }
+            }); //ajax
+        }); //click
+    }); //ready
+
+function flash(obj, time, wh, fx) {
+    $(function () {
+        var $panel = $(obj);
+        var offset = $panel.offset() - $panel.width();
+        var x = offset.left;
+        var y = offset.top;
+        for (var i = 1; i <= time; i++) {
+            if (i % 2 == 0) {
+                $panel.animate({ left: '+' + wh + 'px' }, fx);
+            } else {
+                $panel.animate({ left: '-' + wh + 'px' }, fx);
+            }
+
+        }
+        $panel.animate({ left: 0 }, fx);
+        $panel.offset({ left: x });
+    })
+}
+</script>
+
+</body>
+</html>
+

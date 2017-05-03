@@ -62,6 +62,7 @@ $(document).ready(function(){
         "columns" : [
             {"data": null},
             {"data": "uaccount"},
+            {"data": "uname"},
             {"data": "ucardnumber"},
             {"data": "usex"},
             {"data": null},
@@ -82,12 +83,6 @@ $(document).ready(function(){
                 }
             },
             {
-                "targets": [4],
-                "render": function(data, type, row, full) {
-                        return "待填充";
-                }
-            },
-            {
                 "targets": [5],
                 "render": function(data, type, row, full) {
                         return "待填充";
@@ -96,12 +91,18 @@ $(document).ready(function(){
             {
                 "targets": [6],
                 "render": function(data, type, row, full) {
+                        return "待填充";
+                }
+            },
+            {
+                "targets": [7],
+                "render": function(data, type, row, full) {
                     var date = data.ulastdatetime.split("T")[0];
                     return date;
                 }
             },
             {
-                "targets": [7],
+                "targets": [8],
                 "render": function(data, type, row, full) {
                     return "<a class='btn btn-sm btn-link' href='user_edit.html?id="+data.uuid+"''><span class='glyphicon glyphicon-wrench' style='margin-right:5px;'></span>修改</a>"
                     +"<button class='btn btn-sm btn-link' onclick='del("+data.uuid+")'><span class='glyphicon glyphicon-trash' style='margin-right:5px;'></span>删除</button>";

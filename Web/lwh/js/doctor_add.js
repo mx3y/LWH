@@ -19,14 +19,14 @@
         $.ajax({ 
             type:"post", 
             url:"http://192.168.1.172/api/selectCity",
+            dataType:"jsonp",
             data:{
                 cid: null
             },
-            dataType:"jsonp",
             jsonp:"callback", 
             success:function(data){
-                city = data.ds;
-                $.each(data.ds,function(i,n){
+                city = data;
+                $.each(data,function(i,n){
                     $("#dcity_1").append("<option>"+n.cregion_name+"</option>");
                 });
             },
@@ -50,12 +50,53 @@
                 dataType:"jsonp",
                 jsonp:"callback", 
                 success:function(data){
-                    $.each(data.data,function(i,n){
+                    $.each(data,function(i,n){
                         $("#dcity_2").append("<option>"+n.cregion_name+"</option>");
                     });  
                 },
                 error:function(){
                     console.log("city_2 error.");
+                }
+            });
+        });
+        var hospital = null;
+        $.ajax({ 
+            type:"post", 
+            url:"http://192.168.1.172/api/selectHospital",
+            dataType:"jsonp",
+            jsonp:"callback", 
+            success:function(data){
+                $.each(data,function(i,n){
+                    $("#dhospital").append("<option>"+n.hname+"</option>");
+                });
+            },
+            error:function(){
+                console.log("hospital error.");
+            }
+        });
+        $("#dhospital").change(function(){
+            var hospital_id = null;
+            $.each(hospital,function(i,n){
+                 if(n.hname == $("#dhospital").val())
+                    hospital_id = n.hid;
+            });
+            $("#dept").html("<option>请选择</option>");
+            $.ajax({ 
+                type:"post", 
+                url:"http://192.168.1.172/api/selectDept",
+                data:{
+                    hid: 0
+                },
+                dataType:"jsonp",
+                jsonp:"callback", 
+                success:function(data){
+                    $.each(data,function(i,n){
+                        console.log(n.dname);
+                        $("#ddept").append("<option>"+n.dname+"</option>");
+                    });  
+                },
+                error:function(){
+                    console.log("dept error.");
                 }
             });
         });
@@ -83,13 +124,13 @@
                 $("#ddeptid").siblings(".help-block").html("医生科室编号不能为空");
                 return false;
             }
-
+            var onlinedate =  $("input:checkbox[name='d_onlinedate']:checked").map(function(index,el) {return $(el).val();}).get().join(',');
             var doctor={
                 "dname": $("#dname").val(),
                 "dtype": $("#dtype").val(),
                 "ddept": $("#ddept").val(),
                 "ddeptid": $("#ddeptid").val(),
-                "dcity": $("#dcity_2").val(),
+                "dcity": $("#dcity_1").val()+" "+$("#dcity_2").val(),
                 "dcityid": $("#dcityid").val(),
                 "dhospital": $("#dhospital").val(),
                 "dhospitalid": $("#dhospitalid").val(),
@@ -113,6 +154,16 @@
                 "dsort": $("#dsort").val(),
                 "dishot": $("#dishot").val(),
                 "dstate": $("#dstate").val(),
+                "d_onlinedate": onlinedate,
+                "d_message": $("#d_message").val(),
+                "d_count": $("#d_count").val(),
+                "d_score": $("#d_score").val(),
+                "d_professionscore": $("#d_professionscore").val(),
+                "d_professioncount": $("#d_professioncount").val(),
+                "d_servicesscore": $("#d_servicesscore").val(),
+                "d_servicescount": $("#d_servicescount").val(),
+                "d_replyscore": $("#d_replyscore").val(),
+                "d_replycount": $("#d_replycount").val(),
             }
             doctor = JSON.stringify(doctor);
             var ddoctor={

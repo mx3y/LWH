@@ -35,7 +35,7 @@
             </div>
         </div>
     </nav>
-    <div class="nav-left">
+    <div class="nav-left" style="height: 120%;">
         <div class="nav-title">
             <img src="images/test.jpg" class="img-circle">
             <a href="index.html">六维健康</a>
@@ -77,6 +77,18 @@
                     <span>订单支付</span>
                 </a>
             </li>
+            <li>
+                <a href="patient_list.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>就诊人列表</span>
+                </a>
+            </li>
+            <li>
+                <a href="order_reply.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>订单评价</span>
+                </a>
+            </li>
         </ul>
     </div>
      <div class="nav-open">
@@ -98,14 +110,14 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">医生名称</label>
+                                        <label for="name">名称</label>
                                         <input type="text" class="form-control" id="dname">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生类型</label>
+                                        <label for="name">类型</label>
                                         <select class="form-control" id="dtype">
                                             <option value="0">六维</option>
                                             <option value="1">三甲名医</option>
@@ -117,8 +129,8 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生所属城市</label>
-                                        <select class="form-control" id="dcity_1">
+                                        <label for="name">所属城市</label>
+                                        <select class="form-control" id="dcity_1" autocomplete="off">
                                             <option>请选择</option>
                                         </select>
                                         <span class="help-block"></span>
@@ -127,7 +139,7 @@
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="name">&nbsp</label>
-                                        <select class="form-control" id="dcity_2">
+                                        <select class="form-control" id="dcity_2" autocomplete="off">
                                             <option>请选择</option>
                                         </select>
                                         <span class="help-block"></span>
@@ -135,7 +147,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">医生所属城市编号</label>
+                                        <label for="name">所属城市编号</label>
                                         <input type="text" class="form-control" id="dcityid">
                                         <span class="help-block"></span>
                                     </div>
@@ -144,28 +156,32 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生所属医院</label>
-                                        <input type="text" class="form-control" id="dhospital">
+                                        <label for="name">所属医院</label>
+                                        <select class="form-control" id="dhospital">
+                                            <option>请选择</option>
+                                        </select>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生所属医院编号</label>
+                                        <label for="name">所属医院编号</label>
                                         <input type="text" class="form-control" id="dhospitalid">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生科室</label>
-                                        <input type="text" class="form-control" id="ddept">
+                                        <label for="name">科室</label>
+                                        <select class="form-control" id="ddept">
+                                            <option>请选择</option>
+                                        </select>
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生科室编号</label>
+                                        <label for="name">科室编号</label>
                                         <input type="text" class="form-control" id="ddeptid">
                                         <span class="help-block"></span>
                                     </div>
@@ -197,56 +213,56 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">医生对账折扣</label>
+                                        <label for="name">对账折扣</label>
                                         <input type="text" class="form-control" id="ddiscount">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">医生手机号码</label>
+                                        <label for="name">手机号码</label>
                                         <input type="text" class="form-control" id="dtell">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生视频咨询显示价格</label>
+                                        <label for="name">视频咨询显示价格</label>
                                         <input type="text" class="form-control" id="dshowvideo">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生视频咨询真实价格</label>
+                                        <label for="name">视频咨询真实价格</label>
                                         <input type="text" class="form-control" id="dsrealvideo">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生代挂号显示价格</label>
+                                        <label for="name">代挂号显示价格</label>
                                         <input type="text" class="form-control" id="dshowregister">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生代挂号真实价格</label>
+                                        <label for="name">代挂号真实价格</label>
                                         <input type="text" class="form-control" id="dsrealregister">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生电话咨询显示价格</label>
+                                        <label for="name">电话咨询显示价格</label>
                                         <input type="text" class="form-control" id="dshowtell">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生电话咨询真实价格</label>
+                                        <label for="name">电话咨询真实价格</label>
                                         <input type="text" class="form-control" id="dsrealtell">
                                         <span class="help-block"></span>
                                     </div>
@@ -255,28 +271,28 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">医生银行帐号</label>
+                                        <label for="name">银行帐号</label>
                                         <input type="text" class="form-control" id="dbankaccount">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生银行姓名</label>
+                                        <label for="name">银行姓名</label>
                                         <input type="text" class="form-control" id="dbankaname">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="name">医生开户行</label>
+                                        <label for="name">开户行</label>
                                         <input type="text" class="form-control" id="dbanktype">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">医生QQ</label>
+                                        <label for="name">QQ</label>
                                         <input type="text" class="form-control" id="dqq">
                                         <span class="help-block"></span>
                                     </div>
@@ -285,14 +301,14 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">医生登录帐号</label>
+                                        <label for="name">登录帐号</label>
                                         <input type="text" class="form-control" id="daccount">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">医生登录密码</label>
+                                        <label for="name">登录密码</label>
                                         <input type="text" class="form-control" id="dpassword">
                                         <span class="help-block"></span>
                                     </div>
@@ -301,7 +317,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">医生排序</label>
+                                        <label for="name">排序</label>
                                         <input type="text" class="form-control" id="dsort">
                                         <span class="help-block"></span>
                                     </div>
@@ -317,6 +333,104 @@
                                     <div class="form-group">
                                         <label for="name">状态</label>
                                         <input type="text" class="form-control" id="dstate">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <label for="name">上班时间</label>
+                                        <div style="margin-top: 8px;">
+                                            <label class="checkbox-inline " style="margin: 0 10px;">
+                                                <input type="checkbox" name="d_onlinedate" value="1">周一
+                                            </label>
+                                            <label class="checkbox-inline" style="margin-right: 10px;">
+                                                <input type="checkbox" name="d_onlinedate" value="2">周二
+                                            </label>
+                                            <label class="checkbox-inline" style="margin-right: 10px;">
+                                                <input type="checkbox" name="d_onlinedate" value="3">周三
+                                            </label>
+                                            <label class="checkbox-inline" style="margin-right: 10px;">
+                                                <input type="checkbox" name="d_onlinedate" value="4">周四
+                                            </label>
+                                            <label class="checkbox-inline" style="margin-right: 10px;">
+                                                <input type="checkbox" name="d_onlinedate" value="5">周五
+                                            </label>
+                                            <label class="checkbox-inline" style="margin-right: 10px;">
+                                                <input type="checkbox" name="d_onlinedate" value="6">周六
+                                            </label>
+                                            <label class="checkbox-inline" style="margin-right: 10px;">
+                                                <input type="checkbox" name="d_onlinedate" value="7">周日
+                                            </label>
+                                        </div>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="name">评分总</label>
+                                        <input type="text" class="form-control" id="d_score">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="name">接诊次数</label>
+                                        <input type="text" class="form-control" id="d_count">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="name">长描述</label>
+                                        <input type="text" class="form-control" id="d_message">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="name">专业水平评分</label>
+                                        <input type="text" class="form-control" id="d_professionscore">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="name">专业水平评分次数</label>
+                                        <input type="text" class="form-control" id="d_professioncount">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="name">服务态度评分</label>
+                                        <input type="text" class="form-control" id="d_servicesscore">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="name">服务态度评分次数</label>
+                                        <input type="text" class="form-control" id="d_servicescount">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="name">回复速度评分</label>
+                                        <input type="text" class="form-control" id="d_replyscore">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="name">回复速度评分次数</label>
+                                        <input type="text" class="form-control" id="d_replycount">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>

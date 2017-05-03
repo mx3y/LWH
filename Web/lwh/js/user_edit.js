@@ -37,13 +37,15 @@
                 jsonp:"callback", 
                 success:function(data){
                     $("#utijtid").val(data["utijtid"]);
+                    $("#uname").val(data["uname"]);
                     $("#ucompanymonery").val(data["ucompanymonery"]);
                     $("#umonery").val(data["umonery"]);
                     $("#uaccount").val(data["uaccount"]);
                     $("#upassword").val(data["upassword"]);
                     $("#ucardnumber").val(data["ucardnumber"]);
                     $("#umail").val(data["umail"]);
-                    $("#ubrithday").val(data["ubrithday"]);
+                    var date = data.ubrithday.split("T")[0];
+                    $("#ubrithday").val(date);
                     $("#usex").val(data["usex"]);
                     $("#ucompanyid").val(data["ucompanyid"]);
                     $("#ustate").val(data["ustate"]);
@@ -113,6 +115,7 @@
             var user={
                 "uuid": getUrlParam("id"),
                 "utijtid": $("#utijtid").val(),
+                "uname": $("#uname").val(),
                 "ucompanymonery": $("#ucompanymonery").val(),
                 "umonery": $("#umonery").val(),
                 "uaccount": $("#uaccount").val(),
