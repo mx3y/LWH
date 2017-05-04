@@ -259,19 +259,16 @@
                 dataType:"jsonp",
                 jsonp:"callback", 
                 success:function(data){
+                    $("#img_name").val($("#dname").val()+"_img.jpg");
                     $("#img_sbt").trigger("click");
                     $(".success").fadeIn("slow").delay(1000).fadeOut("slow",function(){                   
                         window.location.href = "doctor_list.html";
                     }); 
-                    console.log(data);
                 },
                 error:function(){
                     alert('fail');
                 }
             }); 
-        });
-        $("#dname").change(function(){
-            $("#img_name").val($("#dname").val()+"_img.jpg");
         });
         $("#file").change(function(){
             var reader = new FileReader();

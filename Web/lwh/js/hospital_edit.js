@@ -24,7 +24,7 @@
         var default_city = null;
         $.ajax({ 
             type:"post", 
-            url:"http://localhost:3448/api/selectCity",
+            url:"http://192.168.1.172/api/selectCity",
             data:{
                 cid: null
             },
@@ -54,7 +54,7 @@
             $("#dcity_2").html("<option>请选择</option>");
             $.ajax({ 
                 type:"post", 
-                url:"http://localhost:3448/api/selectCity",
+                url:"http://192.168.1.172/api/selectCity",
                 data:{
                     cid: city_id
                 },
@@ -73,7 +73,7 @@
         if(getUrlParam("id")){
             $.ajax({ 
                 type:"post", 
-                url:"http://localhost:3448/api/selectCity",
+                url:"http://192.168.1.172/api/hospitalSendUpdate",
                 data:{id:getUrlParam("id")}, 
                 dataType:"jsonp",
                 jsonp:"callback", 
@@ -110,7 +110,7 @@
             hospital = JSON.stringify(hospital);
             $.ajax({ 
                 type:"post", 
-                url:"http://localhost:3448/api/selectCity",
+                url:"http://192.168.1.172/api/hospitalUpdate",
                 data:{json: hospital},
                 dataType:"jsonp",
                 jsonp:"callback", 
