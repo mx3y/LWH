@@ -32,7 +32,7 @@ namespace LW_AskOnline.Web.control
             {
                 did = int.Parse(o["did"].ToString()),
                 dname = o["dname"].ToString(),
-                dimage = "isnull",
+                dimage = o["dimage"].ToString(),
                 ddept = o["ddept"].ToString(),
                 ddeptid = o["ddeptid"].ToString(),
                 dtype = o["dtype"].ToString(),
@@ -81,8 +81,8 @@ namespace LW_AskOnline.Web.control
                 DateTime time = log.GetTime();
                 string handle = "UPDATE";
                 string user = "DOCTOR";
-                //string master = context.Request.Cookies["mname"].Value;
-                log.WriteLogFile(handle,ip,user,time); 
+                string master = context.Request.Cookies["mname"].Value.ToString();
+                log.WriteLogFile(handle, ip, user, time, master);  
             }
             context.Response.Write(callback + "()");
         }

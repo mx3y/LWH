@@ -35,9 +35,8 @@ namespace LW_AskOnline.Web.control
             BLL.ask_order oBll = new BLL.ask_order();
             BLL.ask_illpersion iBll = new BLL.ask_illpersion();
             Model.ask_order oModel = oBll.GetModel(int.Parse(parameter));//订单
-            
-            Model.ask_illpersion iModel = iBll.GetModel(1);//就诊
-            Model.ask_doctor_list dModel = dBll.GetModel(1);//医生
+            Model.ask_illpersion iModel = iBll.GetModel((int)oModel.oillid);//就诊
+            Model.ask_doctor_list dModel = dBll.GetModel(oModel.odid);//医生
             Detial detial = new Detial()
             {
                 dhospital = dModel.dhospital,
@@ -52,10 +51,8 @@ namespace LW_AskOnline.Web.control
                 ocreatetime = oModel.ocreatetime,
                 otype = oModel.otype
             };
-
-
             string json = Newtonsoft.Json.JsonConvert.SerializeObject(detial, Newtonsoft.Json.Formatting.Indented);
-              context.Response.Write(callback+"("+json+")");
+            context.Response.Write(callback+"("+json+")");
         }
 
         public bool IsReusable

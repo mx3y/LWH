@@ -10,7 +10,7 @@ namespace LW_AskOnline.Common
     public class Log : System.Web.UI.Page
     {
         //写入日志文件
-        public void WriteLogFile(string handle,string ip,string user,DateTime time)
+        public void WriteLogFile(string handle,string ip,string user,DateTime time,string master)
         {
             //指定日志文件的目录
             string fname = Server.MapPath("upedFile") + "\\logfile.txt";
@@ -34,6 +34,7 @@ namespace LW_AskOnline.Common
                 w.Write(handle+" ");
                 w.Write(ip + " ");
                 w.Write(user + " ");
+                w.Write(master + " ");
                 //w.Write(master + " ");
                 w.Write(time + " \r\n");
                 /*w.Write("{0} {1} \r\n", DateTime.Now.ToLongTimeString(),

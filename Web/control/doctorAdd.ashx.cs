@@ -21,6 +21,14 @@ namespace LW_AskOnline.Web.control
             Common.Log log = new Common.Log();
             string callback = context.Request.QueryString["callback"].ToString();
             string addParameter = context.Request.QueryString["json"].ToString();
+            /*//获取图片
+            HttpPostedFile img = context.Request.Files["upload_file"];
+            string s = img.FileName;
+            //获取路径
+            string path = "~/upload/" + s.Substring(s.LastIndexOf("//") + 1);
+            string getpath = path.Substring(1);
+            //保存
+            img.SaveAs(context.Server.MapPath(path));*/
             //读json
             Object obj = JsonConvert.DeserializeObject(addParameter);
             JObject o = (JObject)obj;
@@ -28,7 +36,7 @@ namespace LW_AskOnline.Web.control
             Model.ask_doctor_list adlModel = new Model.ask_doctor_list()
             {
                 dname = o["dname"].ToString(),
-                dimage = "isnull",
+                dimage = o["dimage"].ToString(),
                 ddept = o["ddept"].ToString(),
                 ddeptid = o["ddeptid"].ToString(),
                 dtype = o["dtype"].ToString(),
@@ -78,8 +86,8 @@ namespace LW_AskOnline.Web.control
                 DateTime time = log.GetTime();
                 string handle = "ADD";
                 string user = "DOCTOR";
-                //string master = context.Request.Cookies["mname"].Value;
-                log.WriteLogFile(handle, ip, user, time); 
+                string master = context.Request.Cookies["mname"].Value.ToString();
+                log.WriteLogFile(handle, ip, user, time,master); 
             }
             context.Response.Write(callback + "(" + o + ")");
         }

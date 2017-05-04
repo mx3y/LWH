@@ -22,11 +22,11 @@ namespace LW_AskOnline.Web.control.test
         {
                 context.Response.ContentType = "text/plain";
                 context.Response.ContentEncoding = Encoding.UTF8;
+                string name = context.Request.Form["img_name"];
                 HttpPostedFile img = context.Request.Files["upload_file"];
-                string s = img.FileName;
-                string path = "~/upload/" + s.Substring(s.LastIndexOf("//") + 1);
+                string path = "~/upload/" + name.Substring(name.LastIndexOf("//") + 1);
                 img.SaveAs(context.Server.MapPath(path));
-                context.Response.Write(s);
+                context.Response.Write(name);
         }
         
         public bool IsReusable

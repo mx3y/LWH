@@ -106,6 +106,59 @@
     <Content Include="control\img.html" />
     <Content Include="dll\Newtonsoft.Json.dll" />
     <Content Include="dll\URLRewriter.dll" />
+    <Content Include="doctor\login.html" />
+    <Content Include="doctor\order_detail.html" />
+    <Content Include="doctor\order_list.html" />
+    <Content Include="doctor\static\css\style.css" />
+    <Content Include="doctor\static\images\icon_01.png" />
+    <Content Include="doctor\static\images\icon_02.png" />
+    <Content Include="doctor\static\images\icon_03.png" />
+    <Content Include="doctor\static\images\icon_04.png" />
+    <Content Include="doctor\static\images\icon_05.png" />
+    <Content Include="doctor\static\images\icon_06.png" />
+    <Content Include="doctor\static\images\icon_07.png" />
+    <Content Include="doctor\static\images\icon_08.png" />
+    <Content Include="doctor\static\images\icon_09.png" />
+    <Content Include="doctor\static\images\icon_10.png" />
+    <Content Include="doctor\static\images\icon_11.png" />
+    <Content Include="doctor\static\images\icon_12.png" />
+    <Content Include="doctor\static\images\icon_13.png" />
+    <Content Include="doctor\static\images\icon_14.png" />
+    <Content Include="doctor\static\images\icon_15.png" />
+    <Content Include="doctor\static\images\icon_16.png" />
+    <Content Include="doctor\static\images\icon_17.png" />
+    <Content Include="doctor\static\images\icon_18.png" />
+    <Content Include="doctor\static\images\icon_19.png" />
+    <Content Include="doctor\static\images\img_01.png" />
+    <Content Include="doctor\static\images\img_02.png" />
+    <Content Include="doctor\static\images\list_img01.png" />
+    <Content Include="doctor\static\images\list_img02.png" />
+    <Content Include="doctor\static\images\list_img03.png" />
+    <Content Include="doctor\static\images\list_img04.png" />
+    <Content Include="doctor\static\images\list_img05.png" />
+    <Content Include="doctor\static\images\list_img06.png" />
+    <Content Include="doctor\static\images\list_img07.png" />
+    <Content Include="doctor\static\images\list_img08.png" />
+    <Content Include="doctor\static\images\list_img09.png" />
+    <Content Include="doctor\static\images\list_img10.png" />
+    <Content Include="doctor\static\images\list_img11.png" />
+    <Content Include="doctor\static\images\list_img12.png" />
+    <Content Include="doctor\static\images\list_img13.png" />
+    <Content Include="doctor\static\images\list_img14.png" />
+    <Content Include="doctor\static\images\list_img15.png" />
+    <Content Include="doctor\static\images\list_img16.png" />
+    <Content Include="doctor\static\images\list_img17.png" />
+    <Content Include="doctor\static\images\list_img18.png" />
+    <Content Include="doctor\static\images\list_img19.png" />
+    <Content Include="doctor\static\images\list_img20.png" />
+    <Content Include="doctor\static\images\list_img21.png" />
+    <Content Include="doctor\static\images\list_img22.png" />
+    <Content Include="doctor\static\images\list_img23.png" />
+    <Content Include="doctor\static\images\list_img24.png" />
+    <Content Include="doctor\static\js\jquery.cookie.js" />
+    <Content Include="doctor\static\js\jquery.min.js" />
+    <Content Include="doctor\static\js\rem.js" />
+    <Content Include="lwh\1.html" />
     <Content Include="lwh\bootstrap\css\bootstrap-theme.css" />
     <Content Include="lwh\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="lwh\bootstrap\css\bootstrap.css" />
@@ -130,6 +183,7 @@
     <Content Include="lwh\doctor_edit.html" />
     <Content Include="lwh\doctor_list.html" />
     <Content Include="lwh\hospital_add.html" />
+    <Content Include="lwh\hospital_edit.html" />
     <Content Include="lwh\hospital_list.html" />
     <Content Include="lwh\images\bg-2.jpg" />
     <Content Include="lwh\images\bg.jpg" />
@@ -143,16 +197,24 @@
     <Content Include="lwh\js\doctor_add.js" />
     <Content Include="lwh\js\doctor_edit.js" />
     <Content Include="lwh\js\doctor_list.js" />
+    <Content Include="lwh\js\hospital_add.js" />
+    <Content Include="lwh\js\hospital_edit.js" />
+    <Content Include="lwh\js\hospital_list.js" />
     <Content Include="lwh\js\images\sort_asc.png" />
     <Content Include="lwh\js\images\sort_asc_disabled.png" />
     <Content Include="lwh\js\images\sort_both.png" />
     <Content Include="lwh\js\images\sort_desc.png" />
     <Content Include="lwh\js\images\sort_desc_disabled.png" />
+    <Content Include="lwh\js\img.js" />
     <Content Include="lwh\js\index.js" />
+    <Content Include="lwh\js\jquery.cookie.js" />
     <Content Include="lwh\js\jquery.form.js" />
     <Content Include="lwh\js\log_query.js" />
+    <Content Include="lwh\js\master_edit.js" />
     <Content Include="lwh\js\order_list.js" />
     <Content Include="lwh\js\order_pay.js" />
+    <Content Include="lwh\js\order_reply.js" />
+    <Content Include="lwh\js\patient_list.js" />
     <Content Include="lwh\js\user_add.js" />
     <Content Include="lwh\js\user_edit.js" />
     <Content Include="lwh\js\user_list.js" />
@@ -162,6 +224,8 @@
     <Content Include="lwh\master_edit.html" />
     <Content Include="lwh\order_list.html" />
     <Content Include="lwh\order_pay.html" />
+    <Content Include="lwh\order_reply.html" />
+    <Content Include="lwh\patient_list.html" />
     <Content Include="lwh\test.html" />
     <Content Include="lwh\user_add.html" />
     <Content Include="lwh\user_edit.html" />
@@ -227,6 +291,9 @@
   <ItemGroup>
     <Compile Include="control\deptAdd.ashx.cs">
       <DependentUpon>deptAdd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\doctorImg.ashx.cs">
+      <DependentUpon>doctorImg.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\doctorLogin.ashx.cs">
       <DependentUpon>doctorLogin.ashx</DependentUpon>
@@ -447,6 +514,7 @@
     <Content Include="control\doctorLogin.ashx" />
     <Content Include="control\doctorOrder.ashx" />
     <Content Include="control\doctorOrderDetial.ashx" />
+    <Content Include="control\doctorImg.ashx" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.min.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap.css.map" />

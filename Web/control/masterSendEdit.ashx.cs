@@ -22,7 +22,7 @@ namespace LW_AskOnline.Web.control
             BLL.ask_master adlBll = new BLL.ask_master();
             if (context.Request.Cookies["mid"] != null)
             {
-                string mid = context.Request.Cookies["mid"].Value;
+                string mid = context.Request.Cookies["mid"].Value.ToString();
                 adlModel = adlBll.GetModel(int.Parse(mid));
                 string json = Newtonsoft.Json.JsonConvert.SerializeObject(adlModel, Newtonsoft.Json.Formatting.Indented);
                 context.Response.Write(callback + "(" + json + ")");

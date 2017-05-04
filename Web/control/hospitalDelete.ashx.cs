@@ -33,8 +33,8 @@ namespace LW_AskOnline.Web.control
                 DateTime time = log.GetTime();
                 string handle = "DELETE";
                 string user = "HOSPITAL";
-               // string master = context.Request.Cookies["mname"].Value;
-                log.WriteLogFile(handle, ip, user, time);
+                string master = context.Request.Cookies["mname"].Value.ToString();
+                log.WriteLogFile(handle, ip, user, time, master); 
             }
             context.Response.Write(callback + "()");
         }
