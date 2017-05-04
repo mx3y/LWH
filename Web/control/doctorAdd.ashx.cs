@@ -21,14 +21,6 @@ namespace LW_AskOnline.Web.control
             Common.Log log = new Common.Log();
             string callback = context.Request.QueryString["callback"].ToString();
             string addParameter = context.Request.QueryString["json"].ToString();
-            /*//获取图片
-            HttpPostedFile img = context.Request.Files["upload_file"];
-            string s = img.FileName;
-            //获取路径
-            string path = "~/upload/" + s.Substring(s.LastIndexOf("//") + 1);
-            string getpath = path.Substring(1);
-            //保存
-            img.SaveAs(context.Server.MapPath(path));*/
             //读json
             Object obj = JsonConvert.DeserializeObject(addParameter);
             JObject o = (JObject)obj;
@@ -80,14 +72,17 @@ namespace LW_AskOnline.Web.control
             BLL.ask_doctor_list adlBll = new BLL.ask_doctor_list();
             int check = adlBll.Add(adlModel);
             //写入日志
-            if (check != 0)
+            if (context.Request.Cookies["mname"] != null)
             {
-                string ip = log.GetIP();
-                DateTime time = log.GetTime();
-                string handle = "ADD";
-                string user = "DOCTOR";
-                string master = context.Request.Cookies["mname"].Value.ToString();
-                log.WriteLogFile(handle, ip, user, time,master); 
+                if (check != 0)
+                {
+                    string ip = log.GetIP();
+                    DateTime time = log.GetTime();
+                    string handle = "ADD";
+                    string user = "DOCTOR";
+                    string master = context.Request.Cookies["mname"].Value.ToString();
+                    log.WriteLogFile(handle, ip, user, time, master);
+                }
             }
             context.Response.Write(callback + "(" + o + ")");
         }

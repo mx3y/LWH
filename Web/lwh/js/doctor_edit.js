@@ -172,6 +172,8 @@
                     $("#d_servicescount").val(data["d_servicescount"]);
                     $("#d_replyscore").val(data["d_replyscore"]);
                     $("#d_replycount").val(data["d_replycount"]);
+                    var img_url = "http://192.168.1.172/upload/"+data["dimage"];
+                    $("#image").attr("src",img_url);
                 },
                 error:function(){
                     alert('get-url-fail');
@@ -243,6 +245,7 @@
                 "d_servicescount": $("#d_servicescount").val(),
                 "d_replyscore": $("#d_replyscore").val(),
                 "d_replycount": $("#d_replycount").val(),
+                "dimage": $("#dname").val()+"_img.jpg",
             }
             doctor = JSON.stringify(doctor);
             var ddoctor={
@@ -256,6 +259,7 @@
                 dataType:"jsonp",
                 jsonp:"callback", 
                 success:function(data){
+                    $("#img_sbt").trigger("click");
                     $(".success").fadeIn("slow").delay(1000).fadeOut("slow",function(){                   
                         window.location.href = "doctor_list.html";
                     }); 
@@ -265,5 +269,19 @@
                     alert('fail');
                 }
             }); 
+        });
+        $("#dname").change(function(){
+            $("#img_name").val($("#dname").val()+"_img.jpg");
+        });
+        $("#file").change(function(){
+            var reader = new FileReader();
+            var file = this.files[0];
+            reader.onload = function(e) {
+                $("#image").attr("src",e.target.result);
+            };
+            reader.readAsDataURL(file);
+        });
+        $(".select").bind("click",function(){
+            $("#file").trigger("click");
         });
 });

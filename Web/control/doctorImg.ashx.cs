@@ -22,14 +22,7 @@ namespace LW_AskOnline.Web.control
             string type = img.ContentType;
             string fileExt = VirtualPathUtility.GetExtension(img.FileName).ToLower();
             string fileFilt = ".gif|.jpg|.php|.jsp|.jpeg|.png|";
-            string path = "~/upload/" + name.Substring(name.LastIndexOf("//") + 1);
-            //判断是否存在图片，存在则删除
-            string file = System.Web.HttpContext.Current.Server.MapPath(path);
-            if (System.IO.File.Exists(file))
-            {
-                System.IO.File.Delete(file);
-            }
-            else if (length > 1048576)
+            if (length > 1048576)
             {
                 context.Response.Write("文件大于1M，不能上传");
             }
@@ -39,6 +32,7 @@ namespace LW_AskOnline.Web.control
             }
             else
             {
+                string path = "~/upload/" + name.Substring(name.LastIndexOf("//") + 1);
                 img.SaveAs(context.Server.MapPath(path));
                 context.Response.Write(name);
             }

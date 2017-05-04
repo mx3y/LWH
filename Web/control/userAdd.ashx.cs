@@ -49,16 +49,18 @@ namespace LW_AskOnline.Web.control
             BLL.ask_user adlBll = new BLL.ask_user();
             int check = adlBll.Add(adlModel);
             //写入日志
-            if (check != 0)
+            if (context.Request.Cookies["mname"] != null)
             {
-                string ip = log.GetIP();
-                DateTime time = log.GetTime();
-                string handle = "ADD";
-                string user = "USER";
-                string master = context.Request.Cookies["mname"].Value.ToString();
-                log.WriteLogFile(handle, ip, user, time, master);  
+                if (check != 0)
+                {
+                    string ip = log.GetIP();
+                    DateTime time = log.GetTime();
+                    string handle = "ADD";
+                    string user = "USER";
+                    string master = context.Request.Cookies["mname"].Value.ToString();
+                    log.WriteLogFile(handle, ip, user, time, master);
+                }
             }
-            
             context.Response.Write(callback + "(" + o + ")");
         }
 

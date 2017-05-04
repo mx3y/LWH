@@ -164,6 +164,7 @@
                 "d_servicescount": $("#d_servicescount").val(),
                 "d_replyscore": $("#d_replyscore").val(),
                 "d_replycount": $("#d_replycount").val(),
+                "dimage": $("#dname").val()+"_img.jpg",
             }
             doctor = JSON.stringify(doctor);
             var ddoctor={
@@ -177,14 +178,28 @@
                 dataType:"jsonp",
                 jsonp:"callback", 
                 success:function(data){
-                    $(".success").fadeIn("slow").delay(1000).fadeOut("slow",function(){                   
+                    $("#img_sbt").trigger("click");
+                    $(".success").fadeIn("slow").delay(1000).fadeOut("slow",function(){
                         window.location.href = "doctor_list.html";
-                    }); 
-                    console.log(data);
+                    });
                 },
                 error:function(){
                     alert('fail');
                 }
             }); 
         });
+        $("#dname").change(function(){
+            $("#img_name").val($("#dname").val()+"_img.jpg");
+        });
+        $("#file").change(function(){
+            var reader = new FileReader();
+            var file = this.files[0];
+            reader.onload = function(e) {
+                $("#image").attr("src",e.target.result);
+            };
+            reader.readAsDataURL(file);
+        });
+        $(".select").bind("click",function(){
+            $("#file").trigger("click");
+        });      
 });

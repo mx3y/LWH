@@ -24,7 +24,7 @@
         var default_city = null;
         $.ajax({ 
             type:"post", 
-            url:"http://192.168.1.172/api/selectCity",
+            url:"http://localhost:3448/api/selectCity",
             data:{
                 cid: null
             },
@@ -54,7 +54,7 @@
             $("#dcity_2").html("<option>请选择</option>");
             $.ajax({ 
                 type:"post", 
-                url:"http://192.168.1.172/api/selectCity",
+                url:"http://localhost:3448/api/selectCity",
                 data:{
                     cid: city_id
                 },
@@ -73,7 +73,7 @@
         if(getUrlParam("id")){
             $.ajax({ 
                 type:"post", 
-                url:"http://192.168.1.172/api/hospitalSendUpdate",
+                url:"http://localhost:3448/api/selectCity",
                 data:{id:getUrlParam("id")}, 
                 dataType:"jsonp",
                 jsonp:"callback", 
@@ -110,11 +110,12 @@
             hospital = JSON.stringify(hospital);
             $.ajax({ 
                 type:"post", 
-                url:"http://192.168.1.172/api/hospitalUpdate",
+                url:"http://localhost:3448/api/selectCity",
                 data:{json: hospital},
                 dataType:"jsonp",
                 jsonp:"callback", 
                 success:function(data){
+                    $("#img_sbt").trigger("click");
                     $(".success").fadeIn("slow").delay(1000).fadeOut("slow",function(){                   
                         window.location.href = "hospital_list.html";
                     });
@@ -123,5 +124,19 @@
                     alert('fail');
                 }
             }); 
+        });
+        $("#dname").change(function(){
+            $("#img_name").val($("#dname").val()+"_img.jpg");
+        });
+        $("#file").change(function(){
+            var reader = new FileReader();
+            var file = this.files[0];
+            reader.onload = function(e) {
+                $("#image").attr("src",e.target.result);
+            };
+            reader.readAsDataURL(file);
+        });
+        $(".select").bind("click",function(){
+            $("#file").trigger("click");
         });
 });

@@ -132,3 +132,30 @@ ul,li{
 .main .table>tbody>tr>td{
 	vertical-align: middle;
 }
+.main .img{
+	position: absolute;
+	top: 70px;
+	right: 50px;
+	width: 150px;
+	height: 200px;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.main .img_box{
+	margin: 10px;
+	width: 130px;
+	height: 130px;
+	border: 1px solid #ccc;
+	background: yellow;
+}
+.main .img_box img{
+	width: 130px;
+	height: 130px;
+}
+.main .img_btn{
+	margin-top: 12px;
+}
+.main .img_btn button{
+	width: 130px;
+}

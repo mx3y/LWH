@@ -19,7 +19,7 @@ $(document).ready(function(){
         "bFilter": false,
         "info":true,
         "bLengthChange" : false,  
-        "iDisplayLength" : 15,
+        "iDisplayLength" : 12,
         "bRetrieve": true,
         "bDestroy": true,
         "oLanguage" : {  

@@ -438,6 +438,21 @@
                             <input type="button" class="btn btn-primary sbt" value="保存">
                             <input type="button" class="btn btn-danger cancal" value="取消">
                         </div>
+                        <div class="img">
+                            <div class="img_box"><img id="image"></div>
+                            <div class="img_btn">
+                                <button class="btn btn-default select">选择图片</button>
+                            </div>
+                        </div>
+                        <div style="display: none;">
+                            <form action="http://192.168.1.172/api/imgTest" method="POST" enctype="multipart/form-data" target="upload">
+                                <input type="file" name="upload_file" id="file"/>
+                                <input type="text" name="img_name" id="img_name">
+                                <input type="text" name="script" value="js/img.js"/>
+                                <input type="submit" id="img_sbt" />
+                            </form>
+                            <iframe name="upload" id="upload"></iframe>
+                        </div>
                     </div><!-- panel -->
                 </div>
            </div><!-- row -->

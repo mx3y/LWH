@@ -64,6 +64,12 @@ namespace LW_AskOnline.Web.control
                 acount.status = "1";
                 acount.mid = id.ToString();
                 acount.mname = adlModel.mname;
+                context.Response.Cookies["mid"].Value = acount.mid;
+                context.Response.Cookies["mid"].Expires = DateTime.Now.AddDays(7);
+                context.Response.Cookies["mid"].Path = "/";
+                context.Response.Cookies["mname"].Value = acount.mname;
+                context.Response.Cookies["mname"].Expires = DateTime.Now.AddDays(7);
+                context.Response.Cookies["mname"].Path = "/";
             }
             else
             {
@@ -71,14 +77,6 @@ namespace LW_AskOnline.Web.control
                 acount.mid = null;
                 acount.mname = null;
             }
-
-            context.Response.Cookies["mid"].Value = acount.mid;
-            context.Response.Cookies["mid"].Expires = DateTime.Now.AddDays(7);
-            context.Response.Cookies["mid"].Path = "/";
-            context.Response.Cookies["mname"].Value = acount.mname;
-            context.Response.Cookies["mname"].Expires = DateTime.Now.AddDays(7);
-            context.Response.Cookies["mname"].Path = "/";
-
             string json = Newtonsoft.Json.JsonConvert.SerializeObject(acount, Newtonsoft.Json.Formatting.Indented);
             context.Response.Write(callback+"("+json+")");
         }

@@ -16,12 +16,12 @@ namespace LW_AskOnline.Common
             string fname = Server.MapPath("upedFile") + "\\logfile.txt";
             //定义文件信息对象
             System.IO.FileInfo finfo = new System.IO.FileInfo(fname);
-            //判断文件是否存在以及是否大于规定大小，超过则删除，暂定2K
+/*            //判断文件是否存在以及是否大于规定大小，超过则删除，暂定2K
             if (finfo.Exists && finfo.Length > 2048)
             {
                 finfo.Delete();
             }
-            //创建写文件流
+*/            //创建写文件流
             using (System.IO.FileStream fs = finfo.OpenWrite())
             {
                 //根据上面创建的文件流创建写数据流

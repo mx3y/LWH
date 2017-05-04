@@ -26,14 +26,17 @@ namespace LW_AskOnline.Web.control
             adlModel.ustate = 0;
             bool check = adlBll.Update(adlModel);
             //写入日志
-            if (check)
+            if (context.Request.Cookies["mname"] != null)
             {
-                string ip = log.GetIP();
-                DateTime time = log.GetTime();
-                string handle = "DELETE";
-                string user = "USER";
-                string master = context.Request.Cookies["mname"].Value.ToString();
-                log.WriteLogFile(handle, ip, user, time, master);  
+                if (check)
+                {
+                    string ip = log.GetIP();
+                    DateTime time = log.GetTime();
+                    string handle = "DELETE";
+                    string user = "USER";
+                    string master = context.Request.Cookies["mname"].Value.ToString();
+                    log.WriteLogFile(handle, ip, user, time, master);
+                }
             }
             context.Response.Write(callback + "()");
         }
