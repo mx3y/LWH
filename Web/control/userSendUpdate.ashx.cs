@@ -16,14 +16,21 @@ namespace LW_AskOnline.Web.control
         {
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
-            string callback = context.Request.QueryString["callback"].ToString();
-            string parameter = context.Request.QueryString["id"].ToString();
-            int id = Convert.ToInt32(parameter);
-            BLL.ask_user adlBll = new BLL.ask_user();
-            Model.ask_user adlModel = new Model.ask_user();
-            adlModel = adlBll.GetModel(id);
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(adlModel, Newtonsoft.Json.Formatting.Indented);
-            context.Response.Write(callback + "(" + json + ")");
+            if (context.Request.Cookies["mid"] != null)
+            {
+                string callback = context.Request.QueryString["callback"].ToString();
+                string parameter = context.Request.QueryString["id"].ToString();
+                int id = Convert.ToInt32(parameter);
+                BLL.ask_user adlBll = new BLL.ask_user();
+                Model.ask_user adlModel = new Model.ask_user();
+                adlModel = adlBll.GetModel(id);
+                string json = Newtonsoft.Json.JsonConvert.SerializeObject(adlModel, Newtonsoft.Json.Formatting.Indented);
+                context.Response.Write(callback + "(" + json + ")");
+            }
+            else
+            {
+                context.Response.Write("请先登录"); 
+            }
         }
 
         public bool IsReusable

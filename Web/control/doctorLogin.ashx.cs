@@ -34,6 +34,7 @@ namespace LW_AskOnline.Web.control
             Acount acount = new Acount();
             BLL.ask_doctor_list adlBll = new BLL.ask_doctor_list();
             List<Model.ask_doctor_list> dlist = adlBll.GetModelList("");
+            Common.Log log = new Common.Log();
             int check = 0;
             int index = 0;
             for (int i = 0; i < dlist.Count; i++)
@@ -42,6 +43,9 @@ namespace LW_AskOnline.Web.control
                 {
                     index = i;
                     check = 1;
+                    Model.ask_doctor_list adlModel = dlist[i];
+                    adlModel.dlastlogin = log.GetTime();
+                    adlBll.Update(adlModel);
                     break;
                 }
             }

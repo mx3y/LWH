@@ -29,7 +29,7 @@ namespace LW_AskOnline.Web.control
             }
             else
             {
-                context.Response.Write("error");
+                context.Response.Write("请先登录！");
             }
         }
 

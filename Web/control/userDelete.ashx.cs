@@ -16,18 +16,18 @@ namespace LW_AskOnline.Web.control
         {
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
-            Common.Log log = new Common.Log();
-            string callback = context.Request.QueryString["callback"].ToString();
-            string parameter = context.Request.QueryString["id"].ToString();
-            int id = Convert.ToInt32(parameter);
-            BLL.ask_user adlBll = new BLL.ask_user();
-            Model.ask_user adlModel = new Model.ask_user();
-            adlModel = adlBll.GetModel(id);
-            adlModel.ustate = 0;
-            bool check = adlBll.Update(adlModel);
-            //写入日志
-            if (context.Request.Cookies["mname"] != null)
+            if (context.Request.Cookies["mid"] != null)
             {
+                Common.Log log = new Common.Log();
+                string callback = context.Request.QueryString["callback"].ToString();
+                string parameter = context.Request.QueryString["id"].ToString();
+                int id = Convert.ToInt32(parameter);
+                BLL.ask_user adlBll = new BLL.ask_user();
+                Model.ask_user adlModel = new Model.ask_user();
+                adlModel = adlBll.GetModel(id);
+                adlModel.ustate = 0;
+                bool check = adlBll.Update(adlModel);
+                //写入日志
                 if (check)
                 {
                     string ip = log.GetIP();
@@ -37,8 +37,12 @@ namespace LW_AskOnline.Web.control
                     string master = context.Request.Cookies["mname"].Value.ToString();
                     log.WriteLogFile(handle, ip, user, time, master);
                 }
+                context.Response.Write(callback + "()");
             }
-            context.Response.Write(callback + "()");
+            else
+            {
+                context.Response.Write("请先登录"); 
+            }
         }
 
         public bool IsReusable

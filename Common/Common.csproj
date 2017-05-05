@@ -132,7 +132,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetCookie.cs" />
+    <Compile Include="checkCookie.cs" />
     <Compile Include="HttpProc.cs" />
     <Compile Include="Log.cs">
       <SubType>ASPXCodeBehind</SubType>

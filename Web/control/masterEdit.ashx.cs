@@ -24,7 +24,7 @@ namespace LW_AskOnline.Web.control
             Object ja = JsonConvert.DeserializeObject(parameter);
             JObject o = (JObject)ja;
             BLL.ask_master adlBll = new BLL.ask_master();
-            Common.GetCookie cookie = new Common.GetCookie();
+            Common.checkCookie cookie = new Common.checkCookie();
             string mid = context.Request.Cookies["mid"].Value.ToString();
             Model.ask_master adlModel = new Model.ask_master()
             {
