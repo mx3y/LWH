@@ -46,9 +46,16 @@
                     $("#umail").val(data["umail"]);
                     var date = data.ubrithday.split("T")[0];
                     $("#ubrithday").val(date);
-                    $("#usex").val(data["usex"]);
-                    $("#ucompanyid").val(data["ucompanyid"]);
-                    $("#ustate").val(data["ustate"]);
+                    var usex = data.usex;
+                    $("input:radio[name='usex'][value='"+usex+"']").attr("checked","checked");
+                    date = data.uregisterdatetime.split("T").join(" ");
+                    $("#uregisterdatetime").val(date);
+                    date = data.ulastdatetime.split("T").join(" ");
+                    $("#ulastdatetime").val(date);
+                    $("#ulastip").val(data["ulastip"]);
+                    $("#ucompanyid").val(data["name"]);
+                    var ustate = data.ustate;
+                    $("input:radio[name='ustate'][value='"+ustate+"']").attr("checked","checked");
                 },
                 error:function(){
                     alert('get-url-fail');
@@ -114,19 +121,12 @@
             
             var user={
                 "uuid": getUrlParam("id"),
-                "utijtid": $("#utijtid").val(),
                 "uname": $("#uname").val(),
-                "ucompanymonery": $("#ucompanymonery").val(),
-                "umonery": $("#umonery").val(),
                 "uaccount": $("#uaccount").val(),
-                "upassword": $("#upassword").val(),
-                "ucardnumber": $("#ucardnumber").val(),
                 "umail": $("#umail").val(),
-                "ubrithday": $("#ubrithday").val(),
-                "usex": $("#usex").val(),
-                "ucompanyid": $("#ucompanyid").val(),
-                "ustate": $("#ustate").val(),
+                "ubrithday": $("#ubrithday").val()
             }
+            console.log(user);
             user = JSON.stringify(user);
             var uuser={
                 'json':user

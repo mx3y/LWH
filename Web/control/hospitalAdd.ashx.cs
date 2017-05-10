@@ -23,7 +23,7 @@ namespace LW_AskOnline.Web.control
             {
                 Common.Log log = new Common.Log();
                 string callback = context.Request.QueryString["callback"].ToString();
-                string addParameter = context.Request.QueryString["json"].ToString();
+                string addParameter = context.Request["json"].ToString();
                 //读json
                 Object ja = JsonConvert.DeserializeObject(addParameter);
                 JObject o = (JObject)ja;

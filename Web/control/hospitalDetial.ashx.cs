@@ -17,7 +17,7 @@ namespace LW_AskOnline.Web.control
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
             string callback = context.Request.QueryString["callback"].ToString();
-            string hid = context.Request.QueryString["hid"].ToString();
+            string hid = context.Request["hid"].ToString();
             BLL.ask_hospital hosAdlBll = new BLL.ask_hospital();
             BLL.ask_dept deptAdlBll = new BLL.ask_dept();
             List<Model.ask_dept> list = deptAdlBll.GetModelList("dhid = " + int.Parse(hid) + "");

@@ -30,7 +30,7 @@ namespace LW_AskOnline.Web.control
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
             string callback = context.Request.QueryString["callback"].ToString();
-            string parameter = context.Request.QueryString["id"].ToString();
+            string parameter = context.Request["id"];
             BLL.ask_doctor_list dBll = new BLL.ask_doctor_list();
             BLL.ask_order oBll = new BLL.ask_order();
             BLL.ask_illpersion iBll = new BLL.ask_illpersion();

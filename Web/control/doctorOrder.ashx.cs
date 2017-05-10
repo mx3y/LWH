@@ -17,7 +17,7 @@ namespace LW_AskOnline.Web.control
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
             string callback = context.Request.QueryString["callback"].ToString();
-            string did = context.Request.QueryString["id"].ToString();
+            string did = context.Request["id"];
             BLL.ask_order adlBll = new BLL.ask_order();
             List<Model.ask_order> list = new List<Model.ask_order>();
             list = adlBll.GetModelList("odid = " + int.Parse(did) + "");

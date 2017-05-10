@@ -26,7 +26,8 @@ namespace LW_AskOnline.Web.control.test
                 HttpPostedFile img = context.Request.Files["upload_file"];
                 string path = "~/upload/" + name.Substring(name.LastIndexOf("//") + 1);
                 img.SaveAs(context.Server.MapPath(path));
-                context.Response.Write(name);
+                string url = "http://localhost:3448/upload/" + name;
+                context.Response.Write(url);
         }
         
         public bool IsReusable

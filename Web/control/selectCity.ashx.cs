@@ -20,9 +20,9 @@ namespace LW_AskOnline.Web.control
             string callback = context.Request.QueryString["callback"].ToString();
             string getCid;
             BLL.ask_city adlBll = new BLL.ask_city();
-            if (context.Request.QueryString["cid"].ToString() != "")
+            if (context.Request["cid"].ToString() != "")
             {
-                getCid = context.Request.QueryString["cid"].ToString();
+                getCid = context.Request["cid"].ToString();
                 List<Model.ask_city> list = adlBll.GetModelList("cparent_id = '" + getCid + "'");
                 string json = Newtonsoft.Json.JsonConvert.SerializeObject(list, Newtonsoft.Json.Formatting.Indented);
                 context.Response.Write(callback + "(" + json + ")");

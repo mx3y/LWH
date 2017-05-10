@@ -21,7 +21,7 @@ namespace LW_AskOnline.Web.control
             if (context.Request.Cookies["mid"] != null)
             {
                 string callback = context.Request.QueryString["callback"].ToString();
-                string addParameter = context.Request.QueryString["json"].ToString();
+                string addParameter = context.Request["json"].ToString();
                 //读json
                 Object obj = JsonConvert.DeserializeObject(addParameter);
                 JObject o = (JObject)obj;
@@ -60,8 +60,10 @@ namespace LW_AskOnline.Web.control
                     dsort = int.Parse(o["dsort"].ToString()),
                     dishot = int.Parse(o["dishot"].ToString()),
                     dstate = int.Parse(o["dstate"].ToString()),
-                    d_onlinedate = o["d_onlinedate"].ToString(),
+                    //d_onlinedate = o["d_onlinedate"].ToString(),
+                    d_onlinedate = "asdwdw",
                     d_message = o["d_message"].ToString(),
+                    //d_message = "123",
                     d_count = int.Parse(o["d_count"].ToString()),
                     d_score = o["d_score"].ToString(),
                     d_professionscore = o["d_professionscore"].ToString(),

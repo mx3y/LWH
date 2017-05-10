@@ -17,7 +17,7 @@ namespace LW_AskOnline.Web.control
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
             string callback = context.Request.QueryString["callback"].ToString();
-            string id = context.Request.QueryString["id"].ToString();
+            string id = context.Request["id"].ToString();
             BLL.ask_ucpaas adlBll = new BLL.ask_ucpaas();
             Model.ask_ucpaas adlModel = new Model.ask_ucpaas();
             adlModel = adlBll.GetModel(int.Parse(id));

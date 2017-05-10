@@ -17,9 +17,9 @@ namespace LW_AskOnline.Web.control
         {
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
+            string callback = context.Request.QueryString["callback"].ToString();
             if (context.Request.Cookies["mid"] != null)
             {
-                string callback = context.Request.QueryString["callback"].ToString();
                 BLL.ask_doctor_list adlBLL = new BLL.ask_doctor_list();
                 Model.ask_doctor_list adlModel = new Model.ask_doctor_list();
                 DataSet set = adlBLL.GetAllList();
@@ -42,7 +42,9 @@ namespace LW_AskOnline.Web.control
             }
             else
             {
-                context.Response.Write("请先登录");
+                
+                context.Response.Write(callback +"()");
+                context.Response.Redirect("http://192.168.1.172/lwh/login.html");
             }
         }
 

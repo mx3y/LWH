@@ -35,7 +35,7 @@ namespace LW_AskOnline.Web.control
                 string path = "~/upload/" + name.Substring(name.LastIndexOf("//") + 1);
                 img.SaveAs(context.Server.MapPath(path));
                 context.Response.Write(name);
-            }
+            } 
         }
 
         public bool IsReusable

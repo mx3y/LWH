@@ -24,7 +24,7 @@ namespace LW_AskOnline.Web.control
         {
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
-            string parameter = context.Request.QueryString["json"].ToString();
+            string parameter = context.Request["json"];
             string callback = context.Request.QueryString["callback"].ToString();
             //读json
             Object ja = JsonConvert.DeserializeObject(parameter);

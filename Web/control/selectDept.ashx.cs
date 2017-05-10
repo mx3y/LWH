@@ -20,9 +20,9 @@ namespace LW_AskOnline.Web.control
             string callback = context.Request.QueryString["callback"].ToString();
             string getHid;
             BLL.ask_dept adlBll = new BLL.ask_dept();
-            if (context.Request.QueryString["hid"].ToString() != "")
+            if (context.Request["hid"].ToString() != "")
             {
-                getHid = context.Request.QueryString["hid"].ToString();
+                getHid = context.Request["hid"].ToString();
                 int getDhid = int.Parse(getHid);
                 List<Model.ask_dept> list = adlBll.GetModelList("dhid = " + getDhid + "");
                 string json = Newtonsoft.Json.JsonConvert.SerializeObject(list, Newtonsoft.Json.Formatting.Indented);

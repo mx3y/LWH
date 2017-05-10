@@ -21,7 +21,7 @@ namespace LW_AskOnline.Web.control
             {
                 Common.Log log = new Common.Log();
                 string callback = context.Request.QueryString["callback"].ToString();
-                string parameter = context.Request.QueryString["id"].ToString();
+                string parameter = context.Request["id"].ToString();
                 int id = Convert.ToInt32(parameter);
                 BLL.ask_hospital adlBll = new BLL.ask_hospital();
                 Model.ask_hospital adlModel = new Model.ask_hospital();

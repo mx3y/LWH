@@ -33,7 +33,6 @@ $(document).ready(function(){
         $(".nav-open").show();
     });
     $("#user-list").DataTable({
-        "bFilter": false,
         "info":true,
         "bLengthChange" : false,  
         "iDisplayLength" : 12,

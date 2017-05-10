@@ -111,7 +111,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="name">用户类型</label>
-                                        <input type="text" class="form-control" id="utijtid">
+                                        <input type="text" class="form-control" id="utijtid" disabled="true">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
@@ -127,14 +127,14 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="name">公司额度</label>
-                                        <input type="text" class="form-control" id="ucompanymonery">
+                                        <input type="text" class="form-control" id="ucompanymonery" disabled="true">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="name">充值金额</label>
-                                        <input type="text" class="form-control" id="umonery">
+                                        <input type="text" class="form-control" id="umonery" disabled="true">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
@@ -142,22 +142,22 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">用户帐号</label>
+                                        <label for="name">手机号码</label>
                                         <input type="text" class="form-control" id="uaccount">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <!-- <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="name">用户密码</label>
                                         <input type="text" class="form-control" id="upassword">
                                         <span class="help-block"></span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="name">身份证号</label>
-                                        <input type="text" class="form-control" id="ucardnumber">
+                                        <input type="text" class="form-control" id="ucardnumber" disabled="true">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
@@ -179,11 +179,13 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">性别</label>
-                                        <select class="form-control" id="usex">
-                                            <option>男</option>
-                                            <option>女</option>
-                                        </select>
+                                        <label for="name"> 性别</label><br>
+                                        <label class="radio-inline" style="margin: 5px 10px;">
+                                            <input type="radio" name="usex" value="男" disabled="true">男
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="usex" value="女" disabled="true">女
+                                        </label>
                                         <span class="help-block"></span>                                        
                                     </div>
                                 </div>
@@ -191,16 +193,44 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">用户公司编号</label>
-                                        <input type="text" class="form-control" id="ucompanyid">
+                                        <label for="name">注册时间</label>
+                                        <input type="text" class="form-control" id="uregisterdatetime" disabled="true">
                                         <span class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="name">用户使用状态</label>
-                                        <input type="text" class="form-control" id="ustate">
+                                        <label for="name">最后登录时间</label>
+                                        <input type="text" class="form-control" id="ulastdatetime" disabled="true">
                                         <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="name">最后登录ip</label>
+                                        <input type="text" class="form-control" id="ulastip" disabled="true">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="name">用户公司</label>
+                                        <input type="text" class="form-control" id="ucompanyid" disabled="true">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="name">状态</label><br>
+                                        <label class="radio-inline" style="margin: 5px 10px;">
+                                            <input type="radio" name="ustate" value="1" disabled="true">启用
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="ustate" value="0" disabled="true">禁用
+                                        </label>
+                                        <span class="help-block"></span>                                        
                                     </div>
                                 </div>
                             </div>
