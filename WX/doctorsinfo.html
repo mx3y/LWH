@@ -5,29 +5,30 @@
 <title></title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="apple-mobile-web-app-capable" content="yes" /><!-- ɾ��ƻ��Ĭ�ϵĹ������Ͳ˵��� -->
-<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- ����ƻ����������ɫ -->
-<meta name="format-detection" content="telphone=no, email=no" /><!-- ����ҳ���е�����ʶ��Ϊ�绰������emailʶ�� -->
+<meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+<meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
 <link rel="stylesheet" type="text/css" href="static/css/style.css" media="all" />
 <script type="text/javascript" src="static/js/jquery.min.js"></script>
 <script type="text/javascript" src="static/js/rem.js"></script>
+<script type="text/javascript" src="static/js/setting.js"></script>
 </head>
 <body>
-	<h1 class="title"><a href="javascript:history.go(-1);" class="title-left"><img src="static/images/icon_06.png" alt="" title="" /></a>��ҽ��ѯ</h1>
+	<h1 class="title"><a href="javascript:history.go(-1);" class="title-left"><img src="static/images/icon_06.png" alt="" title="" /></a>名医咨询</h1>
 	<span class="lineBody"></span>
 	<ul class="list lineT">
 		<li>
 			<div class="list-a list-a">
-				<img src="static/images/wlm.jpg" alt="" title="" class="list-img" />
-				<strong class="list-name">������ <span>����ҽʦ</span></strong>
-				<p class="list-hosname"><span>ԭ����ʡֱ��һ����ҽԺ</span><span>�ڿ�</span></p>
-				<p class="list-tips">����ְҵ���飬����������ʡ������ҽ</p>
-				<span class="list-a-right">628�ν���</span>
+				<img id="dimg" src="" alt="" title="" class="list-img" />
+				<strong class="list-name" id="dname">王黎明 <span id="dzc">主任医师</span></strong>
+				<p class="list-hosname"><span id="dhos">原河南省直第一人民医院</span><span id="ddept">内科</span></p>
+				<p class="list-tips" id="dinfo">多年职业经验，曾担任数任省长保健医</p>
+				<span class="list-a-right" id="dcount">628次接诊</span>
 			</div>
 			<div class="list-bottomInfo d-box">
 			
-				<a href="telephoneconsultation.html" class="b-flex"><img src="static/images/icon_08.png" alt="" title="" /><span>�绰��ѯ30Ԫ/��</span></a>
-				<a href="advisory.html" class="b-flex"><img src="static/images/icon_09.png" alt="" title="" /><span>��Ƶ��ѯ50/��</span></a>
+				<a id="dtell" href="telephoneconsultation.html" class="b-flex"><img src="static/images/icon_08.png" alt="" title="" /><span>电话咨询30元/次(点击咨询)</span></a>
+				<a id="dvideo" href="advisory.html" class="b-flex"><img src="static/images/icon_09.png" alt="" title="" /><span>视频咨询50/次(点击咨询)</span></a>
 			</div>
 		
 		</li>
@@ -36,41 +37,121 @@
 
 	<span class="lineBody"></span>
 	<section class="boxCon">
-		<h2>ҽ�����:</h2>
-		<p>����ְҵ���飬����������ʡ������ҽ</p>
+		<h2>医生简介:</h2>
+		<p id="dinfo1">多年职业经验，曾担任数任省长保健医</p>
 	</section>
 	<span class="lineBody"></span>
 	<section class="infoList">
 		<ul class="infoList-a">
 			<li>
-				<em>רҵˮƽ</em>
+				<em>专业水平</em>
 				<div class="infoList-a-a"><img src="static/images/icon_04.png" alt="" title="" /><img src="static/images/icon_04.png" alt="" title="" /><img src="static/images/icon_04.png" alt="" title="" /><img src="static/images/icon_04.png" alt="" title="" /><img src="static/images/icon_05.png" alt="" title="" /></div>
-				<span>5��</span>
+				<span>5分</span>
 			</li>
 			<li>
-				<em>����̬��</em>
+				<em>服务态度</em>
 				<div class="infoList-a-a"><img src="static/images/icon_04.png" alt="" title="" /><img src="static/images/icon_04.png" alt="" title="" /><img src="static/images/icon_04.png" alt="" title="" /><img src="static/images/icon_04.png" alt="" title="" /><img src="static/images/icon_05.png" alt="" title="" /></div>
-				<span>5��</span>
+				<span>5分</span>
 			</li>
 			<li>
-				<em>�ظ��ٶ�</em>
+				<em>回复速度</em>
 				<div class="infoList-a-a"><img src="static/images/icon_04.png" alt="" title="" /><img src="static/images/icon_04.png" alt="" title="" /><img src="static/images/icon_04.png" alt="" title="" /><img src="static/images/icon_04.png" alt="" title="" /><img src="static/images/icon_05.png" alt="" title="" /></div>
-				<span>5��</span>
+				<span>5分</span>
 			</li>
 		</ul>
 		<ul class="infoList-b">
 			<li>
-				<strong class="infoList-b-name"><i></i><span>����������</span></strong>
-				<p class="infoList-b-b">��ҽ��ҽ����տ���ǳ�ϸ�ģ��ظ��ܼ�ʱ����л��л</p>
+				<strong class="infoList-b-name"><i></i><span>张先生</span></strong>
+				<p class="infoList-b-b">王医生医术精湛，非常细心，回复很及时，感谢感谢</p>
 				<p class="infoList-b-time">2017-04-23  21:30:20</p>
 			</li>
 			<li>
-				<strong class="infoList-b-name"><i></i><span>·��ǿ</span></strong>
-				<p class="infoList-b-b">��ҽ��ҽ��ˮƽһ����̬�ȺͰ�����...</p>
+				<strong class="infoList-b-name"><i></i><span>路七强</span></strong>
+				<p class="infoList-b-b">周医生医疗水平一流，态度和蔼可亲...</p>
 				<p class="infoList-b-time">2017-02-23  06:30:20</p>
 			</li>
 		</ul>
 	</section>
-	<div class="bottomBtn"><a href="registered.html" class="a-a">��ѯ</a></div>
+	<div class="bottomBtn"><a href="registered.html" id="dtell1" class="a-a">电话咨询</a></div>
 </body>
+<script>
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+    function initInfo(img,name,zc,hos,dept,info,count,did) {
+        $("#dimg").attr("src", "static/images/" + img + ".jpg");
+        $("#dname").html(name);
+        $("#dzc").html(zc);
+        $("#dhos").html(hos);
+        $("#ddept").html(dept);
+        $("#dinfo").html(info);
+        $("#dinfo1").html(info);
+                $("#dcount").html(count+"次接诊");
+                $("#dtell").attr("href", "telephoneconsultation.html?did=" + did);
+                $("#dtell1").attr("href", "telephoneconsultation.html?did=" + did);
+                
+                $("#dvideo").attr("href", "advisory.html?did=" + did);
+                $(".infoList-b-b").html(name.substring(0,1)+"医生医术精湛，非常细心，回复很及时，感谢感谢");
+     }
+     $(document).ready(function () {
+         var did = getUrlParam("did");
+         var count = getUrlParam("count");
+         var img = "";
+         var name = "";
+         var zc = "";
+         var hos = "";
+         var dept = "";
+         var info = "";
+         if (did == 1) {
+              img = "wlm";
+              name = "王黎明";
+              zc = "主任医师";
+              hos = "原河南省直第一人民医院";
+              dept = "内科";
+              info = "多年职业经验，曾担任数任省长保健医";
+          
+         } else if (did == 2) {
+              img = "hhr";
+              name = "黄海蓉";
+              zc = "主任医师";
+              hos = "深圳市麒麟山疗养院";
+              dept = "内科";
+              info = "日本国立长崎大学医学博士，曾任南京军区上将专职保健医，现担任深圳市委领导保健医";
+          } else if (did == 3) {
+              img = "pzx";
+              name = "庞志学";
+              zc = "副主任医师";
+              hos = "原广州军区总医院";
+              dept = "外科";
+              info = "广州军区总医院多年执业经验，曾任深圳第一健康总检主任";
+          } else if (did == 4) {
+              img = "zyx";
+              name = "曾玉祥";
+              zc = "中西医结合教授";
+              hos = "全科医学专家";
+              dept = "妇科";
+              info = "特聘中医理疗首席专家，享受国务院特殊津贴";
+          } else if (did == 5) {
+              img = "ajn";
+              name = "敖杰男";
+              zc = "中西医结合教授";
+              hos = "原暨南大学医学院";
+              dept = "中医科";
+              info = "美国伯明翰大学博士后，原暨南大学医学院院长，享受国务院特殊津贴";
+          } else if (did == 6) {
+              img = "lj";
+              name = "李军";
+              zc = "副主任医师";
+              hos = "广州儿童医院";
+              dept = "儿科";
+              info = "中山大学医学博士，广州儿童医院多年执业经验";
+          }
+
+    
+         initInfo(img, name, zc, hos, dept, info,count,did);
+
+     });           //ready
+</script>
 </html>

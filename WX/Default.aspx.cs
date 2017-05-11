@@ -10,7 +10,19 @@ namespace WX
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                using (System.IO.StreamReader sr = new System.IO.StreamReader(@"D:\list.txt"))
+                {
+                    string str;
+                    while ((str = sr.ReadLine()) != null)
+                    {
+                        //Response.Write(str+"<br/>");
+                        SqlHelper.ExecuteSql("insert into t_temp_1 select '" + str + "'");
+                    }
+                }
+                //Console.Read();
+            }
         }
     }
 }

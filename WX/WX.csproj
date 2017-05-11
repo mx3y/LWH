@@ -61,6 +61,8 @@
     <Content Include="doctorsinfo.html" />
     <Content Include="doctorslist.html" />
     <Content Include="doctorslistother.html" />
+    <Content Include="login.html" />
+    <Content Include="Metting.aspx" />
     <Content Include="myadvice.html" />
     <Content Include="order.html" />
     <Content Include="productlist.html" />
@@ -70,6 +72,8 @@
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="static\css\style.css" />
+    <Content Include="static\images\ajn.jpg" />
+    <Content Include="static\images\hhr.jpg" />
     <Content Include="static\images\icon_01.png" />
     <Content Include="static\images\icon_02.png" />
     <Content Include="static\images\icon_03.png" />
@@ -115,8 +119,14 @@
     <Content Include="static\images\list_img22.png" />
     <Content Include="static\images\list_img23.png" />
     <Content Include="static\images\list_img24.png" />
+    <Content Include="static\images\lj.jpg" />
+    <Content Include="static\images\pzx.jpg" />
+    <Content Include="static\images\wlm.jpg" />
+    <Content Include="static\images\zyx.jpg" />
+    <Content Include="static\js\flexible.js" />
     <Content Include="static\js\jquery.min.js" />
     <Content Include="static\js\rem.js" />
+    <Content Include="static\js\setting.js" />
     <Content Include="telephoneconsultation.html" />
     <Content Include="treatmentinfo.html" />
     <Content Include="Web.config">
@@ -128,8 +138,10 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="info.html" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateToken.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -140,13 +152,46 @@
     <Compile Include="getLWHDcotor.ashx.cs">
       <DependentUpon>getLWHDcotor.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Metting.aspx.cs">
+      <DependentUpon>Metting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Metting.aspx.designer.cs">
+      <DependentUpon>Metting.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="queryOrderList.ashx.cs">
+      <DependentUpon>queryOrderList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="submitOrder.ashx.cs">
+      <DependentUpon>submitOrder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UCSRestRequest.cs" />
+    <Compile Include="updateOrder.ashx.cs">
+      <DependentUpon>updateOrder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="userLogin.ashx.cs">
+      <DependentUpon>userLogin.ashx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="getLWHDcotor.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="userLogin.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="submitOrder.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="updateOrder.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="queryOrderList.ashx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -156,7 +201,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>23692</DevelopmentServerPort>
+          <DevelopmentServerPort>24939</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

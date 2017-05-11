@@ -5,48 +5,69 @@
 <title></title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="apple-mobile-web-app-capable" content="yes" /><!-- É¾³ıÆ»¹ûÄ¬ÈÏµÄ¹¤¾ßÀ¸ºÍ²Ëµ¥À¸ -->
-<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- ÉèÖÃÆ»¹û¹¤¾ßÀ¸ÑÕÉ« -->
-<meta name="format-detection" content="telphone=no, email=no" /><!-- ºöÂÔÒ³ÃæÖĞµÄÊı×ÖÊ¶±ğÎªµç»°£¬ºöÂÔemailÊ¶±ğ -->
+<meta name="apple-mobile-web-app-capable" content="yes" /><!-- åˆ é™¤è‹¹æœé»˜è®¤çš„å·¥å…·æ å’Œèœå•æ  -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- è®¾ç½®è‹¹æœå·¥å…·æ é¢œè‰² -->
+<meta name="format-detection" content="telphone=no, email=no" /><!-- å¿½ç•¥é¡µé¢ä¸­çš„æ•°å­—è¯†åˆ«ä¸ºç”µè¯ï¼Œå¿½ç•¥emailè¯†åˆ« -->
 <link rel="stylesheet" type="text/css" href="static/css/style.css" media="all" />
 <script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery.cookie/1.4.1/jquery.cookie.js"></script>
 <script type="text/javascript" src="static/js/rem.js"></script>
+<script type="text/javascript" src="static/js/setting.js"></script>
 </head>
 <body class="bodyBg">
-	<h1 class="title">ÃûÒ½×ÉÑ¯</h1>
+	<h1 class="title">ååŒ»å’¨è¯¢</h1>
 	<aside class="tab d-box">
-		<div class="b-flex"><a href="doctorslist.html">ÁùÎ¬ÃûÒ½</a></div>
-		<div class="b-flex"><a href="productlist.html">Èı¼×ÃûÒ½</a></div>
-		<div class="b-flex focus"><a href="myadvice.html">ÎÒµÄ×ÉÑ¯</a></div>
+		<div class="b-flex"><a href="doctorslist.html">å…­ç»´ååŒ»</a></div>
+		<div class="b-flex"><a href="productlist.html">ä¸‰ç”²ååŒ»</a></div>
+		<div class="b-flex focus"><a href="myadvice.html">æˆ‘çš„å’¨è¯¢</a></div>
 	</aside>
 	<section class="myadvice">
-		<div class="tabSub">
+		<div class="tabSub" style="display:none">
 			<div class="tabSubBox d-box">
-				<a href="#" class="tab-li focus b-flex">ÍøÂç×ÉÑ¯</a>
-				<a href="#" class="tab-li b-flex">µç»°×ÉÑ¯</a>
-				<a href="#" class="tab-li b-flex">ÊÓÆµ×ÉÑ¯</a>
+				<a href="#" class="tab-li focus b-flex">ç½‘ç»œå’¨è¯¢</a>
+				<a href="#" class="tab-li b-flex">ç”µè¯å’¨è¯¢</a>
+				<a href="#" class="tab-li b-flex">è§†é¢‘å’¨è¯¢</a>
 			</div>
 		</div>
-		<aside class="tab d-box">
-			<div class="b-flex focus"><a href="#">Î´½áÊø</a></div>
-			<div class="b-flex"><a href="#">ÒÑ½áÊø</a></div>
-			<div class="b-flex"><a href="#">ÒÑÈ¡Ïû</a></div>
-			<div class="b-flex"><a href="#">´ıÖ§¸¶</a></div>
+		<aside class="tab d-box" style="display:none">
+			<div class="b-flex focus"><a href="#">æœªç»“æŸ</a></div>
+			<div class="b-flex"><a href="#">å·²ç»“æŸ</a></div>
+			<div class="b-flex"><a href="#">å·²å–æ¶ˆ</a></div>
+			<div class="b-flex"><a href="#">å¾…æ”¯ä»˜</a></div>
 		</aside>
 		<ul class="myadviceList">
 			<li>
-				<div class="myadviceList-box"><em>±¦±¦¼çÉÏÓĞ¿é¶¹¶¹´óµÄÊªÕî</em><span><i><img src="static/images/icon_11.png" alt="" title=""></i></span></div>
-				<div class="myadviceList-bottom"><em>Ãâ·Ñ×ÉÑ¯</em><span class="myadviceList-bottom-span">³¬Ê±</span><span class="myadviceList-bottom-last">2016-04-08  08:00</span></div>
-			</li>
-			<li>
-				<div class="myadviceList-box"><em>±¦±¦¼çÉÏÓĞ¿é¶¹¶¹´óµÄÊªÕî±¦±¦¼çÉÏÓĞ¿é¶¹¶¹´óµÄÊªÕî±¦±¦¼çÉÏÓĞ¿é¶¹¶¹´óµÄÊªÕî</em><span><i><img src="static/images/icon_11.png" alt="" title=""></i></span></div>
-				<div class="myadviceList-bottom"><em>£¤25</em><span class="myadviceList-bottom-span">Î´Ö§¸¶</span><span class="myadviceList-bottom-last">2016-04-08  08:00</span></div>
-			</li>
-			<li>
-				<div class="myadviceList-box"><em>±¦±¦¼çÉÏÓĞ¿é¶¹¶¹´óµÄÊªÕî</em><span><i><img src="static/images/icon_11.png" alt="" title=""></i></span></div>
-				<div class="myadviceList-bottom"><em>£¤25</em><span class="myadviceList-bottom-span">µÈ´ıÒ½Éú»Ø¸´</span><span class="myadviceList-bottom-last">2016-04-08  08:00</span></div>
+				<div class="myadviceList-box"><em>å®å®è‚©ä¸Šæœ‰å—è±†è±†å¤§çš„æ¹¿ç–¹</em><span><i><img src="static/images/icon_11.png" alt="" title=""></i></span></div>
+				<div class="myadviceList-bottom"><em>å…è´¹å’¨è¯¢</em><span class="myadviceList-bottom-span">è¶…æ—¶</span><span class="myadviceList-bottom-last">2016-04-08  08:00</span></div>
 			</li>
 		</ul>
 	</section>
 </body>
+<script>
+
+    $(document).ready(function () {
+        var cook = $.cookie('lwhd');
+        var uid = cook.split('|')[0];
+
+      //  var domain = "http://localhost:24939\/";
+        var url = domain + "queryOrderList.ashx?uid=" + uid;
+
+        $.ajax({
+            url: url,
+            dataType: "jsonp",
+            jsonp: "callback",
+            beforeSend: function () {
+            },
+            success: function (dataarg) {
+                if (dataarg != "0") {
+    
+                    $(".myadviceList").html(dataarg);
+
+                } else {
+                    alert("è·å–ä¿¡æ¯å¤±è´¥");
+                }
+            }
+        }); //ajax
+    });          //ready
+</script>
 </html>

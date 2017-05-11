@@ -74,8 +74,9 @@ article,aside,section,canvas,details,figcaption,figure,footer,header,hgroup,menu
 
 .productList{text-align:center; border-collapse:collapse; table-layout:fixed; width:100%;}
 .productList td{border:1px solid #ececec;}
+.productList a{display:block; position:relative;}
 .productList img{width:1.02rem; height:1.03rem;}
-/*.productList span{display:block; font-size:.15rem; color:#333; line-height:.20rem; margin-top:.08rem;}*/
+.productList span{display:block; font-size:.15rem; color:#333; line-height:.20rem; position:absolute; left:0; bottom:.15rem; text-align:center; width:100%;}
 
 .boxCon{border-top:1px solid #ececec; border-bottom:1px solid #ececec; padding:0 .13rem .13rem;}
 .boxCon h2{font-size:.18rem; line-height:.20rem; padding:.12rem 0 .08rem;}

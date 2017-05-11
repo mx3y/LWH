@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<script type="text/javascript">
+    var CONTEXT = "http://www.liuweijiankang.com:80/liuwei/"
+</script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>会员中心—我的预约</title>
+    <link rel="stylesheet" href="http://www.liuweijiankang.com:80/liuwei/wx-static/css/bootstrap.css">
+    <link rel="stylesheet" href="http://www.liuweijiankang.com:80/liuwei/wx-static/css/ydy.css">
+      <script src="static/js/flexible.js"></script>
+</head>
+<body class="yby-bg">
+<div class="con-ydy">
+    <p id="info">&nbsp;&nbsp;&nbsp;&nbsp;尊敬的陈钢，鹏华基金已经安排了您的家庭医生服务，您可以和副主任级以上职称的资深医生在线实时沟通，进行电话连线和视频连线。<br/>&nbsp;&nbsp;&nbsp;&nbsp;
+            您的<span>咨询服务企业可用余额为3000.0元</span>，可以咨询六维在线名医，预约25个科室的三甲医院在 职医生咨询，咨询费用超出企业余额部分可通过微信进行支付。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>咨询电话:<span>400-808-8166</span></p>
+    <p class="ydy"><img src="http://www.liuweijiankang.com:80/liuwei/wx-static/images/ydy-bg.png" alt=""/></p>
+</div>
+<div class="ydy-zc-btn">
+    <div class="mb">
+        <p class="ydy-zc-txt">为您带来<span>专业可靠</span></p>
+        <p class="ydy-zc-txt"><span>服务一流</span>健康服务尊享体验</p>
+    </div>
+    <a href="doctorslist.html" class="btn-msty">马上咨询医生>></a>
+</div>
+
+</body>
+<script src="http://www.liuweijiankang.com:80/liuwei/wx-static/js/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery.cookie/1.4.1/jquery.cookie.js"></script>
+<script src="http://www.liuweijiankang.com:80/liuwei/wx-static/js/custom/leepop.js"></script>
+
+<script>
+    function getCookie(name) {
+        var cookieName = encodeURIComponent(name) + '=';
+        var cookieStart = document.cookie.indexOf(cookieName);
+        var cookieValue = null;
+        if (cookieStart > -1) {
+            var cookieEnd = document.cookie.indexOf(';', cookieStart);
+            if (cookieEnd == -1) {
+                cookieEnd = document.cookie.length;
+            }
+  
+            cookieValue = decodeURIComponent(document.cookie.substring(cookieStart + cookieName.length, cookieEnd));
+        }
+        return cookieValue;
+    }
+    $(document).ready(function () {
+        var cook = getCookie("lwhd");
+   
+        var name = cook.split('|')[1];
+        var company = cook.split('|')[2];
+        var monery = cook.split('|')[3];
+
+        $("#info").html("&nbsp;&nbsp;&nbsp;&nbsp;尊敬的" + name + "，" + company + "已经安排了您的家庭医生服务，您可以和副主任级以上职称的资深医生在线实时沟通，进行电话连线和视频连线。<br/>&nbsp;&nbsp;&nbsp;&nbsp;您的<span>咨询服务企业可用余额为" + monery + "元</span>，可以咨询六维在线名医，预约25个科室的三甲医院在 职医生咨询，咨询费用超出企业余额部分可通过微信进行支付。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>咨询电话:<span>400-808-8166</span><br/><br/><br/>");
+    });          //ready
+</script>
+</html>

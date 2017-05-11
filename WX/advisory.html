@@ -5,59 +5,162 @@
 <title></title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="apple-mobile-web-app-capable" content="yes" /><!-- ɾ��ƻ��Ĭ�ϵĹ������Ͳ˵��� -->
-<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- ����ƻ����������ɫ -->
-<meta name="format-detection" content="telphone=no, email=no" /><!-- ����ҳ���е�����ʶ��Ϊ�绰������emailʶ�� -->
+<meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+<meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
 <link rel="stylesheet" type="text/css" href="static/css/style.css" media="all" />
 <script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery.cookie/1.4.1/jquery.cookie.js"></script>
 <script type="text/javascript" src="static/js/rem.js"></script>
 </head>
 <body>
-	<h1 class="title"><a href="javascript:history.go(-1);" class="title-left"><img src="static/images/icon_06.png" alt="" title="" /></a>������ѯ</h1>
+	<h1 class="title"><a href="javascript:history.go(-1);" class="title-left"><img src="static/images/icon_06.png" alt="" title="" /></a>视频咨询</h1>
 	<span class="lineBody"></span>
 	<ul class="list lineT">
 		<li>
-			<div class="list-a list-a">
-				<img src="static/images/img_01.png" alt="" title="" class="list-img" />
-				<strong class="list-name">���»� <span>����ҽ��</span></strong>
-				<p class="list-hosname"><span>�����б���ҽԺ</span><span>������</span></p>
-				<p class="list-tips">���󿵸������ϰ��������󿵸������ϰ��������󿵸������ϰ���</p>
-				<p class="list-num">��20.00/�� </p>
+            <div class="list-a list-a">
+				<img id="dimg" src="" alt="" title="" class="list-img" />
+				<strong class="list-name"  id="dname">周月华 <span  id="dzc">主任医生</span></strong>
+				<p class="list-hosname"><span id="dhos">深圳市北大医院</span><span id="ddept">康复科</span></p>
+				<p class="list-tips" id="dinfo">术后康复，养老褒奖，术后康复，养老褒奖，术后康复，养老褒奖</p>
+				<p class="list-num">￥50.00/次 <span>(视频前两小时取消可退费)</span></p>
 			</div>
-			<div class="list-bottomInfos d-box">
-				<div class="b-flex"><img src="static/images/icon_10.png" alt="" title="" /><span>��֤ҽ��</span></div>
-				<div class="b-flex"><img src="static/images/icon_10.png" alt="" title="" /><span>���˻ظ�</span></div>
-				<div class="b-flex"><img src="static/images/icon_10.png" alt="" title="" /><span>δ�ظ��Զ��˿�</span></div>
+
+
+			<div class="list-bottomInfos d-box" style="display:none">
+				<div class="b-flex"><img src="static/images/icon_10.png" alt="" title="" /><span>认证医生</span></div>
+				<div class="b-flex"><img src="static/images/icon_10.png" alt="" title="" /><span>本人回复</span></div>
+				<div class="b-flex"><img src="static/images/icon_10.png" alt="" title="" /><span>未接通自动退款</span></div>
 			</div>
 		</li>
 	</ul>
 	<span class="lineBody"></span>
-	<section class="patientInfo">
-		<ul>
-			<li><strong>ԤԼ��Ϣ</strong><span>2017-02-02 ���ڶ� ����</span></li>
-		</ul>
-	</section>
+	<div class="infoCon-froms">
+
+		<textarea class="textareas"  placeholder="请输入您的QQ号码，该号码为视频咨询时与医生视频的QQ号码" id="txtMessage"></textarea>
+   
+		
+	</div>
 	<span class="lineBody"></span>
 	<section class="infoCon">
 		<ul class="">
-			<li>
-				<h2>�ó�����:</h2>
-				<p>���¸�����רҵ15�꣬�����������������ٴ����������෢�������ڴ���Χ���ڱ���������������������ǰ����ǰ�������ڱ��������ճ����񣬶Խ����ټ������������Լ��Ķ������⡣</p>
+					<li>
+				<h2>温馨提示:</h2>
+				<p>400客服接到您的订单后会致电给您安排视频咨询时间，并将您的QQ添加为QQ好友<br/><br/>
+                  在约定时间两小时前您可以取消订单，系统自动退费到您的帐号中<br/><br/>
+                  在约定时间请您登录QQ号码，客服会安排医生和您进行QQ视频<br/><br/>
+                  视频过程中如因网络等因素中断，您可以在讨论组中重新发起视频请求，医生将和您再次进行视频咨询<br/><br/>
+                为保护您的个人隐私，咨询医生时，请尽量不要透露联系方式等与病情描述无关的信息</p>
 			</li>
 			<li>
-				<h2>���˼��:</h2>
-				<p>���¸�����רҵ15�꣬�����������������ٴ����������෢�������ڴ���Χ���ڱ���������������������ǰ����ǰ�������ڱ��������ճ����񣬶Խ����ټ������������Լ��Ķ������⡣</p>
-			</li>
-			<li>
-				<h2>����˵��:</h2>
-				<p>���¸�����רҵ15�꣬�����������������ٴ����������෢�������ڴ���Χ���ڱ���������������������ǰ����ǰ�������ڱ��������ճ����񣬶Խ����ټ������������Լ��Ķ������⡣</p>
-			</li>
-			<li>
-				<h2>֣�س�ŵ:</h2>
-				<p>���¸�����רҵ15�꣬�����������������ٴ����������෢�������ڴ���Χ���ڱ���������������������ǰ����ǰ�������ڱ��������ճ����񣬶Խ����ټ������������Լ��Ķ������⡣</p>
+				<h2>郑重承诺:</h2>
+				<p>视频过程中系统将全程录音，便于您日后查询，有任何疑问或者投诉建议，请致电：400-808-8166</p>
 			</li>
 		</ul>
 	</section>
-	<div class="bottomBtn"><a href="#" class="a-a">������ѯ</a></div>
+<div class="bottomBtn"><a href="tel:4008088166" class="a-b">联系客服</a><a  class="a-c" id="dtell">立即预约</a></div>
 </body>
+<script>
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+    function initInfo(img, name, zc, hos, dept, info, did) {
+        $("#dimg").attr("src", "static/images/" + img + ".jpg");
+        $("#dname").html(name);
+        $("#dzc").html(zc);
+        $("#dhos").html(hos);
+        $("#ddept").html(dept);
+        $("#dinfo").html(info);
+        //$("#dtell").attr("href", "recharge.html?did="+did);
+    }
+    $(document).ready(function () {
+        var did = getUrlParam("did");
+
+        var img = "";
+        var name = "";
+        var zc = "";
+        var hos = "";
+        var dept = "";
+        var info = "";
+        if (did == 1) {
+            img = "wlm";
+            name = "王黎明";
+            zc = "主任医师";
+            hos = "原河南省直第一人民医院";
+            dept = "内科";
+            info = "多年职业经验，曾担任数任省长保健医";
+
+        } else if (did == 2) {
+            img = "hhr";
+            name = "黄海蓉";
+            zc = "主任医师";
+            hos = "深圳市麒麟山疗养院";
+            dept = "内科";
+            info = "日本国立长崎大学医学博士，曾任南京军区上将专职保健医，现担任深圳市委领导保健医";
+        } else if (did == 3) {
+            img = "pzx";
+            name = "庞志学";
+            zc = "副主任医师";
+            hos = "原广州军区总医院";
+            dept = "外科";
+            info = "广州军区总医院多年执业经验，曾任深圳第一健康总检主任";
+        } else if (did == 4) {
+            img = "zyx";
+            name = "曾玉祥";
+            zc = "中西医结合教授";
+            hos = "全科医学专家";
+            dept = "妇科";
+            info = "特聘中医理疗首席专家，享受国务院特殊津贴";
+        } else if (did == 5) {
+            img = "ajn";
+            name = "敖杰男";
+            zc = "中西医结合教授";
+            hos = "原暨南大学医学院";
+            dept = "中医科";
+            info = "美国伯明翰大学博士后，原暨南大学医学院院长，享受国务院特殊津贴";
+        } else if (did == 6) {
+            img = "lj";
+            name = "李军";
+            zc = "副主任医师";
+            hos = "广州儿童医院";
+            dept = "儿科";
+            info = "中山大学医学博士，广州儿童医院多年执业经验";
+        }
+
+
+        initInfo(img, name, zc, hos, dept, info, did);
+        $("#txtMessage").focus();
+        $("#dtell").click(function () {
+            //  alert($("#txtMessage").val());
+            var cook = $.cookie('lwhd');
+            var uid = cook.split('|')[0];
+            var name = cook.split('|')[1];
+            var company = cook.split('|')[2];
+            var monery = cook.split('|')[3];
+
+            var domain = "http://localhost:24939\/";
+            var url = domain + "submitOrder.ashx?did=" + did + "&uid=" + uid + "&info=" + $("#txtMessage").val() + "&type=2";
+            $.ajax({
+                url: url,
+                dataType: "jsonp",
+                jsonp: "callback",
+                beforeSend: function () {
+                },
+                success: function (dataarg) {
+
+                    if (dataarg != "0") {
+
+                        window.location.href = "recharge.html?type=2&did=" + did + "&oid=" + dataarg;
+                    } else {
+                        alert("图片上传失败");
+
+                    }
+                }
+
+            }); //ajax
+        });
+    });                //ready
+</script>
 </html>

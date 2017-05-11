@@ -5,45 +5,164 @@
 <title></title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="apple-mobile-web-app-capable" content="yes" /><!-- ɾ��ƻ��Ĭ�ϵĹ������Ͳ˵��� -->
-<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- ����ƻ����������ɫ -->
-<meta name="format-detection" content="telphone=no, email=no" /><!-- ����ҳ���е�����ʶ��Ϊ�绰������emailʶ�� -->
+<meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+<meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
 <link rel="stylesheet" type="text/css" href="static/css/style.css" media="all" />
 <script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery.cookie/1.4.1/jquery.cookie.js"></script>
 <script type="text/javascript" src="static/js/rem.js"></script>
+<script type="text/javascript" src="static/js/setting.js"></script>
 </head>
 <body class="bodyBg">
-	<h1 class="title"><a href="javascript:history.go(-1);" class="title-left"><img src="static/images/icon_06.png" alt="" title="" /></a>��ֵ</h1>
+	<h1 class="title"><a href="javascript:history.go(-1);" class="title-left"><img src="static/images/icon_06.png" alt="" title="" /></a>充值</h1>
 	<span class="lineBody"></span>
 	<section class="patientInfo">
 		<ul>
-			<li><strong>������</strong><span>1865566655</span></li>
-			<li><strong>���»�ҽ����ѯ</strong><input type="text" name="" class="input" value="1" /><span class="c-red">��10.00</span></li>
-			<li><strong>�Ż�ȯ</strong><span>��<i><img src="static/images/icon_11.png" alt="" title="" /></i></span></li>
-			<li><strong>&nbsp;</strong><span>�����ϼƣ�<em class="c-red">��10.00</em><i><img src="static/images/icon_11.png" alt="" title="" /></i></span></li>
+			<li><strong>订单号</strong><span id="oid">1865566655</span></li>
+			<li><strong id="oname">周月华医生咨询</strong><span class="c-red" id="askmonery">￥10.00</span></li>
+		
+		
 		</ul>
 	</section>
 	<span class="lineBody"></span>
 	<section class="patientService">
 		<ul>
 			<li>
-				<input type="checkbox" name="" class="checkbox" id="checked1" checked />
-				<a href="#" class="patientService-a c-red">��0.00</a>
-				<label for="checked1">���ͽ��<span><img src="static/images/icon_12.png" alt="" title="" /></span></label>
-				<p>(���ͽ�0.00�����ο��ã�0.00)</p>
+				<input type="checkbox" name="" class="checkbox" id="checked1" checked disabled="disabled"  />
+				<a href="#" class="patientService-a c-red" ></a>
+				<label for="checked1" id="edu">2323<span><img src="static/images/icon_12.png"   alt="" title="" /></span></label>
+				<p>(零钱包中的额度由单位提供，不可提现)</p>
 			</li>
 			<li>
-				<input type="checkbox" name="" class="checkbox" id="checked2" checked />
-				<label for="checked2">�˻�����0.00</label>
+				<input type="checkbox" name="" class="checkbox" id="checked2"  disabled="disabled" />
+            
+				<label for="checked2">使用个人账户(余额￥0)</label>
 			</li>
 		</ul>
 	</section>
 	<span class="lineBody"></span>
 	<section class="patientInfo">
 		<ul>
-			<li><strong>Ӧ���ܶ�</strong><span class="c-red">��10.00</span></li>
+			<li><strong>订单总额</strong><span class="c-red" id="ototal">￥10.00</span></li>
 		</ul>
 	</section>
-	<div class="bottomBtn"><em class="bottomBtn-con">����֧��: <span class="c-red">��10.00</span></em><a href="#" class="a-c">ȥ֧��</a></div>
+	<div class="bottomBtn"><em class="bottomBtn-con">个人还需支付: <span class="c-red">￥0.00</span></em><a  id="submitOrder" class="a-c">确认下单</a></div>
 </body>
+<script>
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+
+    $(document).ready(function () {
+        var did = getUrlParam("did");
+        var type = getUrlParam("type");
+        var oid = getUrlParam("oid");
+        var img = "";
+        var name = "";
+        var zc = "";
+        var hos = "";
+        var dept = "";
+        var info = "";
+        if (did == 1) {
+            img = "wlm";
+            name = "王黎明";
+            zc = "主任医师";
+            hos = "原河南省直第一人民医院";
+            dept = "内科";
+            info = "多年职业经验，曾担任数任省长保健医";
+
+        } else if (did == 2) {
+            img = "hhr";
+            name = "黄海蓉";
+            zc = "主任医师";
+            hos = "深圳市麒麟山疗养院";
+            dept = "内科";
+            info = "日本国立长崎大学医学博士，曾任南京军区上将专职保健医，现担任深圳市委领导保健医";
+        } else if (did == 3) {
+            img = "pzx";
+            name = "庞志学";
+            zc = "副主任医师";
+            hos = "原广州军区总医院";
+            dept = "外科";
+            info = "广州军区总医院多年执业经验，曾任深圳第一健康总检主任";
+        } else if (did == 4) {
+            img = "zyx";
+            name = "曾玉祥";
+            zc = "中西医结合教授";
+            hos = "全科医学专家";
+            dept = "妇科";
+            info = "特聘中医理疗首席专家，享受国务院特殊津贴";
+        } else if (did == 5) {
+            img = "ajn";
+            name = "敖杰男";
+            zc = "中西医结合教授";
+            hos = "原暨南大学医学院";
+            dept = "中医科";
+            info = "美国伯明翰大学博士后，原暨南大学医学院院长，享受国务院特殊津贴";
+        } else if (did == 6) {
+            img = "lj";
+            name = "李军";
+            zc = "副主任医师";
+            hos = "广州儿童医院";
+            dept = "儿科";
+            info = "中山大学医学博士，广州儿童医院多年执业经验";
+        }
+
+        var cook = $.cookie('lwhd');
+        var uid = cook.split('|')[0];
+        var uname = cook.split('|')[1];
+        var company = cook.split('|')[2];
+        var monery = cook.split('|')[3];
+
+        $("#oid").html("");
+        var typeinfo = "视频咨询";
+        var feiyong = "50";
+        if (type == 1) {
+            typeinfo = "电话咨询";
+            feiyong = "30";
+        }
+        var myDate = new Date;
+
+$("#oid").html( myDate.getFullYear()  + oid + myDate.getTime());
+        $("#oname").html(name + "医生" + typeinfo);
+
+        $("#askmonery").html("￥" + feiyong);
+
+        $("#ototal").html("￥" + feiyong);
+
+        $("#edu").html("使用就医零钱包(余额￥" + monery + ")");
+
+
+        // initInfo(img, name, zc, hos, dept, info, did);
+
+        $("#submitOrder").click(function () {
+            //  alert($("#txtMessage").val());
+
+
+          //  var domain = "http://localhost:24939\/";
+            var url = domain + "updateOrder.ashx?oid=" + oid + "&publicMonery=" + feiyong;
+            $.ajax({
+                url: url,
+                dataType: "jsonp",
+                jsonp: "callback",
+                beforeSend: function () {
+                },
+                success: function (dataarg) {
+
+                    if (dataarg == "success") {
+                        alert("下单成功,400客服稍后会致电您,为您安排咨询时间,请保持手机畅通.请注意接听0755-268268268的来电");
+                        window.location.href = "myadvice.html";
+                    } else {
+                        alert("订单提交失败");
+
+                    }
+                }
+
+            }); //ajax
+        });
+    });                  //ready
+    </script>
 </html>

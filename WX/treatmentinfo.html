@@ -5,67 +5,67 @@
 <title></title>
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="apple-mobile-web-app-capable" content="yes" /><!-- ɾ��ƻ��Ĭ�ϵĹ������Ͳ˵��� -->
-<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- ����ƻ����������ɫ -->
-<meta name="format-detection" content="telphone=no, email=no" /><!-- ����ҳ���е�����ʶ��Ϊ�绰������emailʶ�� -->
+<meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+<meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
 <link rel="stylesheet" type="text/css" href="static/css/style.css" media="all" />
 <script type="text/javascript" src="static/js/jquery.min.js"></script>
 <script type="text/javascript" src="static/js/rem.js"></script>
 </head>
 <body class="bodyBg">
-	<h1 class="title"><a href="javascript:history.go(-1);" class="title-left"><img src="static/images/icon_06.png" alt="" title=""></a>������</h1>
+	<h1 class="title"><a href="javascript:history.go(-1);" class="title-left"><img src="static/images/icon_06.png" alt="" title=""></a>就诊人</h1>
 	<section class="treatmentinfo">
 		<ul class="treatmentinfoList">
 			<li>
-				<label class="labelA"><span>* </span>����</label>
-				<input type="text" name="" class="inputA" placeholder="��д��ʵ���������عҺ�ʧ��" />
+				<label class="labelA"><span>* </span>姓名</label>
+				<input type="text" name="" class="inputA" placeholder="填写真实姓名，返回挂号失败" />
 			</li>
 			<li>
-				<label class="labelA"><span>* </span>�ֻ���</label>
-				<input type="text" name="" class="inputA" placeholder="���ھ����˻�ȡ�Һ���Ϣ" />
+				<label class="labelA"><span>* </span>手机号</label>
+				<input type="text" name="" class="inputA" placeholder="用于就诊人获取挂号信息" />
 			</li>
 			<li>
-				<label class="labelA">֤������</label>
+				<label class="labelA">证件类型</label>
 				<div class="selectA">
-					<div class="selectAbtn"><span>��½����֤</span><i class="triangleDown"></i></div>
+					<div class="selectAbtn"><span>大陆身份证</span><i class="triangleDown"></i></div>
 					<ul class="selectA-con" style="display:none;">
-						<li>��½����֤</li>
-						<li>�۰�����֤</li>
+						<li>大陆身份证</li>
+						<li>港澳身份证</li>
 					</ul>
 				</div>
 			</li>
 			<li>
-				<label class="labelA">֤����</label>
-				<input type="text" name="" class="inputA" placeholder="������֤����" />
+				<label class="labelA">证件号</label>
+				<input type="text" name="" class="inputA" placeholder="请输入证件号" />
 			</li>
 			<li>
-				<label class="labelA">�Ա�</label>
+				<label class="labelA">性别</label>
 				<div class="radioA">
-					<input type="radio" name="radio" id="radio1" checked /><label for="radio1"> ��</label>
-					<input type="radio" name="radio" id="radio2" /><label for="radio2"> Ů</label>
+					<input type="radio" name="radio" id="radio1" checked /><label for="radio1"> 男</label>
+					<input type="radio" name="radio" id="radio2" /><label for="radio2"> 女</label>
 				</div>
 			</li>
 			<li>
-				<label class="labelA">��������</label>
+				<label class="labelA">出生年月</label>
 				<div class="timeA">2017-01-01</div>
 			</li>
 		</ul>
 	</section>
 	<section class="patientInfo mt-a">
 		<ul>
-			<li><strong>����</strong><span>��ѡ��<i><img src="static/images/icon_11.png" alt="" title=""></i></span></li>
+			<li><strong>地区</strong><span>请选择<i><img src="static/images/icon_11.png" alt="" title=""></i></span></li>
 		</ul>
 	</section>
 	<section class="treatmentinfo" style="margin-top:-1px;">
 		<ul class="treatmentinfoList">
 			<li>
-				<label class="labelA">��ϸ��ַ</label>
-				<input type="text" name="" class="inputA" placeholder="��д��ϸ��ַ" />
+				<label class="labelA">详细地址</label>
+				<input type="text" name="" class="inputA" placeholder="填写详细地址" />
 			</li>
 		</ul>
 	</section>
-	<p class="bottomBtns"><a href="#">����</a></p>
-	<p class="bottomBtns-info"><span>* </span>����������֤Ϊ�Һ���Чƾ֤�����Ӻ����޸ģ���������벦��ͷ��绰 <em>400-8888-8888</em></p>
+	<p class="bottomBtns"><a href="#">保存</a></p>
+	<p class="bottomBtns-info"><span>* </span>姓名，身份证为挂号有效凭证，添加后不能修改，如需更改请拨打客服电话 <em>400-8888-8888</em></p>
 	<script language="JavaScript" type="text/javascript">
 	<!--
 		$(function(){

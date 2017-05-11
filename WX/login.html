@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<script type="text/javascript">
+	var CONTEXT = "http://www.liuweijiankang.com:80/liuwei/"
+</script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>登陆</title>
+    <link rel="stylesheet" href="http://www.liuweijiankang.com:80/liuwei/wx-static/css/bootstrap.css">
+    <link rel="stylesheet" href="http://www.liuweijiankang.com:80/liuwei/wx-static/css/style.css">
+ 
+    <script src="static/js/flexible.js"></script>
+       <style>
+    .banner{
+    width:100%;
+    margin:0 auto;
+    }
+    .banner img{width:100%;}
+    
+    .hy {
+    min-height: 31em;
+}
+    </style>
+</head>
+<body>
+<header>
+    
+    <i class="banner"><img src="http://www.liuweijiankang.com:80/liuwei/wx-static/images/img_wx_logo.png" /></i> 
+   
+</header>
+
+<div class="container-fluid hy" id="login">
+
+<dl class="login-layout clearfix">
+ 
+		
+    <dt>
+    <i class="icon-mz"></i><i class="line"></i><input type="text" name="username" value="陈钢" placeholder="请输入姓名" />
+    </dt>
+    <dt>
+        <i class="icon-sfz"></i><i class="line"></i><input type="text" name="password" value="370121197409257411" placeholder="请输入证件号码" />
+    </dt>
+ 
+</dl>
+
+    <dl class="login-layout clearfix"><a class="btn-login" href="#">登录</a></dl>
+
+</div>
+
+ 
+<footer>
+       <center>
+            <a class="logo" href="#">
+                <span class="logotxt">六维健康</span>
+            </a>
+            <div  class="smalltxt">引领中国精准医疗</div>
+
+            <div class="phone">
+                <img src="http://www.liuweijiankang.com:80/liuwei/wx-static/images/phone-icon.png">
+                <span>400-808-8166</span>
+            </div>
+           <!--  <div class="">Copyright 2002-2015 viptijian.com  六维健康版权所有</div> -->
+        </center>
+</footer>
+
+<script src="http://www.liuweijiankang.com:80/liuwei/wx-static/js/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="http://www.liuweijiankang.com:80/liuwei/wx-static/js/custom/leepop.js"></script>
+<script type="text/javascript" src="static/js/setting.js"></script>
+<script>
+
+    $(document).ready(function () {
+        var user = $("input[name='username']");
+        var pwd = $("input[name='password']");
+        user.focus();
+        $(".btn-login").click(function () {
+
+       //     var domain = "http://localhost:24939\/";
+            var url = domain + "userLogin.ashx?userName=" + user.val() + "&userPassword=" + pwd.val();
+            $.ajax({
+                url: url,
+                dataType: "jsonp",
+                jsonp: "callback",
+                beforeSend: function () {
+                },
+                success: function (dataarg) {
+         
+                   if (dataarg == "success") {
+         
+                        window.location.href = "info.html";
+                    } else {
+                        user.focus();
+                        user.val("");
+                        pwd.val("");
+                        user.attr("placeholder", "会员信息有误");
+                        flash('#login', 8, 10, 100);
+
+                    }
+                }
+
+            }); //ajax
+        }); //click
+
+    });     //ready
+
+function flash(obj, time, wh, fx) {
+    $(function () {
+        var $panel = $(obj);
+        var offset = $panel.offset() - $panel.width();
+        var x = offset.left;
+        var y = offset.top;
+        for (var i = 1; i <= time; i++) {
+            if (i % 2 == 0) {
+                $panel.animate({ left: '+' + wh + 'px' }, fx);
+            } else {
+                $panel.animate({ left: '-' + wh + 'px' }, fx);
+            }
+
+        }
+        $panel.animate({ left: 0 }, fx);
+      $panel.offset({ left: x });
+
+    })
+}
+</script>
+
+</body>
+</html>
+
