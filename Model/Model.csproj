@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ask_dept.cs" />
+    <Compile Include="ask_doctor_list_date.cs" />
     <Compile Include="ask_illpersion.cs" />
     <Compile Include="ask_master.cs" />
     <Compile Include="ask_order_reply.cs" />
