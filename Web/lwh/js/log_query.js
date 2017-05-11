@@ -15,18 +15,58 @@ $(document).ready(function(){
         $(".nav-close").hide();
         $(".nav-open").show();
     });
-    $.ajax({ 
-        type:"post", 
-        url:"http://192.168.1.168/api/showLog",
-        dataType:"jsonp",
-        jsonp:"callback", 
-        success:function(data){
-            for(item in data){
-                $(".show_log").append("<li>"+data[item]+"</li>");
-            }
+    $("#log-list").DataTable({
+        "bFilter": false,
+        "info":true,
+        "bLengthChange" : false,  
+        "iDisplayLength" : 12,
+        "bRetrieve": true,
+        "bDestroy": true,
+        "oLanguage" : {  
+                "sLengthMenu" : "每页显示 _MENU_ 条记录",  
+                "sZeroRecords" : "对不起，没有匹配的数据",  
+                "sInfo" : "第 _START_ - _END_ 条 / 共 _TOTAL_ 条数据",  
+                "sInfoEmpty" : "没有匹配的数据",  
+                "sInfoFiltered" : "(数据表中共 _MAX_ 条记录)",  
+                "sProcessing" : "正在加载中...",  
+                "sSearch" : "全文搜索：",  
+                "oPaginate" : {  
+                    "sFirst" : "第一页",  
+                    "sPrevious" : " 上一页 ",  
+                    "sNext" : " 下一页 ",  
+                    "sLast" : " 最后一页 "  
+                }
+
         },
-        error:function(){
-            alert('fail');
-        }
-    }); 
+        "ajax": {
+            "url": "http://192.168.1.172/api/showLog",
+            "dataType": "jsonp"
+        },
+        "columns" : [
+            {"data": null},
+            {"data": "master"},
+            {"data": "ip"},
+            {"data": null},
+            {"data": "user"}
+        ],
+       "columnDefs": [
+            {
+                "targets": [0],
+                "render": function(data, type, row, full) {
+                    return data.date+" "+data.time;
+                }
+            },
+            {
+                "targets": [3],
+                "render": function(data, type, row, full) {
+                    if(data.handle == "UPDATE")
+                    	return "更新";
+                    else if(data.handle == "ADD")
+                    	return "增加";
+                    else if(data.handle == "DELETE")
+                    	return "删除";
+                }
+            }
+        ]
+    });
 });

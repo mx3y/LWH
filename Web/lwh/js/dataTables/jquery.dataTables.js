@@ -8560,10 +8560,10 @@
 			jqTbody.append( rows );
 	
 			// Restore the width of the original table - was read from the style property,
-			// so we can restore directly to that
-			jqTable
-				.css( 'width', settings.sDestroyWidth )
-				.removeClass( classes.sTable );
+			// // so we can restore directly to that
+			// jqTable
+			// 	.css( 'width', settings.sDestroyWidth )
+			// 	.removeClass( classes.sTable );
 	
 			// If the were originally stripe classes - then we add them back here.
 			// Note this is not fool proof (for example if not all rows had stripe

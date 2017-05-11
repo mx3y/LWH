@@ -20,37 +20,14 @@ namespace LW_AskOnline.Web.control.test
 
         public void ProcessRequest(HttpContext context)
         {
-           /* context.Response.ContentType = "text/plain";
-            context.Response.ContentEncoding = Encoding.UTF8;
-            string callback = context.Request.QueryString["callback"].ToString();
-            HttpPostedFile img = context.Request.Files["file"];
-            string s = img.FileName;
-            string path = "~/upload/" + s.Substring(s.LastIndexOf("//") + 1);
-            img.SaveAs(context.Server.MapPath(path));
-            string data = HttpRuntime.AppDomainAppVirtualPath + path.Substring(1);
-            //string json = Newtonsoft.Json.JsonConvert.SerializeObject(formData, Newtonsoft.Json.Formatting.Indented);
-            context.Response.Write(s);*/
-
-
-
-
-
-          
                 context.Response.ContentType = "text/plain";
                 context.Response.ContentEncoding = Encoding.UTF8;
-                HttpPostedFile file = context.Request.Files[0];
-                String fileName = System.IO.Path.GetFileName(file.FileName);
-                file.SaveAs(context.Server.MapPath("~/") + fileName);
-                //HttpPostedFile img = context.Request.Files["file"];
-               // string filename = context.Request.Form["filename"];
-               // string callback = context.Request.QueryString["callback"].ToString();
-               /* string s = img.FileName;
-                string path = "~/upload/" + s.Substring(s.LastIndexOf("//") + 1);
+                string name = context.Request.Form["img_name"];
+                HttpPostedFile img = context.Request.Files["upload_file"];
+                string path = "~/upload/" + name.Substring(name.LastIndexOf("//") + 1);
                 img.SaveAs(context.Server.MapPath(path));
-                string data = HttpRuntime.AppDomainAppVirtualPath + path.Substring(1);*/
-                //string json = Newtonsoft.Json.JsonConvert.SerializeObject(formData, Newtonsoft.Json.Formatting.Indented);
-                context.Response.Write("OK");
-           
+                string url = "http://localhost:3448/upload/" + name;
+                context.Response.Write(url);
         }
         
         public bool IsReusable

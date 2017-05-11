@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>六维健康管理后台</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="js/dataTables/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <script type="text/javascript" src="bootstrap/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="js/dataTables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="js/dataTables/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/order_reply.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div>
+                <div class="nav navbar-nav"></div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span id="master_name"></span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="master_edit.html"><span class="glyphicon glyphicon-cog"></span>我的资料</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span>系统通知</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span>退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-left">
+        <div class="nav-title">
+            <img src="images/test.jpg" class="img-circle">
+            <a href="index.html">六维健康</a>
+        </div>
+        <ul>
+            <li>
+                <a href="doctor_list.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>医生管理</span>
+                </a>
+            </li>
+            <li>
+                <a href="user_list.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>用户管理</span>
+                </a>
+            </li>
+            <li>
+                <a href="hospital_list.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>医院管理</span>
+                </a>
+            </li>
+            <li>
+                <a href="log_query.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>日志查询</span>
+                </a>
+            </li>
+            <li>
+                <a href="order_list.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>订单查询</span>
+                </a>
+            </li>
+            <li>
+                <a href="order_pay.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>订单支付</span>
+                </a>
+            </li>
+            <li>
+                <a href="patient_list.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>就诊人列表</span>
+                </a>
+            </li>
+            <li class="li-active">
+                <a href="order_reply.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>订单评价</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+     <div class="nav-open">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </div>
+    <div class="nav-close">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </div>
+    <div class="main" style="padding: 30px;">        
+        <div class="container-fluid">
+            <div class="row" >
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">订单评价</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table">
+                                <table class="table table-bordered table-hover" id="order_reply-list"  width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>订单编号</th>
+                                            <th>医生编号</th>
+                                            <th>用户编号</th>
+                                            <th>评论内容</th>
+                                            <th>评论日期</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div><!-- panel-body -->
+                    </div><!-- panel -->
+                </div>
+           </div><!-- row -->
+        </div>
+        <div class="success">
+            <span class="glyphicon glyphicon-ok"></span><span class="success-message">删除成功</span>
+        </div>
+    </div>
+</body>
+
+</html>

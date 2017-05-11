@@ -37,16 +37,25 @@
                 jsonp:"callback", 
                 success:function(data){
                     $("#utijtid").val(data["utijtid"]);
+                    $("#uname").val(data["uname"]);
                     $("#ucompanymonery").val(data["ucompanymonery"]);
                     $("#umonery").val(data["umonery"]);
                     $("#uaccount").val(data["uaccount"]);
                     $("#upassword").val(data["upassword"]);
                     $("#ucardnumber").val(data["ucardnumber"]);
                     $("#umail").val(data["umail"]);
-                    $("#ubrithday").val(data["ubrithday"]);
-                    $("#usex").val(data["usex"]);
-                    $("#ucompanyid").val(data["ucompanyid"]);
-                    $("#ustate").val(data["ustate"]);
+                    var date = data.ubrithday.split("T")[0];
+                    $("#ubrithday").val(date);
+                    var usex = data.usex;
+                    $("input:radio[name='usex'][value='"+usex+"']").attr("checked","checked");
+                    date = data.uregisterdatetime.split("T").join(" ");
+                    $("#uregisterdatetime").val(date);
+                    date = data.ulastdatetime.split("T").join(" ");
+                    $("#ulastdatetime").val(date);
+                    $("#ulastip").val(data["ulastip"]);
+                    $("#ucompanyid").val(data["name"]);
+                    var ustate = data.ustate;
+                    $("input:radio[name='ustate'][value='"+ustate+"']").attr("checked","checked");
                 },
                 error:function(){
                     alert('get-url-fail');
@@ -112,18 +121,12 @@
             
             var user={
                 "uuid": getUrlParam("id"),
-                "utijtid": $("#utijtid").val(),
-                "ucompanymonery": $("#ucompanymonery").val(),
-                "umonery": $("#umonery").val(),
+                "uname": $("#uname").val(),
                 "uaccount": $("#uaccount").val(),
-                "upassword": $("#upassword").val(),
-                "ucardnumber": $("#ucardnumber").val(),
                 "umail": $("#umail").val(),
-                "ubrithday": $("#ubrithday").val(),
-                "usex": $("#usex").val(),
-                "ucompanyid": $("#ucompanyid").val(),
-                "ustate": $("#ustate").val(),
+                "ubrithday": $("#ubrithday").val()
             }
+            console.log(user);
             user = JSON.stringify(user);
             var uuser={
                 'json':user

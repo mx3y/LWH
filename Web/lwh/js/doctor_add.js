@@ -19,14 +19,14 @@
         $.ajax({ 
             type:"post", 
             url:"http://192.168.1.172/api/selectCity",
+            dataType:"jsonp",
             data:{
                 cid: null
             },
-            dataType:"jsonp",
             jsonp:"callback", 
             success:function(data){
-                city = data.ds;
-                $.each(data.ds,function(i,n){
+                city = data;
+                $.each(data,function(i,n){
                     $("#dcity_1").append("<option>"+n.cregion_name+"</option>");
                 });
             },
@@ -40,7 +40,7 @@
                  if(n.cregion_name == $("#dcity_1").val())
                     city_id = n.cid;
             });
-            $("#dcity_2").html("<option>请选择</option>");
+            $("#dcity_2").html("<option value=''>请选择</option>");
             $.ajax({ 
                 type:"post", 
                 url:"http://192.168.1.172/api/selectCity",
@@ -50,8 +50,8 @@
                 dataType:"jsonp",
                 jsonp:"callback", 
                 success:function(data){
-                    $.each(data.data,function(i,n){
-                        $("#dcity_2").append("<option>"+n.cregion_name+"</option>");
+                    $.each(data,function(i,n){
+                        $("#dcity_2").append("<option title='"+n.cid+"'>"+n.cregion_name+"</option>");
                     });  
                 },
                 error:function(){
@@ -59,9 +59,85 @@
                 }
             });
         });
+        var hospital = null;
+        $.ajax({ 
+            type:"post", 
+            url:"http://192.168.1.172/api/selectHospital",
+            dataType:"jsonp",
+            jsonp:"callback", 
+            success:function(data){
+                $.each(data,function(i,n){
+                    $("#dhospital").append("<option title='"+n.hid+"'>"+n.hname+"</option>");
+                });
+            },
+            error:function(){
+                console.log("hospital error.");
+            }
+        });
+        $("#dhospital").change(function(){
+            var hospital_id = null;
+            $.each(hospital,function(i,n){
+                 if(n.hname == $("#dhospital").val())
+                    hospital_id = n.hid;
+            });
+            $("#dept").html("<option value=''>请选择</option>");
+            $.ajax({ 
+                type:"post", 
+                url:"http://192.168.1.172/api/selectDept",
+                data:{
+                    hid: 0
+                },
+                dataType:"jsonp",
+                jsonp:"callback", 
+                success:function(data){
+                    $.each(data,function(i,n){
+                        console.log(n.dname);
+                        $("#ddept").append("<option title='"+n.did+"'>"+n.dname+"</option>");
+                    });  
+                },
+                error:function(){
+                    console.log("dept error.");
+                }
+            });
+        });
         $(".panel .cancal").click(function(){
             window.location.href = "doctor_list.html";
         });
+
+        var editor = new wangEditor("editor");
+        editor.config.uploadImgUrl = 'http://192.168.1.172/api/editorImage';
+        editor.config.hideLinkImg = true;
+        editor.config.menus = [
+            'bold',
+            'underline',
+            'italic',
+            'strikethrough',
+            'eraser',
+            'forecolor',
+            'bgcolor',
+            'quote',
+            'fontfamily',
+            'fontsize',
+            'head',
+            'unorderlist',
+            'orderlist',
+            'alignleft',
+            'aligncenter',
+            'alignright',
+            'table',
+            'emotion',
+            'img',
+            'location',
+            'undo'
+        ];
+        editor.config.emotions = {
+            'default': {
+                title: '默认',
+                data: './dist/emotions.data'
+            }
+        }
+        editor.create();
+
         $(".panel .sbt").click(function(){
             if($("#dname").val()==""){
                 $("#dname").parent().addClass("has-error");
@@ -83,16 +159,15 @@
                 $("#ddeptid").siblings(".help-block").html("医生科室编号不能为空");
                 return false;
             }
-
             var doctor={
                 "dname": $("#dname").val(),
                 "dtype": $("#dtype").val(),
                 "ddept": $("#ddept").val(),
-                "ddeptid": $("#ddeptid").val(),
-                "dcity": $("#dcity_2").val(),
-                "dcityid": $("#dcityid").val(),
+                "ddeptid": $("#ddept option:selected").attr("title"),
+                "dcity": $("#dcity_1").val()+" "+$("#dcity_2").val(),
+                "dcityid": $("#dcity_2 option:selected").attr("title"),
                 "dhospital": $("#dhospital").val(),
-                "dhospitalid": $("#dhospitalid").val(),
+                "dhospitalid": $("#dhospital option:selected").attr("title"),
                 "dprofessor": $("#dprofessor").val(),
                 "dcontent": $("#dcontent").val(),
                 "dmonery": $("#dmonery").val(),
@@ -111,14 +186,25 @@
                 "daccount": $("#daccount").val(),
                 "dpassword": $("#dpassword").val(),
                 "dsort": $("#dsort").val(),
-                "dishot": $("#dishot").val(),
-                "dstate": $("#dstate").val(),
+                "dishot": $("input:radio[name='dishot']:checked").val(),
+                "dstate": $("input:radio[name='dstate']:checked").val(),
+                "d_count": $("#d_count").val(),
+                "d_score": $("#d_score").val(),
+                "d_professionscore": $("#d_professionscore").val(),
+                "d_professioncount": $("#d_professioncount").val(),
+                "d_servicesscore": $("#d_servicesscore").val(),
+                "d_servicescount": $("#d_servicescount").val(),
+                "d_replyscore": $("#d_replyscore").val(),
+                "d_replycount": $("#d_replycount").val(),
+                "dimage": $("#dname").val()+"_img.jpg",
+                "d_message": editor.$txt.html().replace(/>/g,"&gt;").replace(/</g,"&lt;")
             }
+
             doctor = JSON.stringify(doctor);
+            console.log(doctor);
             var ddoctor={
                 'json':doctor
             };
-            console.log(ddoctor);
             $.ajax({ 
                 type:"post", 
                 url:"http://192.168.1.172/api/doctorAdd",
@@ -126,14 +212,26 @@
                 dataType:"jsonp",
                 jsonp:"callback", 
                 success:function(data){
-                    $(".success").fadeIn("slow").delay(1000).fadeOut("slow",function(){                   
+                    $("#img_name").val($("#dname").val()+"_img.jpg");
+                    $("#img_sbt").trigger("click");
+                    $(".success").fadeIn("slow").delay(1000).fadeOut("slow",function(){
                         window.location.href = "doctor_list.html";
-                    }); 
-                    console.log(data);
+                    });
                 },
                 error:function(){
                     alert('fail');
                 }
             }); 
         });
+        $("#file").change(function(){
+            var reader = new FileReader();
+            var file = this.files[0];
+            reader.onload = function(e) {
+                $("#image").attr("src",e.target.result);
+            };
+            reader.readAsDataURL(file);
+        });
+        $(".select").bind("click",function(){
+            $("#file").trigger("click");
+        });      
 });

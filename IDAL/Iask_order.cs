@@ -9,10 +9,6 @@ namespace LW_AskOnline.IDAL
 	{
 		#region  成员方法
 		/// <summary>
-		/// 得到最大ID
-		/// </summary>
-		int GetMaxId();
-		/// <summary>
 		/// 是否存在该记录
 		/// </summary>
 		bool Exists(int oid);

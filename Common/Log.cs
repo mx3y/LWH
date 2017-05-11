@@ -10,27 +10,32 @@ namespace LW_AskOnline.Common
     public class Log : System.Web.UI.Page
     {
         //写入日志文件
-        public void WriteLogFile(string handle,string ip,string user,DateTime time)
+        public void WriteLogFile(string handle,string ip,string user,DateTime time,string master)
         {
             //指定日志文件的目录
             string fname = Server.MapPath("upedFile") + "\\logfile.txt";
             //定义文件信息对象
             System.IO.FileInfo finfo = new System.IO.FileInfo(fname);
-            //判断文件是否存在以及是否大于规定大小，超过则删除，暂定2K
+/*            //判断文件是否存在以及是否大于规定大小，超过则删除，暂定2K
             if (finfo.Exists && finfo.Length > 2048)
             {
                 finfo.Delete();
             }
-            //创建写文件流
+*/            //创建写文件流
             using (System.IO.FileStream fs = finfo.OpenWrite())
             {
                 //根据上面创建的文件流创建写数据流
                 System.IO.StreamWriter w = new System.IO.StreamWriter(fs);
+                /*Common.Log log = new Common.Log();
+                string ip = log.GetIP();
+                DateTime time = log.GetTime();*/
                 //设置写数据流的起始位置为文件流的末尾
                 w.BaseStream.Seek(0, System.IO.SeekOrigin.End);
                 w.Write(handle+" ");
                 w.Write(ip + " ");
                 w.Write(user + " ");
+                w.Write(master + " ");
+                //w.Write(master + " ");
                 w.Write(time + " \r\n");
                 /*w.Write("{0} {1} \r\n", DateTime.Now.ToLongTimeString(),
                     DateTime.Now.ToLongDateString());*/
@@ -56,7 +61,7 @@ namespace LW_AskOnline.Common
                t = r.ReadToEnd();
            }
            //string t = System.IO.File.ReadAllText(text);
-           string[] lines = Regex.Split(t, "----------------------------------------------", RegexOptions.IgnoreCase);
+           string[] lines = Regex.Split(t, "----------------------------------------------\r\n", RegexOptions.IgnoreCase);
            return lines;
         }
        //获取IP

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="bootstrap/js/jquery-3.2.0.min.js"></script>
+</head>
+<body>
+<form action="http://192.168.1.172/api/imgTest" method="POST" enctype="multipart/form-data" target="upload">
+        <input type="file" name="upload_file" id="file"/>
+        <input type="text" name="img_name"/>
+        <input type="text" name="script" value="js/img.js" style="display:none" />
+        <input type="submit" value="开始上传" />
+</form>
+<img src="" id="image" style="width: 100px;height: auto;">
+<iframe name="upload" id="upload" style="display: none;">
+</iframe> 
+<script type="text/javascript">
+    $("#file").change(function(){
+      var reader = new FileReader();
+      var file = this.files[0];
+      reader.onload = function(e) {
+        $("#image").attr("src",e.target.result);
+      };
+      reader.readAsDataURL(file);
+    });
+</script>
+</body>
+</html>

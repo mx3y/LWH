@@ -104,9 +104,61 @@
     <Content Include="bin\System.Data.SQLite.dll" />
     <Content Include="bin\URLRewriter.dll" />
     <Content Include="control\img.html" />
-    <Content Include="control\upedFile\logfile.txt" />
     <Content Include="dll\Newtonsoft.Json.dll" />
     <Content Include="dll\URLRewriter.dll" />
+    <Content Include="doctor\login.html" />
+    <Content Include="doctor\order_detail.html" />
+    <Content Include="doctor\order_list.html" />
+    <Content Include="doctor\static\css\style.css" />
+    <Content Include="doctor\static\images\icon_01.png" />
+    <Content Include="doctor\static\images\icon_02.png" />
+    <Content Include="doctor\static\images\icon_03.png" />
+    <Content Include="doctor\static\images\icon_04.png" />
+    <Content Include="doctor\static\images\icon_05.png" />
+    <Content Include="doctor\static\images\icon_06.png" />
+    <Content Include="doctor\static\images\icon_07.png" />
+    <Content Include="doctor\static\images\icon_08.png" />
+    <Content Include="doctor\static\images\icon_09.png" />
+    <Content Include="doctor\static\images\icon_10.png" />
+    <Content Include="doctor\static\images\icon_11.png" />
+    <Content Include="doctor\static\images\icon_12.png" />
+    <Content Include="doctor\static\images\icon_13.png" />
+    <Content Include="doctor\static\images\icon_14.png" />
+    <Content Include="doctor\static\images\icon_15.png" />
+    <Content Include="doctor\static\images\icon_16.png" />
+    <Content Include="doctor\static\images\icon_17.png" />
+    <Content Include="doctor\static\images\icon_18.png" />
+    <Content Include="doctor\static\images\icon_19.png" />
+    <Content Include="doctor\static\images\img_01.png" />
+    <Content Include="doctor\static\images\img_02.png" />
+    <Content Include="doctor\static\images\list_img01.png" />
+    <Content Include="doctor\static\images\list_img02.png" />
+    <Content Include="doctor\static\images\list_img03.png" />
+    <Content Include="doctor\static\images\list_img04.png" />
+    <Content Include="doctor\static\images\list_img05.png" />
+    <Content Include="doctor\static\images\list_img06.png" />
+    <Content Include="doctor\static\images\list_img07.png" />
+    <Content Include="doctor\static\images\list_img08.png" />
+    <Content Include="doctor\static\images\list_img09.png" />
+    <Content Include="doctor\static\images\list_img10.png" />
+    <Content Include="doctor\static\images\list_img11.png" />
+    <Content Include="doctor\static\images\list_img12.png" />
+    <Content Include="doctor\static\images\list_img13.png" />
+    <Content Include="doctor\static\images\list_img14.png" />
+    <Content Include="doctor\static\images\list_img15.png" />
+    <Content Include="doctor\static\images\list_img16.png" />
+    <Content Include="doctor\static\images\list_img17.png" />
+    <Content Include="doctor\static\images\list_img18.png" />
+    <Content Include="doctor\static\images\list_img19.png" />
+    <Content Include="doctor\static\images\list_img20.png" />
+    <Content Include="doctor\static\images\list_img21.png" />
+    <Content Include="doctor\static\images\list_img22.png" />
+    <Content Include="doctor\static\images\list_img23.png" />
+    <Content Include="doctor\static\images\list_img24.png" />
+    <Content Include="doctor\static\js\jquery.cookie.js" />
+    <Content Include="doctor\static\js\jquery.min.js" />
+    <Content Include="doctor\static\js\rem.js" />
+    <Content Include="lwh\1.html" />
     <Content Include="lwh\bootstrap\css\bootstrap-theme.css" />
     <Content Include="lwh\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="lwh\bootstrap\css\bootstrap.css" />
@@ -127,9 +179,19 @@
     <Content Include="lwh\css\user_add.css" />
     <Content Include="lwh\css\user_edit.css" />
     <Content Include="lwh\css\user_list.css" />
+    <Content Include="lwh\dist\css\wangEditor.css" />
+    <Content Include="lwh\dist\css\wangEditor.min.css" />
+    <Content Include="lwh\dist\js\lib\jquery-1.10.2.min.js" />
+    <Content Include="lwh\dist\js\lib\jquery-2.2.1.js" />
+    <Content Include="lwh\dist\js\wangEditor.js" />
+    <Content Include="lwh\dist\js\wangEditor.min.js" />
     <Content Include="lwh\doctor_add.html" />
     <Content Include="lwh\doctor_edit.html" />
     <Content Include="lwh\doctor_list.html" />
+    <Content Include="lwh\hospital_add.html" />
+    <Content Include="lwh\hospital_edit.html" />
+    <Content Include="lwh\hospital_list.html" />
+    <Content Include="lwh\ill_persion.html" />
     <Content Include="lwh\images\bg-2.jpg" />
     <Content Include="lwh\images\bg.jpg" />
     <Content Include="lwh\images\test.jpg" />
@@ -142,24 +204,35 @@
     <Content Include="lwh\js\doctor_add.js" />
     <Content Include="lwh\js\doctor_edit.js" />
     <Content Include="lwh\js\doctor_list.js" />
+    <Content Include="lwh\js\hospital_add.js" />
+    <Content Include="lwh\js\hospital_edit.js" />
+    <Content Include="lwh\js\hospital_list.js" />
     <Content Include="lwh\js\images\sort_asc.png" />
     <Content Include="lwh\js\images\sort_asc_disabled.png" />
     <Content Include="lwh\js\images\sort_both.png" />
     <Content Include="lwh\js\images\sort_desc.png" />
     <Content Include="lwh\js\images\sort_desc_disabled.png" />
+    <Content Include="lwh\js\img.js" />
     <Content Include="lwh\js\index.js" />
+    <Content Include="lwh\js\jquery.cookie.js" />
     <Content Include="lwh\js\jquery.form.js" />
     <Content Include="lwh\js\log_query.js" />
+    <Content Include="lwh\js\master_edit.js" />
     <Content Include="lwh\js\order_list.js" />
     <Content Include="lwh\js\order_pay.js" />
+    <Content Include="lwh\js\order_reply.js" />
+    <Content Include="lwh\js\patient_list.js" />
     <Content Include="lwh\js\user_add.js" />
     <Content Include="lwh\js\user_edit.js" />
     <Content Include="lwh\js\user_list.js" />
     <Content Include="lwh\list.html" />
     <Content Include="lwh\login.html" />
     <Content Include="lwh\log_query.html" />
+    <Content Include="lwh\master_edit.html" />
     <Content Include="lwh\order_list.html" />
     <Content Include="lwh\order_pay.html" />
+    <Content Include="lwh\order_reply.html" />
+    <Content Include="lwh\patient_list.html" />
     <Content Include="lwh\test.html" />
     <Content Include="lwh\user_add.html" />
     <Content Include="lwh\user_edit.html" />
@@ -218,16 +291,249 @@
     <Content Include="view\static\js\rem.js" />
     <Content Include="view\static\js\toggles.min.js" />
     <Content Include="view\syms.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\.gitattributes" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\.gitignore" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\dist\css\wangEditor.css" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\dist\css\wangEditor.min.css" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\dist\js\lib\jquery-1.10.2.min.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\dist\js\lib\jquery-2.2.1.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\dist\js\wangEditor.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\dist\js\wangEditor.min.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\Gruntfile.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\index.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\lib\file.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\lib\incoming_form.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\lib\index.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\lib\json_parser.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\lib\multipart_parser.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\lib\octet_parser.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\lib\querystring_parser.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\server-for-cros.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\server.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\wangEditor.css" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00100-start.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00200-E.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00201-E-fn-init.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00202-E-fn-api.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00203-E-fn-selection.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00204-E-fn-selection-IE.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00205-E-fn-command-hooks.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00205-E-fn-command.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00206-E-fn-dom-selector.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00207-E-fn-undo-redo.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0020x-E-fn-user-api.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00210-MC.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00211-MC-fn-bind.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00212-MC-fn-api.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00220-M.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00221-M-fn-bind.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00222-M-fn-api.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00230-DL.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00231-DL-fn-bind.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00232-DL-fn-api.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00240-DP.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00241-DP-fn-bind.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00242-DP-fn-api.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00250-ML.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00251-ML-fn-bind.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00252-ML-fn-api.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00260-T.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00261-T-fn-bind.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00262-T-fn-api.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00300-E-tool-fn.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00310-E-lang.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00400-E-config.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00401-E-UI.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00500-editor-default-config-UI.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00601-editor-add-editor-container.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00602-editor-add-txt.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00700-editor-add-menuContainer.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00800-editor-add-menus.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00810-editor-add-menu-bold.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00820-editor-add-menu-underline.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00830-editor-add-menu-italic.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00840-editor-add-menu-forecolor.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00850-editor-add-menu-bgcolor.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00850-editor-add-menu-strikethrough.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00860-editor-add-menu-eraser.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00870-editor-add-menu-source.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00880-editor-add-menu-quote.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00890-editor-add-menu-family.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008a0-editor-add-menu-fontsize.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008b0-editor-add-menu-head.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008c1-editor-add-menu-unorder-list.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008c2-editor-add-menu-order-list.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008d1-editor-add-menu-align-left.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008d2-editor-add-menu-align-center.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008d3-editor-add-menu-align-right.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008e0-editor-add-menu-link.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008f0-editor-add-menu-unlink.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008g0-editor-add-menu-table.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008h0-editor-add-menu-emotion.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008i0-editor-add-menu-img.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008j0-editor-add-menu-video.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008k0-editor-add-menu-location.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008lo-editor-add-menu-insertcode.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008m0-editor-add-menu-undo.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008n0-editor-add-menu-redo.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\008o0-editor-add-menu-fullscreen.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00900-render-menus.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00910-render-menu-container.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00920-render-txt.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\00930-render-container.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\01000-event-menus.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\01010-event-menuContainer.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\01020-event-txt.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p000-upload-img-fn.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p010-xhr-upload-img.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p011-upload-progress.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p020-upload-img-ui.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p021-upload-img-h5.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p022-upload-img-form.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p023-upload-img-paste.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p024-drag-upload-img.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p030-txt-table-toolbar.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p040-txt-img-toolbar.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p041-txt-link-toolbar.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p050-menu-fixed.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p060-custom-menu-indent.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p060-custom-menu-lineheight.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\0p070-custom-upload.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\9xxxx-copyright.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\parts\9zzzz-end.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\src\js\wangEditor.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\1.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\10.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\11.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\12.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\13.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\14.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\15.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\16.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\17.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\18.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\19.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\2.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\20.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\21.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\22.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\23.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\24.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\25.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\26.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\27.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\28.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\29.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\3.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\30.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\31.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\32.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\33.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\34.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\35.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\36.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\37.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\38.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\39.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\4.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\40.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\41.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\42.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\43.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\44.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\45.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\46.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\47.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\48.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\49.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\5.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\50.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\6.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\7.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\8.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\default\9.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\jinxing\1.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\jinxing\2.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\jinxing\3.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\jinxing\4.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\jinxing\5.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\emotions\jinxing\6.gif" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\highlightjs\dark.css" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\highlightjs\github.css" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\static\highlightjs\highlight.pack.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\angular\test-angular.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\css\bootstrap-theme.css" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\css\bootstrap-theme.min.css" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\css\bootstrap.css" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\css\bootstrap.min.css" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\js\bootstrap.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\js\bootstrap.min.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\js\npm.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\test-bs-modal.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\custom-menu\custom-menu.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\custom-menu\js\custom-menu-1.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\custom-menu\js\custom-menu-2.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\custom-menu\js\custom-menu.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\custom-menu\js\require-main.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\icomoon\demo-files\demo.css" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\icomoon\demo-files\demo.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\icomoon\demo.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\icomoon\Read Me.txt" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\icomoon\style.css" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\index.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\plupload\lib\plupload\Moxie.swf" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\plupload\lib\plupload\Moxie.xap" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\plupload\lib\plupload\plupload.full.min.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\plupload\test.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\requirejs\js\main.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\requirejs\js\require.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\requirejs\test-requirejs.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\seajs\js\jquery-2.2.1-for-seajs.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\seajs\js\sea.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\seajs\main.js" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\seajs\test-seajs.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\step-test\test1.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\step-test\test2.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\test-createbyelem.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\test-js-head.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\test-lang.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\test-menus.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\test-muti.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\test-style.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\test-uploadfn.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\vue\test-vue.html" />
+    <Content Include="wangEditor-2.1.23\wangEditor-2.1.23\test\z-test.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="control\deptAdd.ashx.cs">
+      <DependentUpon>deptAdd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\doctorImg.ashx.cs">
+      <DependentUpon>doctorImg.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\doctorLogin.ashx.cs">
+      <DependentUpon>doctorLogin.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\doctorOrder.ashx.cs">
+      <DependentUpon>doctorOrder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\doctorOrderDetial.ashx.cs">
+      <DependentUpon>doctorOrderDetial.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\editorImage.ashx.cs">
+      <DependentUpon>editorImage.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\hospitalAdd.ashx.cs">
       <DependentUpon>hospitalAdd.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\hospitalDelete.ashx.cs">
       <DependentUpon>hospitalDelete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\hospitalDetial.ashx.cs">
+      <DependentUpon>hospitalDetial.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\hospitalList.ashx.cs">
       <DependentUpon>hospitalList.ashx</DependentUpon>
@@ -250,6 +556,12 @@
     <Compile Include="control\doctorUpdate.ashx.cs">
       <DependentUpon>doctorUpdate.ashx</DependentUpon>
     </Compile>
+    <Compile Include="control\illpersionDetial.ashx.cs">
+      <DependentUpon>illpersionDetial.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\illpersionList.ashx.cs">
+      <DependentUpon>illpersionList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\login.ashx.cs">
       <DependentUpon>login.ashx</DependentUpon>
     </Compile>
@@ -262,14 +574,26 @@
     <Compile Include="control\orderList.ashx.cs">
       <DependentUpon>orderList.ashx</DependentUpon>
     </Compile>
+    <Compile Include="control\orderPayDetial.ashx.cs">
+      <DependentUpon>orderPayDetial.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\orderPayList.ashx.cs">
       <DependentUpon>orderPayList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\orderReplyList.ashx.cs">
+      <DependentUpon>orderReplyList.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\orderUpdate.ashx.cs">
       <DependentUpon>orderUpdate.ashx</DependentUpon>
     </Compile>
+    <Compile Include="control\payDetial.ashx.cs">
+      <DependentUpon>payDetial.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\selectCity.ashx.cs">
       <DependentUpon>selectCity.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\selectDept.ashx.cs">
+      <DependentUpon>selectDept.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\showLog.ashx.cs">
       <DependentUpon>showLog.ashx</DependentUpon>
@@ -315,6 +639,9 @@
     </Compile>
     <Compile Include="control\ucpaasList.ashx.cs">
       <DependentUpon>ucpaasList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\selectHospital.ashx.cs">
+      <DependentUpon>selectHospital.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\userAdd.ashx.cs">
       <DependentUpon>userAdd.ashx</DependentUpon>
@@ -370,6 +697,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="control\test\upedFile\" />
+    <Folder Include="control\upedFile\" />
+    <Folder Include="editor_image\" />
     <Folder Include="upload\" />
   </ItemGroup>
   <ItemGroup>
@@ -408,6 +737,20 @@
     <Content Include="control\login.ashx" />
     <Content Include="control\masterSendEdit.ashx" />
     <Content Include="control\masterEdit.ashx" />
+    <Content Include="control\hospitalDetial.ashx" />
+    <Content Include="control\deptAdd.ashx" />
+    <Content Include="control\selectDept.ashx" />
+    <Content Include="control\selectHospital.ashx" />
+    <Content Include="control\illpersionList.ashx" />
+    <Content Include="control\orderReplyList.ashx" />
+    <Content Include="control\doctorLogin.ashx" />
+    <Content Include="control\doctorOrder.ashx" />
+    <Content Include="control\doctorOrderDetial.ashx" />
+    <Content Include="control\doctorImg.ashx" />
+    <Content Include="control\editorImage.ashx" />
+    <Content Include="control\illpersionDetial.ashx" />
+    <Content Include="control\orderPayDetial.ashx" />
+    <Content Include="control\payDetial.ashx" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.min.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap.css.map" />
@@ -417,6 +760,12 @@
     <None Include="lwh\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="lwh\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <None Include="lwh\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="lwh\dist\css\wangEditor.less" />
+    <None Include="lwh\dist\emotions.data" />
+    <None Include="lwh\dist\fonts\icomoon.eot" />
+    <None Include="lwh\dist\fonts\icomoon.svg" />
+    <None Include="lwh\dist\fonts\icomoon.ttf" />
+    <None Include="lwh\dist\fonts\icomoon.woff" />
     <None Include="view\static\css\style.css.bak" />
     <None Include="view\static\fontello-5d544c46\config.json" />
     <None Include="view\static\fontello-5d544c46\config.json.bak" />
@@ -474,6 +823,49 @@
     <None Include="view\static\svg\icon34.svg" />
     <None Include="view\static\svg\icon35.svg" />
     <None Include="view\static\svg\icon36.svg" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\.jshintrc" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\.npmignore" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\bower.json" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\dist\css\wangEditor.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\dist\fonts\icomoon.eot" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\dist\fonts\icomoon.svg" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\dist\fonts\icomoon.ttf" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\dist\fonts\icomoon.woff" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\LICENSE" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\.npmignore" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\.travis.yml" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\LICENSE" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\package.json" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\node_modules\formidable\Readme.md" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\package.json" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\README.md" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\parts\010-common.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\parts\020-home.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\parts\021-fullscreen.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\parts\022-sourcecode.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\parts\030-menu.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\parts\040-txt.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\parts\041-txt-content.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\parts\050-droplist.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\parts\060-droppanel.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\parts\070-modal.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\parts\xxx-font.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\parts\yyy-hljs-github.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\src\css\wangEditor.less" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\css\bootstrap-theme.css.map" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\css\bootstrap.css.map" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\bootstrap\bs-3.3.5\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\emotions.data" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\icomoon\fonts\icomoon.eot" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\icomoon\fonts\icomoon.svg" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\icomoon\fonts\icomoon.ttf" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\icomoon\fonts\icomoon.woff" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\test\icomoon\selection.json" />
+    <None Include="wangEditor-2.1.23\wangEditor-2.1.23\uploadfiles\readme" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

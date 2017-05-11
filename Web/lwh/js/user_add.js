@@ -82,6 +82,7 @@
             
             var user={
                 "utijtid": $("#utijtid").val(),
+                "uname": $("#uname").val(),
                 "ucompanymonery": $("#ucompanymonery").val(),
                 "umonery": $("#umonery").val(),
                 "uaccount": $("#uaccount").val(),

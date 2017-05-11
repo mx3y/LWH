@@ -23,9 +23,10 @@ $(document).ready(function(){
         "bFilter": false,
         "info":true,
         "bLengthChange" : false,  
-        "iDisplayLength" : 15,
+        "iDisplayLength" : 12,
         "bRetrieve": true,
         "bDestroy": true,
+        "order" : [6,"desc"], 
         "oLanguage" : {  
                 "sLengthMenu" : "每页显示 _MENU_ 条记录",  
                 "sZeroRecords" : "对不起，没有匹配的数据",  
@@ -33,7 +34,7 @@ $(document).ready(function(){
                 "sInfoEmpty" : "没有匹配的数据",  
                 "sInfoFiltered" : "(数据表中共 _MAX_ 条记录)",  
                 "sProcessing" : "正在加载中...",  
-                "sSearch" : "全文搜索：",  
+                "sSearch" : "全文搜索：", 
                 "oPaginate" : {  
                     "sFirst" : "第一页",  
                     "sPrevious" : " 上一页 ",  
@@ -48,46 +49,98 @@ $(document).ready(function(){
         },
         "columns" : [
             {"data": "ouid"},
-            {"data": "odid"},
+            {"data": "dname"},
             {"data": null},
-            {"data": "oresult"},
-            {"data": "ostate"},
+            {"data": null},
+            {"data": null},
+            {"data": null},
             {"data": null},
             {"data": null},
             {"data": "opublicmonery"},
             {"data": "oprivatemonery"},
             {"data": "ototalmonery"},
-            {"data": "otransid"},
-            {"data": "ocallresult"},
-            {"data": "ocallid"},
-            {"data": "ocalldate"}
+            {"data": null},
+            {"data": null},
+            {"data": null}
         ],
        "columnDefs": [
             {
                 "targets": [2],
-                "data": "otype",
+                "render": function(data, type, row, full) {
+                    var msg = data.oillid;
+                    if(msg != 0 ){
+                        msg = msg + "<a style='margin-left: 10px' href='ill_persion.html?id="+data.oillid+"'>详情</a>";
+                    }
+                    return msg;
+                }
+            },
+            {
+                "targets": [3],
                 "render": function(data, type, row, full) {
                     if(data.otype == 0)
-                        return "预约挂号请求";
+                        return "预约挂号";
                     else if(data.otype == 1)
-                        return "电话视频请求";
+                        return "电话视频";
                     else if(data.otype == 2)
-                        return "视频请求";
-
+                        return "视频";
+                }
+            },
+            {
+                "targets": [4],
+                "render": function(data, type, row, full) {
+                    if(data.oresult == 0)
+                        return "已取消";
+                    else if(data.oresult == 1)
+                        return "已预约";
                 }
             },
             {
                 "targets": [5],
                 "render": function(data, type, row, full) {
-                    var date = data.ocreatetime.split("T")[0];
-                    return date;
+                    if(data.ostate == 0)
+                        return "未执行";
+                    else if(data.ostate == 1)
+                        return "已执行";
                 }
             },
             {
                 "targets": [6],
                 "render": function(data, type, row, full) {
-                    var date = data.ocommittime.split("T")[0];
+                    var date = data.ocreatetime.split("T").join(" ");
+                    return date;
+                }
+            },
+            {
+                "targets": [7],
+                "render": function(data, type, row, full) {
+                    var date = data.ocommittime.split("T").join(" ");
                     return date+"<a style='margin-left:10px;' onclick='totuu("+data.oid+")'>修改</a>";
+                }
+            },
+            {
+                "targets": [11],
+                "render": function(data, type, row, full) {
+                    var msg = data.otransid;
+                    if(msg != 0 ){
+                        msg = msg + "<a style='margin-left: 10px' href='order_pay.html?id="+data.otransid+"'>详情</a>";
+                    }
+                    return msg;
+                }
+            },
+            {
+                "targets": [12],
+                "render": function(data, type, row, full) {
+                    var msg = data.ocallid;
+                    if(msg != 0 ){
+                        msg = msg + "<a style='margin-left: 10px' href='ucpaas.html?id="+data.ocallid+"'>详情</a>";
+                    }
+                    return msg;
+                }
+            },
+            {
+                "targets": [13],
+                "render": function(data, type, row, full) {
+                    return "<a style='text-align: center;' href='order_pay.html?id="+data.oid+"'>查看</a>";
                 }
             }
         ]

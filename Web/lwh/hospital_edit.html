@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>六维健康管理后台</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
+    <script type="text/javascript" src="bootstrap/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/hospital_edit.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div>
+                <div class="nav navbar-nav"></div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span id="master_name"></span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="master_edit.html"><span class="glyphicon glyphicon-cog"></span>我的资料</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span>系统通知</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span>退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-left">
+        <div class="nav-title">
+            <img src="images/test.jpg" class="img-circle">
+            <a href="index.html">六维健康</a>
+        </div>
+        <ul>
+            <li>
+                <a href="doctor_list.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>医生管理</span>
+                </a>
+            </li>
+            <li>
+                <a href="user_list.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>用户管理</span>
+                </a>
+            </li>
+            <li class="li-active">
+                <a href="hospital_list.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>医院管理</span>
+                </a>
+            </li>
+            <li>
+                <a href="log_query.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>日志查询</span>
+                </a>
+            </li>
+            <li>
+                <a href="order_list.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>订单查询</span>
+                </a>
+            </li>
+            <li>
+                <a href="order_pay.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>订单支付</span>
+                </a>
+            </li>
+            <li>
+                <a href="patient_list.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>就诊人列表</span>
+                </a>
+            </li>
+            <li>
+                <a href="order_reply.html">
+                    <span class="glyphicon glyphicon-user">
+                    <span>订单评价</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+     <div class="nav-open">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </div>
+    <div class="nav-close">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </div>
+    <div class="main" style="padding:0 30px;">
+        <a class="btn btn-primary pull-right" href="hospital_list.html" style="margin: 20px 15px"><span class="glyphicon glyphicon-chevron-left" style="padding-right: 10px"></span>返回</a>
+        <div class="container-fluid">
+            <div class="row" >
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">编辑医院</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="name">医院名称</label>
+                                        <input type="text" class="form-control" id="hname">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="name">所属城市</label>
+                                        <select class="form-control" id="dcity_1" autocomplete="off">
+                                            <option>请选择</option>
+                                        </select>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="name">&nbsp</label>
+                                        <select class="form-control" id="dcity_2" autocomplete="off">
+                                            <option>请选择</option>
+                                        </select>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="name">所属城市编号</label>
+                                        <input type="text" class="form-control" id="hcityid">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="name">医院级别</label>
+                                        <input type="text" class="form-control" id="hlevel">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="name">医院地址</label>
+                                        <input type="text" class="form-control" id="haddress">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <label for="name">医院介绍</label>
+                                        <textarea class="form-control" rows="3" id="hcontent" style="resize: none;"></textarea>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- panel-body -->
+                        <div class="panel-footer">
+                            <input type="button" class="btn btn-primary sbt" value="保存">
+                            <input type="button" class="btn btn-danger cancal" value="取消">
+                        </div>
+                    </div><!-- panel -->
+                </div>
+           </div><!-- row -->
+        </div>
+        <div class="success">
+            <span class="glyphicon glyphicon-ok"></span><span class="success-message">添加成功</span>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -20,21 +20,17 @@ namespace LW_AskOnline.Web.control
             string callback = context.Request.QueryString["callback"].ToString();
             string getCid;
             BLL.ask_city adlBll = new BLL.ask_city();
-            if (context.Request.QueryString["cid"].ToString() != "")
+            if (context.Request["cid"].ToString() != "")
             {
-                getCid = context.Request.QueryString["cid"].ToString();
-                DataSet set = adlBll.GetList("cparent_id = '" + getCid + "'");
-                string json = Newtonsoft.Json.JsonConvert.SerializeObject(set, Newtonsoft.Json.Formatting.Indented);
-                string zz = "data";
-                int index = json.IndexOf("d");
-                string json1 = json.Remove(index, 2).Insert(index, zz);
-                context.Response.Write(callback + "(" + json1 + ")");
+                getCid = context.Request["cid"].ToString();
+                List<Model.ask_city> list = adlBll.GetModelList("cparent_id = '" + getCid + "'");
+                string json = Newtonsoft.Json.JsonConvert.SerializeObject(list, Newtonsoft.Json.Formatting.Indented);
+                context.Response.Write(callback + "(" + json + ")");
             }
             else
-            { 
-                DataSet set = adlBll.GetList("cparent_id='0'");
-                string json = Newtonsoft.Json.JsonConvert.SerializeObject(set, Newtonsoft.Json.Formatting.Indented);
-                
+            {
+                List<Model.ask_city> list = adlBll.GetModelList("cparent_id='0'");
+                string json = Newtonsoft.Json.JsonConvert.SerializeObject(list, Newtonsoft.Json.Formatting.Indented);
                 context.Response.Write(callback + "(" + json + ")");
             }
         }

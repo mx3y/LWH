@@ -19,12 +19,12 @@ namespace LW_AskOnline.Web.control
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
             string callback = context.Request.QueryString["callback"].ToString();
-            string parameter = context.Request.QueryString["json"].ToString();
+            string parameter = context.Request["json"].ToString();
             //读json
             Object ja = JsonConvert.DeserializeObject(parameter);
             JObject o = (JObject)ja;
             BLL.ask_master adlBll = new BLL.ask_master();
-            Common.GetCookie cookie = new Common.GetCookie();
+            Common.checkCookie cookie = new Common.checkCookie();
             string mid = context.Request.Cookies["mid"].Value.ToString();
             Model.ask_master adlModel = new Model.ask_master()
             {

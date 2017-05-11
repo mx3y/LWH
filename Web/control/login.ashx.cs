@@ -24,7 +24,7 @@ namespace LW_AskOnline.Web.control
         {
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
-            string parameter = context.Request.QueryString["json"].ToString();
+            string parameter = context.Request["json"].ToString();
             string callback = context.Request.QueryString["callback"].ToString();
             //读json
             Object ja = JsonConvert.DeserializeObject(parameter);
@@ -55,7 +55,7 @@ namespace LW_AskOnline.Web.control
                 adlModel.mlastlogintime = time;
                 adlModel.mlastip = ip;
                 adlModel.mstate = 1;
-                if (adlModel.mlogincount == null)
+                if(adlModel.mlogincount==null)
                 {
                     adlModel.mlogincount = 0;
                 }
@@ -64,6 +64,12 @@ namespace LW_AskOnline.Web.control
                 acount.status = "1";
                 acount.mid = id.ToString();
                 acount.mname = adlModel.mname;
+                context.Response.Cookies["mid"].Value = acount.mid;
+                context.Response.Cookies["mid"].Expires = DateTime.Now.AddDays(7);
+                context.Response.Cookies["mid"].Path = "/";
+                context.Response.Cookies["mname"].Value = acount.mname;
+                context.Response.Cookies["mname"].Expires = DateTime.Now.AddDays(7);
+                context.Response.Cookies["mname"].Path = "/";
             }
             else
             {

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Text;
-
 namespace LW_AskOnline.Web.control.test
 {
     /// <summary>
@@ -16,9 +15,8 @@ namespace LW_AskOnline.Web.control.test
         {
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
-            Common.GetCookie cookie = new Common.GetCookie();
-            string name = cookie.getCookie("account");
-            string pwd = cookie.getCookie("pasword");
+            string name = "";
+            string pwd = "";
             if (name != null && pwd != null)
             {
                 if (name.Equals("") && pwd.Equals(""))

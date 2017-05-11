@@ -14,23 +14,57 @@
             $(".nav-close").hide();
             $(".nav-open").show();
         });
+        var city = null;
+        $.ajax({ 
+            type:"post", 
+            url:"http://192.168.1.172/api/selectCity",
+            dataType:"jsonp",
+            data:{
+                cid: null
+            },
+            jsonp:"callback", 
+            success:function(data){
+                city = data;
+                $.each(data,function(i,n){
+                    $("#dcity_1").append("<option>"+n.cregion_name+"</option>");
+                });
+            },
+            error:function(){
+                console.log("city_1 error.");
+            }
+        });
+        $("#dcity_1").change(function(){
+            var city_id = null;
+            $.each(city,function(i,n){
+                 if(n.cregion_name == $("#dcity_1").val())
+                    city_id = n.cid;
+            });
+            $("#dcity_2").html("<option>请选择</option>");
+            $.ajax({ 
+                type:"post", 
+                url:"http://192.168.1.172/api/selectCity",
+                data:{
+                    cid: city_id
+                },
+                dataType:"jsonp",
+                jsonp:"callback", 
+                success:function(data){
+                    $.each(data,function(i,n){
+                        $("#dcity_2").append("<option>"+n.cregion_name+"</option>");
+                    });  
+                },
+                error:function(){
+                    console.log("city_2 error.");
+                }
+            });
+        });
         $(".panel .cancal").click(function(){
-            window.location.href = "user_list.html";
+            window.location.href = "hospital_list.html";
         });
         $(".panel .sbt").click(function(){
-            if($("#ucompanyid").val()==""){
-                $("#ucompanyid").parent().addClass("has-error");
-                $("#ucompanyid").siblings(".help-block").html("用户公司编号不能为空");
-                return false;
-            }
-            if($("#ustate").val()==""){
-                $("#ustate").parent().addClass("has-error");
-                $("#ustate").siblings(".help-block").html("用户状态不能为空");
-                return false;
-            }
             var hospital={
                 "hname": $("#hname").val(),
-                "hcity": $("#hcity").val(),
+                "hcity": $("#dcity_1").val()+" "+$("#dcity_2").val(),
                 "hcityid": $("#hcityid").val(),
                 "hlevel": $("#hlevel").val(),
                 "haddress": $("#haddress").val(),
@@ -39,13 +73,13 @@
             hospital = JSON.stringify(hospital);
             $.ajax({ 
                 type:"post", 
-                url:"http://192.168.1.172/api/userAdd",
+                url:"http://192.168.1.172/api/hospitalAdd",
                 data:{json: hospital}, 
                 dataType:"jsonp",
                 jsonp:"callback", 
                 success:function(data){
                     $(".success").fadeIn("slow").delay(1000).fadeOut("slow",function(){                   
-                        window.location.href = "user_list.html";
+                        window.location.href = "hospital_list.html";
                     }); 
                     console.log(data);
                 },

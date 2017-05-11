@@ -53,16 +53,8 @@ namespace LW_AskOnline.Web.control
             DateTime time = log.GetTime();
             log.WriteLogFile(handle, ip, user, time);  */
             //读取日志
-           /* Common.Log log1 = new Common.Log();
-            string[] lines = log1.ReadLogFile();
-            string json1 = "";
-            foreach (string line in lines)
-            {
-                json1 += string.Format("{{\"handle\": {0},\"ip\": \"{1},\"user\": {2},\"datetime\": {3}\"}},", lines[0], lines[1], lines[2], lines[3]);
-            }
-            json1 = json1.Substring(0, json1.Length - 1);
-            json1 = string.Format("[{0}]", json1);*/
-           /* string [] lines = log.ReadLogFile();
+            /*
+            string [] lines = log.ReadLogFile();
             List<string[]> list = new List<string[]>();
             for (int i = 0; i < lines.Length; i++)
             {
