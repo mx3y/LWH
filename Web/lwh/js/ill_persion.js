@@ -23,7 +23,7 @@
         if(getUrlParam("id")){
             $.ajax({ 
                 type:"post", 
-                url:"http://192.168.1.172/api/userSendUpdate",
+                url:"http://192.168.1.172/api/illpersionDetial",
                 data:{id:getUrlParam("id")}, 
                 dataType:"jsonp",
                 jsonp:"callback", 

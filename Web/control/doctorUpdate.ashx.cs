@@ -38,7 +38,7 @@ namespace LW_AskOnline.Web.control
                 model.dtype = o["dtype"].ToString();
                 model.dhospital = o["dhospital"].ToString();
                 model.dcityid = o["dcityid"].ToString();
-                model.dcity = o["dcity"].ToString();
+                model.dcity = o["dcity"].ToString(); 
                 model.dhospitalid = int.Parse(o["dhospitalid"].ToString());
                 model.dprofessor = o["dprofessor"].ToString();
                 model.dcontent = o["dcontent"].ToString();

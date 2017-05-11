@@ -7,9 +7,9 @@ using System.Text;
 namespace LW_AskOnline.Web.control
 {
     /// <summary>
-    /// ucpaasDetial 的摘要说明
+    /// doctorSchedule 的摘要说明
     /// </summary>
-    public class ucpaasDetial : IHttpHandler
+    public class doctorSchedule : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
@@ -17,11 +17,9 @@ namespace LW_AskOnline.Web.control
             context.Response.ContentType = "text/plain";
             context.Response.ContentEncoding = Encoding.UTF8;
             string callback = context.Request.QueryString["callback"].ToString();
-            string id = context.Request["id"].ToString();
-            BLL.ask_ucpaas adlBll = new BLL.ask_ucpaas();
-            Model.ask_ucpaas adlModel = adlBll.GetModel(int.Parse(id));
-            string json = Newtonsoft.Json.JsonConvert.SerializeObject(adlModel, Newtonsoft.Json.Formatting.Indented);
-            context.Response.Write(callback + "(" + json + ")");
+            string scdid = context.Request["id"].ToString();
+
+            context.Response.Write("Hello World");
         }
 
         public bool IsReusable

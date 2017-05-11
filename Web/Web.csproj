@@ -179,12 +179,19 @@
     <Content Include="lwh\css\user_add.css" />
     <Content Include="lwh\css\user_edit.css" />
     <Content Include="lwh\css\user_list.css" />
+    <Content Include="lwh\dist\css\wangEditor.css" />
+    <Content Include="lwh\dist\css\wangEditor.min.css" />
+    <Content Include="lwh\dist\js\lib\jquery-1.10.2.min.js" />
+    <Content Include="lwh\dist\js\lib\jquery-2.2.1.js" />
+    <Content Include="lwh\dist\js\wangEditor.js" />
+    <Content Include="lwh\dist\js\wangEditor.min.js" />
     <Content Include="lwh\doctor_add.html" />
     <Content Include="lwh\doctor_edit.html" />
     <Content Include="lwh\doctor_list.html" />
     <Content Include="lwh\hospital_add.html" />
     <Content Include="lwh\hospital_edit.html" />
     <Content Include="lwh\hospital_list.html" />
+    <Content Include="lwh\ill_persion.html" />
     <Content Include="lwh\images\bg-2.jpg" />
     <Content Include="lwh\images\bg.jpg" />
     <Content Include="lwh\images\test.jpg" />
@@ -549,6 +556,9 @@
     <Compile Include="control\doctorUpdate.ashx.cs">
       <DependentUpon>doctorUpdate.ashx</DependentUpon>
     </Compile>
+    <Compile Include="control\illpersionDetial.ashx.cs">
+      <DependentUpon>illpersionDetial.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\illpersionList.ashx.cs">
       <DependentUpon>illpersionList.ashx</DependentUpon>
     </Compile>
@@ -564,6 +574,9 @@
     <Compile Include="control\orderList.ashx.cs">
       <DependentUpon>orderList.ashx</DependentUpon>
     </Compile>
+    <Compile Include="control\orderPayDetial.ashx.cs">
+      <DependentUpon>orderPayDetial.ashx</DependentUpon>
+    </Compile>
     <Compile Include="control\orderPayList.ashx.cs">
       <DependentUpon>orderPayList.ashx</DependentUpon>
     </Compile>
@@ -572,6 +585,9 @@
     </Compile>
     <Compile Include="control\orderUpdate.ashx.cs">
       <DependentUpon>orderUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="control\payDetial.ashx.cs">
+      <DependentUpon>payDetial.ashx</DependentUpon>
     </Compile>
     <Compile Include="control\selectCity.ashx.cs">
       <DependentUpon>selectCity.ashx</DependentUpon>
@@ -732,6 +748,9 @@
     <Content Include="control\doctorOrderDetial.ashx" />
     <Content Include="control\doctorImg.ashx" />
     <Content Include="control\editorImage.ashx" />
+    <Content Include="control\illpersionDetial.ashx" />
+    <Content Include="control\orderPayDetial.ashx" />
+    <Content Include="control\payDetial.ashx" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap-theme.min.css.map" />
     <None Include="lwh\bootstrap\css\bootstrap.css.map" />
@@ -741,6 +760,12 @@
     <None Include="lwh\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="lwh\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <None Include="lwh\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="lwh\dist\css\wangEditor.less" />
+    <None Include="lwh\dist\emotions.data" />
+    <None Include="lwh\dist\fonts\icomoon.eot" />
+    <None Include="lwh\dist\fonts\icomoon.svg" />
+    <None Include="lwh\dist\fonts\icomoon.ttf" />
+    <None Include="lwh\dist\fonts\icomoon.woff" />
     <None Include="view\static\css\style.css.bak" />
     <None Include="view\static\fontello-5d544c46\config.json" />
     <None Include="view\static\fontello-5d544c46\config.json.bak" />

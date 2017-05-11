@@ -276,6 +276,7 @@
                 "d_servicescount": $("#d_servicescount").val(),
                 "d_replyscore": $("#d_replyscore").val(),
                 "d_replycount": $("#d_replycount").val(),
+				"dimage": $("#dname").val()+"_img.jpg",
                 "d_message": editor.$txt.html().replace(/>/g,"&gt;").replace(/</g,"&lt;")
 
             }
